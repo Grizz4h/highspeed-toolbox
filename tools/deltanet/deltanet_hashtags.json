@@ -1,0 +1,20 @@
+{
+  "defaults": {
+    "tiktok": ["#highspeed", "#novadelta", "#deltanet"],
+    "instagram": ["#highspeed", "#novadelta", "#deltanet"],
+    "x": ["#HIGHspeed", "#NovaDelta", "#ΔNET"],
+    "gifs": ["highspeed", "novadelta", "deltanet"]
+  },
+  "by_pillar": {
+    "sport": {
+      "tiktok": ["#gameday", "#hockey"],
+      "instagram": ["#gameday", "#hockey"],
+      "x": ["#Gameday"]
+    },
+    "city": {
+      "tiktok": ["#citylife"],
+      "instagram": ["#cityvibes"],
+      "x": ["#CityFeed"]
+    }
+  }
+}

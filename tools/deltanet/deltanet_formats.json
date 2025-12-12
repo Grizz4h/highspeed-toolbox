@@ -1,0 +1,59 @@
+{
+  "platforms": ["tiktok", "instagram", "x", "gifs"],
+  "pillars": [
+    {"id": "sport", "label": "Sport / Gameday"},
+    {"id": "city", "label": "Stadt & Alltag"},
+    {"id": "brands", "label": "Marken & Objekte"},
+    {"id": "bugs", "label": "Bugs / Real-World Anchor"}
+  ],
+  "formats": [
+    {
+      "id": "gameday_signal",
+      "label": "Gameday-Signal",
+      "pillars": ["sport"],
+      "platforms": ["tiktok", "instagram", "x"],
+      "length_sec": [6, 12],
+      "notes": "1-2 Wörter, Sound ab Sek 0, loopfähig"
+    },
+    {
+      "id": "lineup_drop",
+      "label": "Lineup / Starting 6",
+      "pillars": ["sport"],
+      "platforms": ["tiktok", "instagram", "x"],
+      "length_sec": [6, 15],
+      "notes": "Liga-Generator Output, clean & knapp"
+    },
+    {
+      "id": "kurzmeldung",
+      "label": "ΔNET Kurzmeldung",
+      "pillars": ["sport", "city", "brands", "bugs"],
+      "platforms": ["tiktok", "instagram", "x"],
+      "length_sec": [6, 10],
+      "notes": "News-Ticker Feeling, keine Erklärung"
+    },
+    {
+      "id": "one_sentence_lore",
+      "label": "1-Satz Lore-Drop",
+      "pillars": ["city", "brands"],
+      "platforms": ["tiktok", "instagram", "x"],
+      "length_sec": [6, 12],
+      "notes": "Kein Kontext, nur Aussage"
+    },
+    {
+      "id": "bug_report",
+      "label": "Systemfehler / Bug",
+      "pillars": ["bugs"],
+      "platforms": ["tiktok", "instagram", "x"],
+      "length_sec": [6, 10],
+      "notes": "Realitäts-Anker, trocken"
+    },
+    {
+      "id": "gif_release",
+      "label": "GIF Release",
+      "pillars": ["brands", "city", "sport"],
+      "platforms": ["gifs", "x", "instagram"],
+      "length_sec": [2, 5],
+      "notes": "Asset-Release + 1 Satz Kontext"
+    }
+  ]
+}
