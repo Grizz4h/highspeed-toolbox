@@ -1,0 +1,26 @@
+{
+  "world_today": "2125-12-31",
+  "season_start": {
+    "1": "2125-10-08"
+
+  },
+  "matchday_interval_days": 3,
+  "offset_rules": {
+    "episode": [
+      0,
+      0
+    ],
+    "sim": [
+      0,
+      0
+    ],
+    "promo": [
+      -2,
+      -1
+    ],
+    "news": [
+      -2,
+      2
+    ]
+  }
+}
