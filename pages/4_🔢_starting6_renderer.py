@@ -134,8 +134,9 @@ except Exception as e:
     st.stop()
 
 # --- Anzeige ---
-st.subheader("Starting6 (Debug)")
-st.json(starting6)
+with st.expander("Starting6 (Debug)", expanded=False):
+    st.json(starting6)
+
 
 # --- Render Button (optional) ---
 st.divider()

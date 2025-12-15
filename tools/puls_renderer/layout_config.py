@@ -75,8 +75,8 @@ class Starting6LayoutV1:
     header_sub_y: int = 175
 
     # Logos
-    logo_size: int = 140
-    home_logo_y: int = 275
+    logo_size: int = 200
+    home_logo_y: int = 295
     away_logo_y: int = 1230
 
     # HOME Block (oben -> nach unten)

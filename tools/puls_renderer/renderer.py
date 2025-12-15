@@ -39,6 +39,17 @@ class RenderPaths:
 # ----------------------------
 # Helpers: IO / Fonts
 # ----------------------------
+def _load_team_meta(assets_dir: Path) -> dict:
+    p = assets_dir / "team_meta.json"
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+
 def _safe_load_json(path: Path) -> Dict[str, Any]:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -119,6 +130,12 @@ def _split_first_last(full: str) -> tuple[str, str]:
         return parts[0], ""
     return " ".join(parts[:-1]), parts[-1]
 
+def _draw_name_bg(draw, x, y, w, h):
+    draw.rounded_rectangle(
+        (x-10, y-4, x+w+10, y+h+4),
+        radius=6,
+        fill=(20, 40, 60, 120)  # dunkles Blau, halbtransparent
+    )
 
 def _draw_player_block_centered(
     img: Image.Image,
@@ -129,8 +146,8 @@ def _draw_player_block_centered(
     font: ImageFont.FreeTypeFont,
     fill: tuple[int, int, int, int],
     max_width: int = 360,
-    gap_px: int = 10,         # Abstand zwischen Nummer und Name (horizontal)
-    line_gap_px: int = 42,    # Abstand zwischen Vor- und Nachname (vertikal)
+    gap_px: int = 1,         # Abstand zwischen Nummer und Name (horizontal)
+    line_gap_px: int = 36,    # Abstand zwischen Vor- und Nachname (vertikal)
     stroke: bool = True,
     stroke_width: int = 3,
     stroke_fill: tuple[int, int, int, int] = (0, 0, 0, 170),
@@ -701,121 +718,17 @@ def render_from_json_file(
 from .layout_config import Starting6LayoutV1
 from .lineup_adapter import extract_starting6_for_matchup
 
-def render_starting6_from_files(
-    matchday_json_path: Path,
-    lineups_json_path: Path,
-    home_team: str,
-    away_team: str,
-    template_name: str = "starting6v1.png",
-    out_name: Optional[str] = None,
-    layout: Optional[Starting6LayoutV1] = None,
-) -> Path:
+def render_starting6_from_files() -> Path:
     """
     Renders a Starting6 graphic for one selected matchup.
     Uses:
       - matchday json only for metadata (optional)
       - lineups json for players (required)
     """
-    base_dir = Path(__file__).resolve().parent
-    paths = RenderPaths(base_dir=base_dir)
-    layout = layout or Starting6LayoutV1()
-
-    matchday = _safe_load_json(matchday_json_path)
-    lineups = _safe_load_json(lineups_json_path)
-
-    # template
-    template_path = paths.templates_dir / template_name
-    if not template_path.exists():
-        raise FileNotFoundError(f"Template not found: {template_path}")
-
-    img = Image.open(template_path).convert("RGBA")
-    draw = ImageDraw.Draw(img)
-
-    # fonts
-    font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
-
-    font_header = _load_font(font_bold_path, 56)
-    font_team = _load_font(font_bold_path, 28)
-    font_label = _load_font(font_med_path, 18)
-    font_player = _load_font(font_med_path, 22)
-
-    # display map (slug -> display)
-    display_map = _load_team_display_map(paths.fonts_dir)
-
-    # header text
-    spieltag = matchday.get("spieltag")
-    header_text = "TOP GAME"
-    if spieltag is not None:
-        header_text = f"TOP GAME – SPIELTAG {spieltag}"
-
-    # draw header
-    draw.text(
-        (layout.header_center_x, layout.header_y),
-        header_text,
-        font=font_header,
-        fill=layout.color_text,
-        anchor="mm",
-    )
-
-    # extract players
-    s6 = extract_starting6_for_matchup(lineups, home_team, away_team)
-
-    def _draw_team_block(center_x: int, team_name: str, block: Dict[str, Any]):
-        slug = _team_name_to_logo_slug(team_name, display_map)
-
-        # logo
-        logo = _load_logo(paths.logos_dir, slug, layout.logo_size, layout.color_accent)
-        img.alpha_composite(
-            logo,
-            (int(center_x - layout.logo_size / 2), int(layout.teams_y - layout.logo_size / 2)),
-        )
-
-        # team name
-        team_txt = team_name.upper()
-        draw.text(
-            (center_x, layout.team_name_y),
-            team_txt,
-            font=font_team,
-            fill=layout.color_text,
-            anchor="mm",
-        )
-
-        # labels + players
-        y = layout.section_y_start
-
-        def line(label: str, value: str):
-            nonlocal y
-            draw.text((center_x, y), label, font=font_label, fill=layout.color_dim, anchor="mm")
-            y += 26
-            draw.text((center_x, y), value, font=font_player, fill=layout.color_text, anchor="mm")
-            y += layout.line_gap
-
-        fw = block.get("forwards", [])
-        df = block.get("defense", [])
-        g = block.get("goalie", "")
-
-        fw_txt = " • ".join(fw) if fw else "—"
-        df_txt = " • ".join(df) if df else "—"
-        g_txt = g if g else "—"
-
-        line("FORWARDS (LINE 1)", fw_txt)
-        line("DEFENSE (PAIR 1)", df_txt)
-        line("GOALIE", g_txt)
-
-    _draw_team_block(layout.home_center_x, s6["home"]["team"], s6["home"])
-    _draw_team_block(layout.away_center_x, s6["away"]["team"], s6["away"])
-
-    # output name
-    if out_name is None:
-        safe_home = _slugify_team_name(home_team)
-        safe_away = _slugify_team_name(away_team)
-        out_name = f"starting6_{safe_home}_vs_{safe_away}.png"
-
-    out_path = paths.output_dir / out_name
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path)
-    return out_path
+    # Add required parameters to avoid NameError
+    def _not_implemented(*args, **kwargs):
+        raise NotImplementedError("Use the other render_starting6_from_files with parameters.")
+    return _not_implemented()
 
 
 # ============================
@@ -1027,7 +940,7 @@ def render_starting6_from_files(
     font_med = paths.fonts_dir / "Inter-Medium.ttf"
 
     # Header: "TOP GAME / STARTING SIX"
-    header = "TOP GAME"
+    header = ""
     sub = f"{season_label} • SPIELTAG {spieltag}"
     font_h = _fit_text(draw, header, font_bold, max_width=900, start_size=layout.title_size, min_size=40)
     draw_text_ice_noise_bbox(
