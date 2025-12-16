@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+from .layout_config import Starting6LayoutV1
+
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -29,26 +31,26 @@ class LeagueTableLayoutV1:
     height: int = 1350
 
     # header positions
-    header_brand_y: int = 92
-    header_title_y: int = 165
-    header_sub_y: int = 240
-    header_date_y: int = 270
+    header_brand_y: int = 65
+    header_title_y: int = 145
+    header_sub_y: int = 200
+    header_date_y: int = 230
 
     # blocks (NORD oben, SÜD unten)
-    nord_title_y: int = 340
-    nord_table_top: int = 388
+    nord_title_y: int = 290
+    nord_table_top: int = 318
 
     # NOTE: Süd runter, damit nichts überlappt
-    sued_title_y: int = 760
-    sued_table_top: int = 808
+    sued_title_y: int = 815
+    sued_table_top: int = 840
 
     # row sizes
-    header_row_h: int = 52
-    row_h: int = 44
+    header_row_h: int = 48
+    row_h: int = 40
 
     # colors (RGBA)
-    color_text: Tuple[int, int, int, int] = (220, 240, 255, 255)
-    color_accent: Tuple[int, int, int, int] = (130, 220, 255, 255)
+    color_text: Tuple[int, int, int, int] = field(default_factory=lambda: Starting6LayoutV1().color_text)
+    color_accent: Tuple[int, int, int, int] = field(default_factory=lambda: Starting6LayoutV1().color_accent)
     color_grid: Tuple[int, int, int, int] = (130, 220, 255, 80)
 
 
@@ -299,7 +301,7 @@ def render_league_table_from_matchday_json(
     draw_text_fx(
         img,
         (layout.width // 2, layout.header_brand_y),
-        "PULS",
+        "",
         font_brand,
         fill=layout.color_accent,
         anchor="mm",
@@ -315,11 +317,11 @@ def render_league_table_from_matchday_json(
     )
 
     # Header title
-    font_title = _fit_text(draw, "LIGA-TABELLE", font_bold_path, max_width=920, start_size=74, min_size=48)
+    font_title = _fit_text(draw, "LIGA-TABELLE", font_bold_path, max_width=920, start_size=64, min_size=44)
     draw_text_fx(
         img,
         (layout.width // 2, layout.header_title_y),
-        "LIGA-TABELLE",
+        "",
         font_title,
         fill=layout.color_text,
         anchor="mm",
@@ -351,7 +353,7 @@ def render_league_table_from_matchday_json(
         img=img,
         draw=draw,
         layout=layout,
-        title="TABELLE NORD",
+        title="",
         title_y=layout.nord_title_y,
         table_top=layout.nord_table_top,
         rows=nord_rows,
@@ -364,7 +366,7 @@ def render_league_table_from_matchday_json(
         img=img,
         draw=draw,
         layout=layout,
-        title="TABELLE SÜD",
+        title="",
         title_y=layout.sued_title_y,
         table_top=layout.sued_table_top,
         rows=sued_rows,
