@@ -595,6 +595,8 @@ def render_matchday_overview(
         anchor="mm",
     )
 
+
+    # Define watermark font before use
     wm_font = ImageFont.truetype(str(fonts_dir / "Inter-Medium.ttf"), size=20)
     _draw_watermark(
         img,
