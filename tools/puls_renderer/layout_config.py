@@ -11,7 +11,7 @@ class MatchdayLayoutV1:
 
     # --- Header: "SPIELTAG XX" (zentriert unter PULS) ---
     header_center_x: int = 540
-    header_spieltag_y: int = 210
+    header_spieltag_y: int = 140
 
     # --- Match rows: Y-Positionen ---
     # Leicht hochgezogen im Süd-Block (unten war's bei dir am knappsten)
@@ -50,7 +50,7 @@ class MatchdayLayoutV1:
 
     # --- Footer: Datum ---
     footer_date_center_x: int = 540
-    footer_date_y: int = 1285
+    footer_date_y: int = 200
 
     # Colors (RGBA)
     color_text: Tuple[int, int, int, int] = (174, 220, 255, 255)  # #AEDCFF

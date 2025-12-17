@@ -339,6 +339,7 @@ def render_deltanet_boulevard(payload: Dict[str, Any], out_name: Optional[str] =
         kicker_color = getattr(layout, "color_warn", (255, 190, 80, 255))
         kicker_marker = getattr(layout, "color_warn_marker", (255, 190, 80, 220))
         kicker_text = getattr(layout, "color_warn_text", (20, 20, 20, 255))
+        
     else:
         kicker_color = getattr(layout, "color_muted", (180, 185, 190, 255))
         kicker_marker = getattr(layout, "color_muted_marker", (40, 40, 45, 180))

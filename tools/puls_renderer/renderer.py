@@ -476,6 +476,64 @@ def draw_text_ice_noise_bbox(
     layer = Image.new("RGBA", (bw, bh), fill)
     img.paste(layer, (l, t), mask=scratched)
 
+def draw_text_grain_overlay_bbox(
+    img: Image.Image,
+    pos: Tuple[int, int],
+    text: str,
+    font: ImageFont.FreeTypeFont,
+    fill: Tuple[int, int, int, int],
+    anchor: str = "mm",
+    strength: int = 35,          # 10..60 (je höher, desto sichtbarer)
+    grain_density: float = 0.10, # 0.05..0.20
+    blur: float = 0.6,           # 0..1.2
+    seed: Optional[int] = 2,
+) -> None:
+    """
+    Render: Solid text + subtle grain overlay INSIDE the text.
+    No subtract => no holes.
+    """
+    if seed is not None:
+        random.seed(seed)
+
+    # bbox
+    tmp = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    td = ImageDraw.Draw(tmp)
+    l, t, r, b = td.textbbox(pos, text, font=font, anchor=anchor)
+    l = max(0, l); t = max(0, t)
+    r = min(img.size[0], r); b = min(img.size[1], b)
+    bw = max(1, r - l); bh = max(1, b - t)
+
+    # mask
+    text_mask = Image.new("L", (bw, bh), 0)
+    md = ImageDraw.Draw(text_mask)
+    md.text((pos[0] - l, pos[1] - t), text, font=font, fill=255, anchor=anchor)
+
+    # solid text
+    solid = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(solid)
+    sd.text((pos[0] - l, pos[1] - t), text, font=font, fill=fill, anchor=anchor)
+
+    # grain alpha map
+    noise = Image.new("L", (bw, bh), 0)
+    nd = ImageDraw.Draw(noise)
+    n = int(bw * bh * grain_density / 8)
+    n = max(200, n)
+    for _ in range(n):
+        x = random.randint(0, bw - 1)
+        y = random.randint(0, bh - 1)
+        nd.point((x, y), fill=255)
+
+    if blur and blur > 0:
+        noise = noise.filter(ImageFilter.GaussianBlur(radius=blur))
+
+    # grain layer (dark specks inside text)
+    grain = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
+    # use noise as alpha but keep it weak
+    grain.putalpha(noise.point(lambda p: int(p * (strength / 255))))
+
+    # composite: solid text + grain, clipped to text mask
+    solid.alpha_composite(grain)
+    img.paste(solid, (l, t), mask=text_mask)
 
 # ----------------------------
 # Logos
@@ -511,7 +569,7 @@ def render_matchday_overview(
     enable_draw_vs: bool = False,
     delta_date: Optional[str] = None,
     enable_fx_on_teams: bool = False,
-    header_fx: str = "ice_noise",  # "ice_noise" | "fx"
+    header_fx: str = "clean"
 ) -> Path:
     layout = layout or MatchdayLayoutV1()
 
@@ -533,10 +591,30 @@ def render_matchday_overview(
     if spieltag is None:
         raise ValueError("JSON missing required field: spieltag")
 
+    # Header
     header_text = f"SPIELTAG {spieltag}"
     font_spieltag = _fit_text(draw, header_text, font_bold_path, max_width=900, start_size=spieltag_size, min_size=34)
 
-    if header_fx == "ice_noise":
+    if header_fx == "clean":
+        # Knackig, keine Matsch-Glow, kein Noise
+        draw_text_fx(
+            img,
+            (layout.header_center_x, layout.header_spieltag_y),
+            header_text,
+            font_spieltag,
+            fill=layout.color_text,
+            anchor="mm",
+            glow=False,
+            shadow=True,
+            shadow_offset=(0, 3),
+            shadow_alpha=170,
+            stroke=True,
+            stroke_width=3,
+            stroke_fill=(0, 0, 0, 200),
+        )
+
+    elif header_fx == "ice_noise":
+        # alte Variante (falls du sie noch brauchst)
         draw_text_ice_noise_bbox(
             img,
             (layout.header_center_x, layout.header_spieltag_y),
@@ -544,12 +622,14 @@ def render_matchday_overview(
             font_spieltag,
             fill=layout.color_text,
             anchor="mm",
-            intensity=0.15,
-            speck_size=1,
-            seed=2,
-            threshold=80,
+            intensity=0,
+            speck_size=0,
+            seed=0,
+            threshold=0,
         )
+
     else:
+        # dein bisheriges fx (Glow) – würde ich kaum nutzen
         draw_text_fx(
             img,
             (layout.header_center_x, layout.header_spieltag_y),
@@ -567,6 +647,7 @@ def render_matchday_overview(
             stroke_width=2,
             stroke_fill=(0, 0, 0, 160),
         )
+
 
     # Footer date: Δ + user input
     if not delta_date:
