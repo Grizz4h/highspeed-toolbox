@@ -1,6 +1,7 @@
 import json
-from pathlib import Path
 import re
+from pathlib import Path
+
 import streamlit as st
 
 from tools.puls_renderer import (
@@ -21,19 +22,20 @@ st.title("🏒 Starting6 Renderer")
 st.caption("Lädt Matchups + Starting6 aus Matchday-JSON + Lineups-JSON.")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
 
-matchday_files = sorted(DATA_DIR.glob("spieltag_[0-9][0-9].json"))
-lineup_files = sorted(DATA_DIR.glob("spieltag_[0-9][0-9]_lineups.json"))
-
-if not matchday_files or not lineup_files:
-    st.error("Keine JSONs gefunden in /data. Erwartet z.B. spieltag_04.json und spieltag_04_lineups.json")
-    st.stop()
+SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"
+LINEUPS_ROOT   = BASE_DIR / "data" / "lineups"
 
 
+# -----------------------------
+# Helpers
+# -----------------------------
 def _load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
+def _to_index(value: str) -> int:
+    m = re.search(r"(\d+)", str(value))
+    return int(m.group(1)) if m else -1
 
 def _extract_spieltag_number(filename: str) -> int | None:
     m = re.search(r"spieltag_(\d+)", filename)
@@ -44,7 +46,6 @@ def _extract_spieltag_number(filename: str) -> int | None:
     except Exception:
         return None
 
-
 def _home_away(m):
     # erlaubt: (home, away) ODER {"home":..., "away":...}
     if isinstance(m, (list, tuple)) and len(m) >= 2:
@@ -53,9 +54,55 @@ def _home_away(m):
         return str(m.get("home", "")), str(m.get("away", ""))
     return "", ""
 
+def list_seasons(root: Path) -> list[Path]:
+    if not root.exists():
+        return []
+    seasons = [p for p in root.iterdir() if p.is_dir() and p.name.startswith("saison_")]
+    seasons.sort(key=lambda p: _to_index(p.name))
+    return seasons
+
+def list_matchday_files(season_dir: Path) -> list[Path]:
+    if not season_dir.exists():
+        return []
+    return sorted(season_dir.glob("spieltag_[0-9][0-9].json"), key=lambda p: _to_index(p.name))
+
+def list_lineup_files(season_dir: Path) -> list[Path]:
+    if not season_dir.exists():
+        return []
+    return sorted(season_dir.glob("spieltag_[0-9][0-9]_lineups.json"), key=lambda p: _to_index(p.name))
+
+
+# -----------------------------
+# Saison-Auswahl (anhand Spieltage)
+# -----------------------------
+seasons = list_seasons(SPIELTAGE_ROOT)
+if not seasons:
+    st.error(f"Keine Saison-Ordner gefunden unter: {SPIELTAGE_ROOT.as_posix()}")
+    st.stop()
+
+season_labels = [p.name for p in seasons]
+default_season_idx = max(0, len(season_labels) - 1)
+
+selected_season = st.selectbox("Saison auswählen", season_labels, index=default_season_idx)
+
+SPIELTAGE_DIR = SPIELTAGE_ROOT / selected_season
+LINEUPS_DIR   = LINEUPS_ROOT / selected_season
+
+matchday_files = list_matchday_files(SPIELTAGE_DIR)
+lineup_files   = list_lineup_files(LINEUPS_DIR)
+
+if not matchday_files:
+    st.error(f"Keine Matchday-JSONs gefunden in: {SPIELTAGE_DIR.as_posix()}")
+    st.stop()
+
+if not lineup_files:
+    st.error(f"Keine Lineups-JSONs gefunden in: {LINEUPS_DIR.as_posix()}")
+    st.stop()
+
 
 # --- Auswahl ---
 col1, col2 = st.columns(2)
+
 with col1:
     matchday_path: Path = st.selectbox("Matchday JSON", matchday_files, format_func=lambda p: p.name)
 
@@ -77,6 +124,7 @@ with col2:
         format_func=lambda p: p.name,
     )
 
+
 # --- JSON laden ---
 try:
     matchday_data = _load_json(matchday_path)
@@ -92,12 +140,14 @@ except Exception as e:
     st.exception(e)
     st.stop()
 
+
 # --- Matchups extrahieren ---
 matchups = list_matchups_from_matchday_json(matchday_data)
 if not matchups:
     st.error("Keine Matchups aus Matchday JSON extrahiert. (Check: matchday['results'] muss home/away enthalten)")
     st.write("Debug: matchday keys =", list(matchday_data.keys()))
     st.stop()
+
 
 # --- Top-Game auswählen ---
 sel = st.selectbox(
@@ -107,12 +157,12 @@ sel = st.selectbox(
 )
 
 home_team, away_team = _home_away(sel)
-
 if not home_team or not away_team:
     st.error("Matchup-Format unbekannt. Debug-Ausgabe unten.")
     st.write("matchups[0] type:", type(matchups[0]).__name__)
     st.json(matchups[:3])
     st.stop()
+
 
 # --- Starting6 extrahieren ---
 try:
@@ -132,6 +182,7 @@ except Exception as e:
 
     st.exception(e)
     st.stop()
+
 
 # --- Anzeige ---
 with st.expander("Starting6 (Debug)", expanded=False):
@@ -177,4 +228,3 @@ else:
         except Exception as e:
             st.error("Render fehlgeschlagen.")
             st.exception(e)
-

@@ -9,7 +9,7 @@ st.title("🏒 PULS – Spieltags-Renderer")
 st.caption("JSON rein → Spieltagsübersicht PNG raus. Δ-Datum kommt aus UI (nicht aus JSON).")
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # Projektroot (app.py liegt dort)
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = BASE_DIR / "data" / "spieltage" / "saison_01"
 DATA_DIR.mkdir(exist_ok=True)
 
 st.divider()
