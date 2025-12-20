@@ -2,13 +2,16 @@ import streamlit as st
 import subprocess
 import streamlit as st
 
+import subprocess
+
 def _run(cmd: list[str]) -> tuple[int, str]:
     p = subprocess.run(cmd, capture_output=True, text=True)
     out = (p.stdout or "") + (p.stderr or "")
     return p.returncode, out.strip()
 
-def sudo_systemctl(args: list[str]) -> tuple[int, str]:
-    return _run(["sudo", "-n", "/bin/systemctl", *args])
+def systemctl(args: list[str]) -> tuple[int, str]:
+    return _run(["/bin/systemctl", *args])
+
 
 def sudo_journal(service: str) -> tuple[int, str]:
     return _run(["sudo", "-n", "/usr/bin/journalctl", "-u", service, "-n", "120", "--no-pager"])
