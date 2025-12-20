@@ -1,11 +1,1353 @@
 {
   "season": 1,
   "spieltag": 1,
-  "generated_at": "2025-12-19T21:51:56.907990",
+  "generated_at": "2025-12-20T10:20:49.485749",
   "teams": {
+    "Whiteout Berlin": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Markus Vikingstad",
+            "id": "Markusu Vikingstovik",
+            "number": 37,
+            "pos": "F",
+            "overall": 83,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Liam Kirk",
+            "id": "Liamu Kirkven",
+            "number": 94,
+            "pos": "F",
+            "overall": 84,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Frederik Tiffels",
+            "id": "Fri Tiffelar",
+            "number": 95,
+            "pos": "F",
+            "overall": 84,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Leonhard Pföderl",
+            "id": "Leonharda Pfödersen",
+            "number": 93,
+            "pos": "F",
+            "overall": 79,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Andreas Eder",
+            "id": "Andi Edtli",
+            "number": 43,
+            "pos": "F",
+            "overall": 80,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Ty Ronning",
+            "id": "Tyi Ronninsen",
+            "number": 9,
+            "pos": "F",
+            "overall": 83,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Manuel Wiederer",
+            "id": "Mano Wiederik",
+            "number": 21,
+            "pos": "F",
+            "overall": 70,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Blaine Byron",
+            "id": "Blainu Byronvik",
+            "number": 23,
+            "pos": "F",
+            "overall": 72,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Marcel Noebels",
+            "id": "Marcu Noebellek",
+            "number": 92,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Eric Hördler",
+            "id": "Ericu Hördlinov",
+            "number": 77,
+            "pos": "F",
+            "overall": 65,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Lean Bergmann",
+            "id": "Leane Bergen",
+            "number": 10,
+            "pos": "F",
+            "overall": 66,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Yannick Veilleux",
+            "id": "Yannicku Veillenik",
+            "number": 38,
+            "pos": "F",
+            "overall": 74,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Adam Smith",
+            "id": "Adamo Smithar",
+            "number": 4,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Eric Mik",
+            "id": "Ericu Mikik",
+            "number": 12,
+            "pos": "D",
+            "overall": 79,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Matej Leden",
+            "id": "Mateju Ledenov",
+            "number": 33,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Mitchell Reinke",
+            "id": "Mita Reinknik",
+            "number": 5,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Norwin Panocha",
+            "id": "Norwinu Panochdunov",
+            "number": 75,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Lester Lancaster",
+            "id": "Lestera Lancastinov",
+            "number": 74,
+            "pos": "D",
+            "overall": 70,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Jonas Müller",
+            "id": "Jonasu Müllar",
+            "number": 18,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Jake Hildebrand",
+        "id": "Jake Hildebrro",
+        "number": 30,
+        "pos": "G",
+        "overall": 91,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Kassel Zenit": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Tyler Benson",
+            "id": "Tylera Benik",
+            "number": 17,
+            "pos": "F",
+            "overall": 81,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tristan Keck",
+            "id": "Tristano Keckvik",
+            "number": 71,
+            "pos": "F",
+            "overall": 79,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Dominic Turgeon",
+            "id": "Dominicu Turgetto",
+            "number": 91,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Hunter Garlent",
+            "id": "Hunti Garlenar",
+            "number": 65,
+            "pos": "F",
+            "overall": 78,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Michael Bartuli",
+            "id": "Michaelo Bartulin",
+            "number": 27,
+            "pos": "F",
+            "overall": 72,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Darren Mieszkowski",
+            "id": "Darra Mieszkowsovik",
+            "number": 66,
+            "pos": "F",
+            "overall": 74,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Clemens Sager",
+            "id": "Clemenso Sagven",
+            "number": 34,
+            "pos": "F",
+            "overall": 65,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Hans Detsch",
+            "id": "Hanse Detschin",
+            "number": 89,
+            "pos": "F",
+            "overall": 69,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jake Weidner",
+            "id": "Jake Weidnar",
+            "number": 11,
+            "pos": "F",
+            "overall": 71,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Yannik Valenti",
+            "id": "Yanno Valentin",
+            "number": 26,
+            "pos": "F",
+            "overall": 69,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Laurin Braun",
+            "id": "Laurine Braunovik",
+            "number": 18,
+            "pos": "F",
+            "overall": 68,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Mitchell Hoelscher",
+            "id": "Mita Hoelschinov",
+            "number": 44,
+            "pos": "F",
+            "overall": 69,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Bode Wilde",
+            "id": "Boda Wildven",
+            "number": 4,
+            "pos": "D",
+            "overall": 76,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Andrew Bodnarchuk",
+            "id": "Andrewe Bodnarchro",
+            "number": 10,
+            "pos": "D",
+            "overall": 72,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Simon Schütz",
+            "id": "Simona Schützan",
+            "number": 97,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Ben Stadler",
+            "id": "Benu Stadldunov",
+            "number": 28,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Tim Bender",
+            "id": "Tima Bendar",
+            "number": 55,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Manuel Schams",
+            "id": "Mano Schamsov",
+            "number": 6,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Marco Müller",
+            "id": "Marca Müllar",
+            "number": 22,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Philipp Maurer",
+        "id": "Phe Maurar",
+        "number": 33,
+        "pos": "G",
+        "overall": 89,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Wolfsburg Voltsturm": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Matthew White",
+            "id": "Mati Whitinov",
+            "number": 97,
+            "pos": "F",
+            "overall": 79,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Spencer Machacek",
+            "id": "Spo Machacven",
+            "number": 93,
+            "pos": "F",
+            "overall": 79,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tyler Gaudet",
+            "id": "Tylera Gaudetvik",
+            "number": 58,
+            "pos": "F",
+            "overall": 77,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Justin Feser",
+            "id": "Justinu Fesik",
+            "number": 71,
+            "pos": "F",
+            "overall": 77,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jacob Hayhurst",
+            "id": "Jacobe Hayhursan",
+            "number": 15,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jimmy Lambert",
+            "id": "Jimmya Lambersen",
+            "number": 7,
+            "pos": "F",
+            "overall": 76,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Timo Ruckdäschel",
+            "id": "Time Ruckdäschlek",
+            "number": 91,
+            "pos": "F",
+            "overall": 66,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Julian Chrobot",
+            "id": "Juliano Chrobven",
+            "number": 40,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Lucas Dumont",
+            "id": "Lucase Dumontsen",
+            "number": 13,
+            "pos": "F",
+            "overall": 65,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Julius Ramoser",
+            "id": "Jule Ramosinov",
+            "number": 50,
+            "pos": "F",
+            "overall": 64,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Robert Lynch",
+            "id": "Robu Lynchen",
+            "number": 49,
+            "pos": "F",
+            "overall": 74,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Luis Schinko",
+            "id": "Luisa Schinktli",
+            "number": 63,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Keaton Thompson",
+            "id": "Keate Thompov",
+            "number": 4,
+            "pos": "D",
+            "overall": 72,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Julian Melchiori",
+            "id": "Juliano Melchiovik",
+            "number": 44,
+            "pos": "D",
+            "overall": 72,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Fabio Pfohl",
+            "id": "Fabio Pfohlro",
+            "number": 95,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Jimmy Martinovic",
+            "id": "Jimmya Martinovlek",
+            "number": 28,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Ethan Prow",
+            "id": "Ethano Prowovik",
+            "number": 6,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Leo Hafenrichter",
+            "id": "Lea Hafenrichtik",
+            "number": 29,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Janik Möser",
+            "id": "Janika Mösvik",
+            "number": 24,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Dustin Strahlmeier",
+        "id": "Dustino Strahlmeiar",
+        "number": 1,
+        "pos": "G",
+        "overall": 90,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Frankfurt Core": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Cameron Brace",
+            "id": "Camerone Bracar",
+            "number": 86,
+            "pos": "F",
+            "overall": 74,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Carter Rowney",
+            "id": "Cartere Rowneyovik",
+            "number": 17,
+            "pos": "F",
+            "overall": 69,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Linus Fröberg",
+            "id": "Linusa Frötli",
+            "number": 71,
+            "pos": "F",
+            "overall": 74,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Ty Glover",
+            "id": "Tyi Glovtto",
+            "number": 7,
+            "pos": "F",
+            "overall": 67,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Daniel Pfaffengut",
+            "id": "Daniele Pfaffengen",
+            "number": 77,
+            "pos": "F",
+            "overall": 68,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Christopher Wilkie",
+            "id": "Christophera Wilkiinov",
+            "number": 84,
+            "pos": "F",
+            "overall": 66,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Noah Dunham",
+            "id": "Noahi Dunhamro",
+            "number": 12,
+            "pos": "F",
+            "overall": 66,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Kevin Bicker",
+            "id": "Kevine Bickar",
+            "number": 83,
+            "pos": "F",
+            "overall": 66,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jakob Lilja",
+            "id": "Jakobu Liljlek",
+            "number": 10,
+            "pos": "F",
+            "overall": 68,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Dennis Lobach",
+            "id": "Dennise Lobachro",
+            "number": 26,
+            "pos": "F",
+            "overall": 64,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Markus Schweiger",
+            "id": "Markusu Schweigdunov",
+            "number": 64,
+            "pos": "F",
+            "overall": 63,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Matthew Wedman",
+            "id": "Mati Wedmanovik",
+            "number": 67,
+            "pos": "F",
+            "overall": 64,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Fabio Kose",
+            "id": "Fabio Kosvik",
+            "number": 20,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Daniel Wirt",
+            "id": "Daniele Wirtvik",
+            "number": 76,
+            "pos": "D",
+            "overall": 63,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Maksim Matushkin",
+            "id": "Makso Matushkov",
+            "number": 52,
+            "pos": "D",
+            "overall": 68,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Tommy Pasanen",
+            "id": "Tommye Pasanen",
+            "number": 16,
+            "pos": "D",
+            "overall": 63,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Michael Joyaux",
+            "id": "Michaelo Joyauxtto",
+            "number": 49,
+            "pos": "D",
+            "overall": 62,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Ryan McKiernan",
+            "id": "Ryani McKierntto",
+            "number": 58,
+            "pos": "D",
+            "overall": 60,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Reid McNeill",
+            "id": "Reida McNeilov",
+            "number": 4,
+            "pos": "D",
+            "overall": 59,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Mirko Pantkowski",
+        "id": "Mirke Pantkowsov",
+        "number": 30,
+        "pos": "G",
+        "overall": 86,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Krefeld Kernschlag": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Max Newton",
+            "id": "Maxe Newtonik",
+            "number": 37,
+            "pos": "F",
+            "overall": 86,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Mathew Santos",
+            "id": "Mathe Santoslek",
+            "number": 95,
+            "pos": "F",
+            "overall": 83,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Marcel Müller",
+            "id": "Marcu Müllar",
+            "number": 9,
+            "pos": "F",
+            "overall": 84,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Philip Gogulla",
+            "id": "Philu Gogullik",
+            "number": 87,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jonathan Matsumoto",
+            "id": "Jonathane Matsumik",
+            "number": 11,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Adam Payerl",
+            "id": "Adamo Payerlven",
+            "number": 90,
+            "pos": "F",
+            "overall": 74,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Alexander Weiß",
+            "id": "Ale Weissin",
+            "number": 43,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Mark Zengerle",
+            "id": "Marki Zengerlov",
+            "number": 89,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Maximilian Hops",
+            "id": "Maximiliana Hopsen",
+            "number": 67,
+            "pos": "F",
+            "overall": 70,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Daniel Bruch",
+            "id": "Daniele Bruchtto",
+            "number": 26,
+            "pos": "F",
+            "overall": 73,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tim Schütz",
+            "id": "Tima Schützan",
+            "number": 38,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Roope Mäkitalo",
+            "id": "Roopu Mäkitalik",
+            "number": 91,
+            "pos": "F",
+            "overall": 69,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Mick Köhler",
+            "id": "Micka Köhltli",
+            "number": 77,
+            "pos": "D",
+            "overall": 70,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Davis Vandane",
+            "id": "Davisa Vandanven",
+            "number": 55,
+            "pos": "D",
+            "overall": 83,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Zack Dybowski",
+            "id": "Zacka Dybowskovik",
+            "number": 44,
+            "pos": "D",
+            "overall": 72,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Carl Konze",
+            "id": "Carlo Konztli",
+            "number": 47,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Steven Raabe",
+            "id": "Stevene Raabik",
+            "number": 41,
+            "pos": "D",
+            "overall": 70,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Erik Buschmann",
+            "id": "Eriki Buschik",
+            "number": 15,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Oliver Mebus",
+            "id": "Oliveri Mebusov",
+            "number": 22,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Felix Bick",
+        "id": "Felixe Bickar",
+        "number": 31,
+        "pos": "G",
+        "overall": 91,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Iserlohn Miners": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Julian Napravnik",
+            "id": "Juliano Napravndunov",
+            "number": 75,
+            "pos": "F",
+            "overall": 75,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Daniel Fischbuch",
+            "id": "Daniele Fischbsen",
+            "number": 71,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Christian Thomas",
+            "id": "Christiana Thomastto",
+            "number": 27,
+            "pos": "F",
+            "overall": 76,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Eric Cornel",
+            "id": "Ericu Cornvik",
+            "number": 18,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tyler Boland",
+            "id": "Tylera Bolandlek",
+            "number": 10,
+            "pos": "F",
+            "overall": 72,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Eirik Salsten",
+            "id": "Eiriki Salsten",
+            "number": 17,
+            "pos": "F",
+            "overall": 70,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Henrik Törnqvist",
+            "id": "Henrike Törnqvven",
+            "number": 11,
+            "pos": "F",
+            "overall": 69,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Noel Saffran",
+            "id": "Noela Saffrro",
+            "number": 14,
+            "pos": "F",
+            "overall": 63,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Taro Jentzsch",
+            "id": "Taro Jentzscven",
+            "number": 90,
+            "pos": "F",
+            "overall": 68,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Daniel Neumann",
+            "id": "Daniele Neuven",
+            "number": 22,
+            "pos": "F",
+            "overall": 65,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jakub Borzecki",
+            "id": "Jakuba Borzeckro",
+            "number": 29,
+            "pos": "F",
+            "overall": 63,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Daniel Geiger",
+            "id": "Daniele Geigtto",
+            "number": 8,
+            "pos": "F",
+            "overall": 62,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Kyle Wood",
+            "id": "Kyli Woodik",
+            "number": 3,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Colin Ugbekile",
+            "id": "Colino Ugbekilov",
+            "number": 79,
+            "pos": "D",
+            "overall": 76,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Macoy Erkamps",
+            "id": "Macoyi Erkampin",
+            "number": 20,
+            "pos": "D",
+            "overall": 61,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Nils Elten",
+            "id": "Nilso Eltenovik",
+            "number": 4,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Lua Niehus",
+            "id": "Lui Niehustto",
+            "number": 26,
+            "pos": "D",
+            "overall": 61,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Johannes Huß",
+            "id": "Johe Husstli",
+            "number": 55,
+            "pos": "D",
+            "overall": 61,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Robin Norell",
+            "id": "Robino Norelltto",
+            "number": 56,
+            "pos": "D",
+            "overall": 58,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Andreas Jenike",
+        "id": "Andi Jenikdunov",
+        "number": 92,
+        "pos": "G",
+        "overall": 86,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
     "Köln Blitzhaie": {
       "forwards": {
         "line1": [
+          {
+            "name": "Dominik Bokk",
+            "id": "Dominiki Bokksen",
+            "number": 78,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
           {
             "name": "Patrick Russell",
             "id": "Pata Russelnik",
@@ -25,19 +1367,19 @@
             "line": 1,
             "pair": null,
             "rotation": false
-          },
-          {
-            "name": "Dominik Bokk",
-            "id": "Dominiki Bokksen",
-            "number": 78,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
           }
         ],
         "line2": [
+          {
+            "name": "Maximilian Kammerer",
+            "id": "Maximiliana Kammerven",
+            "number": 9,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
           {
             "name": "Nate Schnarr",
             "id": "Natu Schnarven",
@@ -49,21 +1391,11 @@
             "rotation": false
           },
           {
-            "name": "Maximilian Kammerer",
-            "id": "Maximiliana Kammerven",
-            "number": 9,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
             "name": "Louis-Marc Aubry",
             "id": "LouisMarca Aubryik",
             "number": 15,
             "pos": "F",
-            "overall": 74,
+            "overall": 73,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -85,17 +1417,17 @@
             "id": "Tanno Kerven",
             "number": 10,
             "pos": "F",
-            "overall": 74,
+            "overall": 73,
             "line": 3,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Dominik Uher",
-            "id": "Dominiki Uhen",
-            "number": 26,
+            "name": "Robin van Calster",
+            "id": "Robino Calstar",
+            "number": 5,
             "pos": "F",
-            "overall": 67,
+            "overall": 65,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -123,11 +1455,11 @@
             "rotation": false
           },
           {
-            "name": "Frederik Storm",
-            "id": "Fri Storminov",
-            "number": 19,
+            "name": "Parker Tuomie",
+            "id": "Parkera Tuomiov",
+            "number": 62,
             "pos": "F",
-            "overall": 68,
+            "overall": 71,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -159,21 +1491,21 @@
         ],
         "pair2": [
           {
-            "name": "Brady Austin",
-            "id": "Bradya Austinov",
-            "number": 57,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
             "name": "Oliwer Kaski",
             "id": "Oliwo Kasktli",
             "number": 7,
             "pos": "D",
             "overall": 74,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Brady Austin",
+            "id": "Bradya Austinov",
+            "number": 57,
+            "pos": "D",
+            "overall": 71,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -225,35 +1557,35 @@
         "rotation": false
       }
     },
-    "Frankfurt Core": {
+    "Bad Nauheim Devils": {
       "forwards": {
         "line1": [
           {
-            "name": "Linus Fröberg",
-            "id": "Linusa Frötli",
-            "number": 71,
+            "name": "Jordan Hickmott",
+            "id": "Jorde Hickmotik",
+            "number": 61,
             "pos": "F",
-            "overall": 72,
+            "overall": 82,
             "line": 1,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Ty Glover",
-            "id": "Tyi Glovtto",
-            "number": 7,
-            "pos": "F",
-            "overall": 68,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Cameron Brace",
-            "id": "Camerone Bracar",
-            "number": 86,
+            "name": "Julian Lautenschlager",
+            "id": "Juliano Lautenschlagov",
+            "number": 93,
             "pos": "F",
             "overall": 74,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Parker Bowles",
+            "id": "Parkera Bowlestto",
+            "number": 90,
+            "pos": "F",
+            "overall": 73,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -261,31 +1593,31 @@
         ],
         "line2": [
           {
-            "name": "Daniel Pfaffengut",
-            "id": "Daniele Pfaffengen",
-            "number": 77,
+            "name": "Andrej Bires",
+            "id": "Andre Biresven",
+            "number": 88,
             "pos": "F",
-            "overall": 68,
+            "overall": 71,
             "line": 2,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Carter Rowney",
-            "id": "Cartere Rowneyovik",
-            "number": 17,
+            "name": "Davis Koch",
+            "id": "Davisa Kochik",
+            "number": 7,
             "pos": "F",
-            "overall": 69,
+            "overall": 70,
             "line": 2,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Christopher Wilkie",
-            "id": "Christophera Wilkiinov",
-            "number": 84,
+            "name": "Justin Volek",
+            "id": "Justinu Volekinov",
+            "number": 55,
             "pos": "F",
-            "overall": 65,
+            "overall": 72,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -293,9 +1625,9 @@
         ],
         "line3": [
           {
-            "name": "Noah Dunham",
-            "id": "Noahi Dunhamro",
-            "number": 12,
+            "name": "Kevin Handschuh",
+            "id": "Kevine Handschdunov",
+            "number": 34,
             "pos": "F",
             "overall": 66,
             "line": 3,
@@ -303,21 +1635,21 @@
             "rotation": false
           },
           {
-            "name": "Timo Kose",
-            "id": "Time Kosvik",
-            "number": 22,
+            "name": "Lukas Ribarik",
+            "id": "Lukasu Ribarov",
+            "number": 11,
             "pos": "F",
-            "overall": 65,
+            "overall": 67,
             "line": 3,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Jakob Lilja",
-            "id": "Jakobu Liljlek",
-            "number": 10,
+            "name": "Marc El-Sayed",
+            "id": "Marcu ElSaysen",
+            "number": 91,
             "pos": "F",
-            "overall": 68,
+            "overall": 70,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -325,31 +1657,31 @@
         ],
         "line4": [
           {
-            "name": "Matthew Wedman",
-            "id": "Mati Wedmanovik",
-            "number": 67,
+            "name": "Zach Kaiser",
+            "id": "Zachi Kaisdunov",
+            "number": 73,
             "pos": "F",
-            "overall": 63,
+            "overall": 69,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Dennis Lobach",
-            "id": "Dennise Lobachro",
-            "number": 26,
+            "name": "Raphael Jakovlev",
+            "id": "Raphaelo Jakovlov",
+            "number": 17,
             "pos": "F",
-            "overall": 64,
+            "overall": 67,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Markus Schweiger",
-            "id": "Markusu Schweigdunov",
-            "number": 64,
+            "name": "Taylor Vause",
+            "id": "Taylori Vausan",
+            "number": 19,
             "pos": "F",
-            "overall": 63,
+            "overall": 70,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -359,21 +1691,21 @@
       "defense": {
         "pair1": [
           {
-            "name": "Fabio Kose",
-            "id": "Fabio Kosvik",
-            "number": 20,
+            "name": "Marius Erk",
+            "id": "Mariusi Erken",
+            "number": 23,
             "pos": "D",
-            "overall": 67,
+            "overall": 68,
             "line": null,
             "pair": 1,
             "rotation": false
           },
           {
-            "name": "Daniel Wirt",
-            "id": "Daniele Wirtvik",
-            "number": 76,
+            "name": "Justin MacPherson",
+            "id": "Justinu MacPherar",
+            "number": 6,
             "pos": "D",
-            "overall": 64,
+            "overall": 78,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -381,9 +1713,9 @@
         ],
         "pair2": [
           {
-            "name": "Maksim Matushkin",
-            "id": "Makso Matushkov",
-            "number": 52,
+            "name": "Garret Pruden",
+            "id": "Garreta Prudenvik",
+            "number": 15,
             "pos": "D",
             "overall": 67,
             "line": null,
@@ -391,11 +1723,11 @@
             "rotation": false
           },
           {
-            "name": "Tommy Pasanen",
-            "id": "Tommye Pasanen",
-            "number": 16,
+            "name": "Simon Gnyp",
+            "id": "Simona Gnypov",
+            "number": 9,
             "pos": "D",
-            "overall": 61,
+            "overall": 65,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -403,21 +1735,21 @@
         ],
         "pair3": [
           {
-            "name": "Ryan McKiernan",
-            "id": "Ryani McKierntto",
+            "name": "Christopher Fischer",
+            "id": "Christophera Fischven",
             "number": 58,
             "pos": "D",
-            "overall": 60,
+            "overall": 62,
             "line": null,
             "pair": 3,
             "rotation": false
           },
           {
-            "name": "Michael Joyaux",
-            "id": "Michaelo Joyauxtto",
-            "number": 49,
+            "name": "Tjark Kölsch",
+            "id": "Tjarka Kölschov",
+            "number": 16,
             "pos": "D",
-            "overall": 63,
+            "overall": 64,
             "line": null,
             "pair": 3,
             "rotation": false
@@ -425,11 +1757,11 @@
         ],
         "rotation": [
           {
-            "name": "Reid McNeill",
-            "id": "Reida McNeilov",
-            "number": 4,
+            "name": "Xaver Tippmann",
+            "id": "Xavera Tippsen",
+            "number": 43,
             "pos": "D",
-            "overall": 59,
+            "overall": 60,
             "line": null,
             "pair": null,
             "rotation": true
@@ -437,11 +1769,11 @@
         ]
       },
       "goalie": {
-        "name": "Mirko Pantkowski",
-        "id": "Mirke Pantkowsov",
-        "number": 30,
+        "name": "Gerald Kuhn",
+        "id": "Geraldo Kuhnnik",
+        "number": 35,
         "pos": "G",
-        "overall": 85,
+        "overall": 91,
         "line": null,
         "pair": null,
         "rotation": false
@@ -451,11 +1783,11 @@
       "forwards": {
         "line1": [
           {
-            "name": "Miha Verlic",
-            "id": "Miha Verlicinov",
-            "number": 91,
+            "name": "Ziga Jeglic",
+            "id": "Zigi Jeglicen",
+            "number": 13,
             "pos": "F",
-            "overall": 78,
+            "overall": 77,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -471,11 +1803,11 @@
             "rotation": false
           },
           {
-            "name": "Bennet Roßmy",
-            "id": "Bennu Rossmyinov",
-            "number": 73,
+            "name": "Miha Verlic",
+            "id": "Miha Verlicinov",
+            "number": 91,
             "pos": "F",
-            "overall": 75,
+            "overall": 79,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -483,11 +1815,21 @@
         ],
         "line2": [
           {
-            "name": "Ziga Jeglic",
-            "id": "Zigi Jeglicen",
-            "number": 13,
+            "name": "Bennet Roßmy",
+            "id": "Bennu Rossmyinov",
+            "number": 73,
             "pos": "F",
-            "overall": 76,
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Nicolas Krämmer",
+            "id": "Nicolasa Krämmov",
+            "number": 21,
+            "pos": "F",
+            "overall": 75,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -501,35 +1843,25 @@
             "line": 2,
             "pair": null,
             "rotation": false
-          },
-          {
-            "name": "Christian Wejse",
-            "id": "Christiana Wejsen",
-            "number": 65,
-            "pos": "F",
-            "overall": 73,
-            "line": 2,
-            "pair": null,
-            "rotation": false
           }
         ],
         "line3": [
+          {
+            "name": "Nino Kinder",
+            "id": "Nine Kindik",
+            "number": 8,
+            "pos": "F",
+            "overall": 68,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
           {
             "name": "Ross Mauermann",
             "id": "Rossa Mauerven",
             "number": 14,
             "pos": "F",
             "overall": 71,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Nicolas Krämmer",
-            "id": "Nicolasa Krämmov",
-            "number": 21,
-            "pos": "F",
-            "overall": 74,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -547,11 +1879,21 @@
         ],
         "line4": [
           {
-            "name": "Nino Kinder",
-            "id": "Nine Kindik",
-            "number": 8,
+            "name": "Christian Wejse",
+            "id": "Christiana Wejsen",
+            "number": 65,
             "pos": "F",
-            "overall": 68,
+            "overall": 73,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Fabian Herrmann",
+            "id": "Fabianu Herrinov",
+            "number": 25,
+            "pos": "F",
+            "overall": 66,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -565,31 +1907,11 @@
             "line": 4,
             "pair": null,
             "rotation": false
-          },
-          {
-            "name": "Colt Adam Conrad",
-            "id": "Coltu Conradtli",
-            "number": 79,
-            "pos": "F",
-            "overall": 72,
-            "line": 4,
-            "pair": null,
-            "rotation": false
           }
         ]
       },
       "defense": {
         "pair1": [
-          {
-            "name": "Matthew Abt",
-            "id": "Mati Abttli",
-            "number": 42,
-            "pos": "D",
-            "overall": 76,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
           {
             "name": "Ludwig Byström",
             "id": "Ludwu Byströov",
@@ -599,25 +1921,35 @@
             "line": null,
             "pair": 1,
             "rotation": false
+          },
+          {
+            "name": "Rayan Bettahar",
+            "id": "Rayanu Bettahsen",
+            "number": 15,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 1,
+            "rotation": false
           }
         ],
         "pair2": [
-          {
-            "name": "Maxim Rausch",
-            "id": "Maxima Rauschov",
-            "number": 53,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
           {
             "name": "Akito Hirose",
             "id": "Akite Hirosdunov",
             "number": 2,
             "pos": "D",
-            "overall": 74,
+            "overall": 73,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Matthew Abt",
+            "id": "Mati Abttli",
+            "number": 42,
+            "pos": "D",
+            "overall": 76,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -629,15 +1961,15 @@
             "id": "Vlo Emingik",
             "number": 22,
             "pos": "D",
-            "overall": 68,
+            "overall": 69,
             "line": null,
             "pair": 3,
             "rotation": false
           },
           {
-            "name": "Phillip Bruggisser",
-            "id": "Phe Bruggissik",
-            "number": 72,
+            "name": "Maxim Rausch",
+            "id": "Maxima Rauschov",
+            "number": 53,
             "pos": "D",
             "overall": 66,
             "line": null,
@@ -669,1139 +2001,9 @@
         "rotation": false
       }
     },
-    "Kassel Zenit": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Tyler Benson",
-            "id": "Tylera Benik",
-            "number": 17,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Dominic Turgeon",
-            "id": "Dominicu Turgetto",
-            "number": 91,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tristan Keck",
-            "id": "Tristano Keckvik",
-            "number": 71,
-            "pos": "F",
-            "overall": 79,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Darren Mieszkowski",
-            "id": "Darra Mieszkowsovik",
-            "number": 66,
-            "pos": "F",
-            "overall": 72,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Hunter Garlent",
-            "id": "Hunti Garlenar",
-            "number": 65,
-            "pos": "F",
-            "overall": 78,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Michael Bartuli",
-            "id": "Michaelo Bartulin",
-            "number": 27,
-            "pos": "F",
-            "overall": 72,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Clemens Sager",
-            "id": "Clemenso Sagven",
-            "number": 34,
-            "pos": "F",
-            "overall": 65,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jake Weidner",
-            "id": "Jake Weidnar",
-            "number": 11,
-            "pos": "F",
-            "overall": 70,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Maciej Rutkowski",
-            "id": "Macieji Rutkowstli",
-            "number": 12,
-            "pos": "F",
-            "overall": 68,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Yannik Valenti",
-            "id": "Yanno Valentin",
-            "number": 26,
-            "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Laurin Braun",
-            "id": "Laurine Braunovik",
-            "number": 18,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Mitchell Hoelscher",
-            "id": "Mita Hoelschinov",
-            "number": 44,
-            "pos": "F",
-            "overall": 70,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Simon Schütz",
-            "id": "Simona Schützan",
-            "number": 97,
-            "pos": "D",
-            "overall": 70,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Bode Wilde",
-            "id": "Boda Wildven",
-            "number": 4,
-            "pos": "D",
-            "overall": 75,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Andrew Bodnarchuk",
-            "id": "Andrewe Bodnarchro",
-            "number": 10,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Ben Stadler",
-            "id": "Benu Stadldunov",
-            "number": 28,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Tim Bender",
-            "id": "Tima Bendar",
-            "number": 55,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Manuel Schams",
-            "id": "Mano Schamsov",
-            "number": 6,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Marco Müller",
-            "id": "Marca Müllar",
-            "number": 22,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Philipp Maurer",
-        "id": "Phe Maurar",
-        "number": 33,
-        "pos": "G",
-        "overall": 88,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Bad Nauheim Devils": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Julian Lautenschlager",
-            "id": "Juliano Lautenschlagov",
-            "number": 93,
-            "pos": "F",
-            "overall": 74,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jordan Hickmott",
-            "id": "Jorde Hickmotik",
-            "number": 61,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Parker Bowles",
-            "id": "Parkera Bowlestto",
-            "number": 90,
-            "pos": "F",
-            "overall": 73,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Davis Koch",
-            "id": "Davisa Kochik",
-            "number": 7,
-            "pos": "F",
-            "overall": 69,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Andrej Bires",
-            "id": "Andre Biresven",
-            "number": 88,
-            "pos": "F",
-            "overall": 71,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Justin Volek",
-            "id": "Justinu Volekinov",
-            "number": 55,
-            "pos": "F",
-            "overall": 72,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Kevin Handschuh",
-            "id": "Kevine Handschdunov",
-            "number": 34,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Marc El-Sayed",
-            "id": "Marcu ElSaysen",
-            "number": 91,
-            "pos": "F",
-            "overall": 70,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Lukas Ribarik",
-            "id": "Lukasu Ribarov",
-            "number": 11,
-            "pos": "F",
-            "overall": 67,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Raphael Jakovlev",
-            "id": "Raphaelo Jakovlov",
-            "number": 17,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Zach Kaiser",
-            "id": "Zachi Kaisdunov",
-            "number": 73,
-            "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Taylor Vause",
-            "id": "Taylori Vausan",
-            "number": 19,
-            "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Marius Erk",
-            "id": "Mariusi Erken",
-            "number": 23,
-            "pos": "D",
-            "overall": 68,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Justin MacPherson",
-            "id": "Justinu MacPherar",
-            "number": 6,
-            "pos": "D",
-            "overall": 77,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Garret Pruden",
-            "id": "Garreta Prudenvik",
-            "number": 15,
-            "pos": "D",
-            "overall": 65,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Christopher Fischer",
-            "id": "Christophera Fischven",
-            "number": 58,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Simon Gnyp",
-            "id": "Simona Gnypov",
-            "number": 9,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Tjark Kölsch",
-            "id": "Tjarka Kölschov",
-            "number": 16,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Xaver Tippmann",
-            "id": "Xavera Tippsen",
-            "number": 43,
-            "pos": "D",
-            "overall": 63,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Gerald Kuhn",
-        "id": "Geraldo Kuhnnik",
-        "number": 35,
-        "pos": "G",
-        "overall": 92,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Krefeld Kernschlag": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Mathew Santos",
-            "id": "Mathe Santoslek",
-            "number": 95,
-            "pos": "F",
-            "overall": 83,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Marcel Müller",
-            "id": "Marcu Müllar",
-            "number": 9,
-            "pos": "F",
-            "overall": 85,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Max Newton",
-            "id": "Maxe Newtonik",
-            "number": 37,
-            "pos": "F",
-            "overall": 86,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Philip Gogulla",
-            "id": "Philu Gogullik",
-            "number": 87,
-            "pos": "F",
-            "overall": 75,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Daniel Bruch",
-            "id": "Daniele Bruchtto",
-            "number": 26,
-            "pos": "F",
-            "overall": 73,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Adam Payerl",
-            "id": "Adamo Payerlven",
-            "number": 90,
-            "pos": "F",
-            "overall": 74,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Maximilian Hops",
-            "id": "Maximiliana Hopsen",
-            "number": 67,
-            "pos": "F",
-            "overall": 70,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jonathan Matsumoto",
-            "id": "Jonathane Matsumik",
-            "number": 11,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Mark Zengerle",
-            "id": "Marki Zengerlov",
-            "number": 89,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Roope Mäkitalo",
-            "id": "Roopu Mäkitalik",
-            "number": 91,
-            "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tim Schütz",
-            "id": "Tima Schützan",
-            "number": 38,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "David Cerny",
-            "id": "Davida Cernyinov",
-            "number": 29,
-            "pos": "F",
-            "overall": 66,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Mick Köhler",
-            "id": "Micka Köhltli",
-            "number": 77,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Davis Vandane",
-            "id": "Davisa Vandanven",
-            "number": 55,
-            "pos": "D",
-            "overall": 83,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Zack Dybowski",
-            "id": "Zacka Dybowskovik",
-            "number": 44,
-            "pos": "D",
-            "overall": 73,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Carl Konze",
-            "id": "Carlo Konztli",
-            "number": 47,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Steven Raabe",
-            "id": "Stevene Raabik",
-            "number": 41,
-            "pos": "D",
-            "overall": 70,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Oliver Mebus",
-            "id": "Oliveri Mebusov",
-            "number": 22,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Erik Buschmann",
-            "id": "Eriki Buschik",
-            "number": 15,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Felix Bick",
-        "id": "Felixe Bickar",
-        "number": 31,
-        "pos": "G",
-        "overall": 90,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Iserlohn Miners": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Daniel Fischbuch",
-            "id": "Daniele Fischbsen",
-            "number": 71,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Christian Thomas",
-            "id": "Christiana Thomastto",
-            "number": 27,
-            "pos": "F",
-            "overall": 76,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Eric Cornel",
-            "id": "Ericu Cornvik",
-            "number": 18,
-            "pos": "F",
-            "overall": 75,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Tyler Boland",
-            "id": "Tylera Bolandlek",
-            "number": 10,
-            "pos": "F",
-            "overall": 72,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Henrik Törnqvist",
-            "id": "Henrike Törnqvven",
-            "number": 11,
-            "pos": "F",
-            "overall": 69,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Julian Napravnik",
-            "id": "Juliano Napravndunov",
-            "number": 75,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Daniel Neumann",
-            "id": "Daniele Neuven",
-            "number": 22,
-            "pos": "F",
-            "overall": 65,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Noel Saffran",
-            "id": "Noela Saffrro",
-            "number": 14,
-            "pos": "F",
-            "overall": 64,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Taro Jentzsch",
-            "id": "Taro Jentzscven",
-            "number": 90,
-            "pos": "F",
-            "overall": 68,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Eirik Salsten",
-            "id": "Eiriki Salsten",
-            "number": 17,
-            "pos": "F",
-            "overall": 68,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jakub Borzecki",
-            "id": "Jakuba Borzeckro",
-            "number": 29,
-            "pos": "F",
-            "overall": 63,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Daniel Geiger",
-            "id": "Daniele Geigtto",
-            "number": 8,
-            "pos": "F",
-            "overall": 62,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Colin Ugbekile",
-            "id": "Colino Ugbekilov",
-            "number": 79,
-            "pos": "D",
-            "overall": 76,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Kyle Wood",
-            "id": "Kyli Woodik",
-            "number": 3,
-            "pos": "D",
-            "overall": 72,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Lua Niehus",
-            "id": "Lui Niehustto",
-            "number": 26,
-            "pos": "D",
-            "overall": 61,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Nils Elten",
-            "id": "Nilso Eltenovik",
-            "number": 4,
-            "pos": "D",
-            "overall": 65,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Macoy Erkamps",
-            "id": "Macoyi Erkampin",
-            "number": 20,
-            "pos": "D",
-            "overall": 61,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Johannes Huß",
-            "id": "Johe Husstli",
-            "number": 55,
-            "pos": "D",
-            "overall": 62,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Robin Norell",
-            "id": "Robino Norelltto",
-            "number": 56,
-            "pos": "D",
-            "overall": 58,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Andreas Jenike",
-        "id": "Andi Jenikdunov",
-        "number": 92,
-        "pos": "G",
-        "overall": 85,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Wolfsburg Voltsturm": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Spencer Machacek",
-            "id": "Spo Machacven",
-            "number": 93,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Matthew White",
-            "id": "Mati Whitinov",
-            "number": 97,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tyler Gaudet",
-            "id": "Tylera Gaudetvik",
-            "number": 58,
-            "pos": "F",
-            "overall": 77,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Robert Lynch",
-            "id": "Robu Lynchen",
-            "number": 49,
-            "pos": "F",
-            "overall": 75,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Justin Feser",
-            "id": "Justinu Fesik",
-            "number": 71,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jimmy Lambert",
-            "id": "Jimmya Lambersen",
-            "number": 7,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Lucas Dumont",
-            "id": "Lucase Dumontsen",
-            "number": 13,
-            "pos": "F",
-            "overall": 65,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Julian Chrobot",
-            "id": "Juliano Chrobven",
-            "number": 40,
-            "pos": "F",
-            "overall": 74,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jacob Hayhurst",
-            "id": "Jacobe Hayhursan",
-            "number": 15,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Timo Ruckdäschel",
-            "id": "Time Ruckdäschlek",
-            "number": 91,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Luis Schinko",
-            "id": "Luisa Schinktli",
-            "number": 63,
-            "pos": "F",
-            "overall": 68,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Julius Ramoser",
-            "id": "Jule Ramosinov",
-            "number": 50,
-            "pos": "F",
-            "overall": 64,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Keaton Thompson",
-            "id": "Keate Thompov",
-            "number": 4,
-            "pos": "D",
-            "overall": 72,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Julian Melchiori",
-            "id": "Juliano Melchiovik",
-            "number": 44,
-            "pos": "D",
-            "overall": 72,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Jimmy Martinovic",
-            "id": "Jimmya Martinovlek",
-            "number": 28,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Fabio Pfohl",
-            "id": "Fabio Pfohlro",
-            "number": 95,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Leo Hafenrichter",
-            "id": "Lea Hafenrichtik",
-            "number": 29,
-            "pos": "D",
-            "overall": 65,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Janik Möser",
-            "id": "Janika Mösvik",
-            "number": 24,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Ethan Prow",
-            "id": "Ethano Prowovik",
-            "number": 6,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Dustin Strahlmeier",
-        "id": "Dustino Strahlmeiar",
-        "number": 1,
-        "pos": "G",
-        "overall": 90,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
     "Düsseldorf Aurora": {
       "forwards": {
         "line1": [
-          {
-            "name": "Erik Bradford",
-            "id": "Eriki Bradforovik",
-            "number": 22,
-            "pos": "F",
-            "overall": 77,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Ture Linden",
-            "id": "Turo Lindenvik",
-            "number": 71,
-            "pos": "F",
-            "overall": 82,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "Yushiroh Hirano",
             "id": "Yushirohe Hiranik",
@@ -1811,23 +2013,43 @@
             "line": 1,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Ture Linden",
+            "id": "Turo Lindenvik",
+            "number": 71,
+            "pos": "F",
+            "overall": 83,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Erik Bradford",
+            "id": "Eriki Bradforovik",
+            "number": 22,
+            "pos": "F",
+            "overall": 77,
+            "line": 1,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line2": [
           {
-            "name": "Michael Clarke",
-            "id": "Michaelo Clarkov",
-            "number": 18,
+            "name": "Simon Thiel",
+            "id": "Simona Thien",
+            "number": 96,
             "pos": "F",
-            "overall": 68,
+            "overall": 70,
             "line": 2,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Lenny Boos",
-            "id": "Lennya Boosin",
-            "number": 37,
+            "name": "Leon Niederberger",
+            "id": "Leona Niederen",
+            "number": 17,
             "pos": "F",
             "overall": 70,
             "line": 2,
@@ -1847,21 +2069,11 @@
         ],
         "line3": [
           {
-            "name": "Simon Thiel",
-            "id": "Simona Thien",
-            "number": 96,
+            "name": "Lenny Boos",
+            "id": "Lennya Boosin",
+            "number": 37,
             "pos": "F",
-            "overall": 69,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Daniel Assavolyuk",
-            "id": "Daniele Assavolyov",
-            "number": 51,
-            "pos": "F",
-            "overall": 65,
+            "overall": 70,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -1875,15 +2087,25 @@
             "line": 3,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Daniel Assavolyuk",
+            "id": "Daniele Assavolyov",
+            "number": 51,
+            "pos": "F",
+            "overall": 65,
+            "line": 3,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line4": [
           {
-            "name": "Kevin Norén",
-            "id": "Kevine Norénnik",
-            "number": 14,
+            "name": "Michael Clarke",
+            "id": "Michaelo Clarkov",
+            "number": 18,
             "pos": "F",
-            "overall": 65,
+            "overall": 68,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -1893,17 +2115,17 @@
             "id": "Lucase Lessiin",
             "number": 9,
             "pos": "F",
-            "overall": 64,
+            "overall": 63,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Leon Niederberger",
-            "id": "Leona Niederen",
-            "number": 17,
+            "name": "Kevin Norén",
+            "id": "Kevine Norénnik",
+            "number": 14,
             "pos": "F",
-            "overall": 68,
+            "overall": 65,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -1917,7 +2139,7 @@
             "id": "Emilo Quaasov",
             "number": 21,
             "pos": "D",
-            "overall": 68,
+            "overall": 67,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -1935,11 +2157,11 @@
         ],
         "pair2": [
           {
-            "name": "Moritz Kukuk",
-            "id": "Moritzi Kukukin",
-            "number": 26,
+            "name": "Kevin Maginot",
+            "id": "Kevine Magintli",
+            "number": 6,
             "pos": "D",
-            "overall": 66,
+            "overall": 67,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -1949,7 +2171,7 @@
             "id": "Kristianu Blumenschro",
             "number": 8,
             "pos": "D",
-            "overall": 68,
+            "overall": 69,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -1957,21 +2179,21 @@
         ],
         "pair3": [
           {
-            "name": "Nicolas Geitner",
-            "id": "Nicolasa Geitnar",
-            "number": 5,
+            "name": "Moritz Kukuk",
+            "id": "Moritzi Kukukin",
+            "number": 26,
             "pos": "D",
-            "overall": 64,
+            "overall": 66,
             "line": null,
             "pair": 3,
             "rotation": false
           },
           {
-            "name": "Kevin Maginot",
-            "id": "Kevine Magintli",
-            "number": 6,
+            "name": "Nicolas Geitner",
+            "id": "Nicolasa Geitnar",
+            "number": 5,
             "pos": "D",
-            "overall": 66,
+            "overall": 63,
             "line": null,
             "pair": 3,
             "rotation": false
@@ -1983,7 +2205,7 @@
             "id": "Maximiliana Fabar",
             "number": 63,
             "pos": "D",
-            "overall": 68,
+            "overall": 67,
             "line": null,
             "pair": null,
             "rotation": true
@@ -1995,29 +2217,19 @@
         "id": "Nikla Lunear",
         "number": 27,
         "pos": "G",
-        "overall": 83,
+        "overall": 84,
         "line": null,
         "pair": null,
         "rotation": false
       }
     },
-    "Whiteout Berlin": {
+    "Mannheim Ventus": {
       "forwards": {
         "line1": [
           {
-            "name": "Frederik Tiffels",
-            "id": "Fri Tiffelar",
-            "number": 95,
-            "pos": "F",
-            "overall": 85,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Markus Vikingstad",
-            "id": "Markusu Vikingstovik",
-            "number": 37,
+            "name": "Anthony Greco",
+            "id": "Anthonyu Grecan",
+            "number": 44,
             "pos": "F",
             "overall": 83,
             "line": 1,
@@ -2025,11 +2237,21 @@
             "rotation": false
           },
           {
-            "name": "Liam Kirk",
-            "id": "Liamu Kirkven",
-            "number": 94,
+            "name": "Kristian Reichel",
+            "id": "Kristianu Reichlek",
+            "number": 11,
             "pos": "F",
-            "overall": 84,
+            "overall": 82,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Matthias Plachta",
+            "id": "Matthiasu Plachtven",
+            "number": 22,
+            "pos": "F",
+            "overall": 80,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -2037,31 +2259,31 @@
         ],
         "line2": [
           {
-            "name": "Andreas Eder",
-            "id": "Andi Edtli",
-            "number": 43,
+            "name": "Marc Michaelis",
+            "id": "Marcu Michaelsen",
+            "number": 65,
             "pos": "F",
-            "overall": 80,
+            "overall": 81,
             "line": 2,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Leonhard Pföderl",
-            "id": "Leonharda Pfödersen",
-            "number": 93,
+            "name": "Zachary Solow",
+            "id": "Zaco Solowlek",
+            "number": 73,
+            "pos": "F",
+            "overall": 77,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Justin Schütz",
+            "id": "Justinu Schützan",
+            "number": 74,
             "pos": "F",
             "overall": 79,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Ty Ronning",
-            "id": "Tyi Ronninsen",
-            "number": 9,
-            "pos": "F",
-            "overall": 84,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -2069,9 +2291,19 @@
         ],
         "line3": [
           {
-            "name": "Manuel Wiederer",
-            "id": "Mano Wiederik",
-            "number": 21,
+            "name": "Maximilian Heim",
+            "id": "Maximiliana Heimov",
+            "number": 86,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Yannick Proske",
+            "id": "Yannicku Proskov",
+            "number": 27,
             "pos": "F",
             "overall": 71,
             "line": 3,
@@ -2079,19 +2311,9 @@
             "rotation": false
           },
           {
-            "name": "Blaine Byron",
-            "id": "Blainu Byronvik",
-            "number": 23,
-            "pos": "F",
-            "overall": 72,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Marcel Noebels",
-            "id": "Marcu Noebellek",
-            "number": 92,
+            "name": "Alexander Ehl",
+            "id": "Ale Ehlven",
+            "number": 28,
             "pos": "F",
             "overall": 74,
             "line": 3,
@@ -2101,31 +2323,31 @@
         ],
         "line4": [
           {
-            "name": "Lean Bergmann",
-            "id": "Leane Bergen",
-            "number": 10,
+            "name": "Kris Bennett",
+            "id": "Krise Bennettto",
+            "number": 21,
             "pos": "F",
-            "overall": 66,
+            "overall": 75,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Eric Hördler",
-            "id": "Ericu Hördlinov",
-            "number": 77,
+            "name": "Luke Esposito",
+            "id": "Luko Espositov",
+            "number": 19,
             "pos": "F",
-            "overall": 65,
+            "overall": 71,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Yannick Veilleux",
-            "id": "Yannicku Veillenik",
-            "number": 38,
+            "name": "Eric Jonathan Uba",
+            "id": "Ericu Ubtto",
+            "number": 16,
             "pos": "F",
-            "overall": 74,
+            "overall": 63,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -2135,19 +2357,19 @@
       "defense": {
         "pair1": [
           {
-            "name": "Adam Smith",
-            "id": "Adamo Smithar",
-            "number": 4,
+            "name": "Nicolas Mattinen",
+            "id": "Nicolasa Mattinlek",
+            "number": 52,
             "pos": "D",
-            "overall": 69,
+            "overall": 86,
             "line": null,
             "pair": 1,
             "rotation": false
           },
           {
-            "name": "Eric Mik",
-            "id": "Ericu Mikik",
-            "number": 12,
+            "name": "Lukas Kälble",
+            "id": "Lukasu Kälbldunov",
+            "number": 49,
             "pos": "D",
             "overall": 79,
             "line": null,
@@ -2157,21 +2379,21 @@
         ],
         "pair2": [
           {
-            "name": "Matej Leden",
-            "id": "Mateju Ledenov",
-            "number": 33,
+            "name": "Dan Renouf",
+            "id": "Dani Renoufin",
+            "number": 4,
             "pos": "D",
-            "overall": 68,
+            "overall": 75,
             "line": null,
             "pair": 2,
             "rotation": false
           },
           {
-            "name": "Mitchell Reinke",
-            "id": "Mita Reinknik",
-            "number": 5,
+            "name": "Leon Gawanke",
+            "id": "Leona Gawankvik",
+            "number": 9,
             "pos": "D",
-            "overall": 73,
+            "overall": 81,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -2179,21 +2401,21 @@
         ],
         "pair3": [
           {
-            "name": "Norwin Panocha",
-            "id": "Norwinu Panochdunov",
-            "number": 75,
+            "name": "Hayden Shaw",
+            "id": "Haydeno Shawin",
+            "number": 82,
             "pos": "D",
-            "overall": 65,
+            "overall": 69,
             "line": null,
             "pair": 3,
             "rotation": false
           },
           {
-            "name": "Korbinian Geibel",
-            "id": "Korbiniani Geibov",
-            "number": 40,
+            "name": "John Gilmour",
+            "id": "Johne Gilmoik",
+            "number": 7,
             "pos": "D",
-            "overall": 68,
+            "overall": 74,
             "line": null,
             "pair": 3,
             "rotation": false
@@ -2201,11 +2423,11 @@
         ],
         "rotation": [
           {
-            "name": "Jonas Müller",
-            "id": "Jonasu Müllar",
-            "number": 18,
+            "name": "Tobias Fohrler",
+            "id": "Toba Fohrlven",
+            "number": 5,
             "pos": "D",
-            "overall": 67,
+            "overall": 64,
             "line": null,
             "pair": null,
             "rotation": true
@@ -2213,11 +2435,11 @@
         ]
       },
       "goalie": {
-        "name": "Jake Hildebrand",
-        "id": "Jake Hildebrro",
-        "number": 30,
+        "name": "Maximilian Franzreb",
+        "id": "Maximiliana Franzrnik",
+        "number": 56,
         "pos": "G",
-        "overall": 91,
+        "overall": 88,
         "line": null,
         "pair": null,
         "rotation": false
@@ -2227,21 +2449,11 @@
       "forwards": {
         "line1": [
           {
-            "name": "Erik Jinesjö Karlsson",
-            "id": "Eriki Karlsdunov",
-            "number": 19,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
             "name": "Robbie Czarnik",
             "id": "Robbii Czarnvik",
             "number": 77,
             "pos": "F",
-            "overall": 82,
+            "overall": 85,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -2251,7 +2463,17 @@
             "id": "Marki Rasselnik",
             "number": 92,
             "pos": "F",
-            "overall": 88,
+            "overall": 89,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Erik Jinesjö Karlsson",
+            "id": "Eriki Karlsdunov",
+            "number": 19,
+            "pos": "F",
+            "overall": 82,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -2259,9 +2481,9 @@
         ],
         "line2": [
           {
-            "name": "Alex-Olivier Voyer",
-            "id": "Ale Voyinov",
-            "number": 42,
+            "name": "Fabio Sarto",
+            "id": "Fabio Sartven",
+            "number": 9,
             "pos": "F",
             "overall": 67,
             "line": 2,
@@ -2273,7 +2495,7 @@
             "id": "Nicu Lattvik",
             "number": 14,
             "pos": "F",
-            "overall": 69,
+            "overall": 70,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -2290,16 +2512,6 @@
           }
         ],
         "line3": [
-          {
-            "name": "Fabio Sarto",
-            "id": "Fabio Sartven",
-            "number": 9,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "Thomas Reichel",
             "id": "Thoma Reichlek",
@@ -2319,19 +2531,19 @@
             "line": 3,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Anselm Gerg",
+            "id": "Anso Gergik",
+            "number": 15,
+            "pos": "F",
+            "overall": 63,
+            "line": 3,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line4": [
-          {
-            "name": "Marvin Schmid",
-            "id": "Marvino Schmidtto",
-            "number": 13,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "Nikita Kessler",
             "id": "Niki Kesslinov",
@@ -2351,27 +2563,37 @@
             "line": 4,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Marvin Schmid",
+            "id": "Marvino Schmidtto",
+            "number": 13,
+            "pos": "F",
+            "overall": 66,
+            "line": 4,
+            "pair": null,
+            "rotation": false
           }
         ]
       },
       "defense": {
         "pair1": [
           {
-            "name": "Julian Eichinger",
-            "id": "Juliano Eichinglek",
-            "number": 91,
+            "name": "Simon Sezemsky",
+            "id": "Simona Sezemsktli",
+            "number": 93,
             "pos": "D",
-            "overall": 72,
+            "overall": 74,
             "line": null,
             "pair": 1,
             "rotation": false
           },
           {
-            "name": "Simon Sezemsky",
-            "id": "Simona Sezemsktli",
-            "number": 93,
+            "name": "Julian Eichinger",
+            "id": "Juliano Eichinglek",
+            "number": 91,
             "pos": "D",
-            "overall": 73,
+            "overall": 72,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -2383,7 +2605,7 @@
             "id": "Denise Pfaffengen",
             "number": 76,
             "pos": "D",
-            "overall": 69,
+            "overall": 71,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -2393,7 +2615,7 @@
             "id": "Flora Ketteren",
             "number": 16,
             "pos": "D",
-            "overall": 67,
+            "overall": 68,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -2401,21 +2623,21 @@
         ],
         "pair3": [
           {
-            "name": "Ryan Odude",
-            "id": "Ryani Odudar",
-            "number": 79,
+            "name": "Philipp Mass",
+            "id": "Phe Massovik",
+            "number": 25,
             "pos": "D",
-            "overall": 63,
+            "overall": 67,
             "line": null,
             "pair": 3,
             "rotation": false
           },
           {
-            "name": "Philipp Mass",
-            "id": "Phe Massovik",
-            "number": 25,
+            "name": "Ryan Odude",
+            "id": "Ryani Odudar",
+            "number": 79,
             "pos": "D",
-            "overall": 66,
+            "overall": 64,
             "line": null,
             "pair": 3,
             "rotation": false
@@ -2439,7 +2661,895 @@
         "id": "Ilye Sharipovik",
         "number": 43,
         "pos": "G",
-        "overall": 86,
+        "overall": 85,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Augsburg Ferox": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Alexander Blank",
+            "id": "Ale Blankov",
+            "number": 26,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Donald D.J. Busdeker",
+            "id": "Dono Busdekvik",
+            "number": 14,
+            "pos": "F",
+            "overall": 83,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Alexandre Grenier",
+            "id": "Ale Greniov",
+            "number": 82,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Riley Damiani",
+            "id": "Rileyu Damiansen",
+            "number": 19,
+            "pos": "F",
+            "overall": 77,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tim Wohlgemuth",
+            "id": "Tima Wohlgemtto",
+            "number": 33,
+            "pos": "F",
+            "overall": 77,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Anthony Louis",
+            "id": "Anthonyu Louisovik",
+            "number": 18,
+            "pos": "F",
+            "overall": 77,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Florian Elias",
+            "id": "Floriani Eliasov",
+            "number": 67,
+            "pos": "F",
+            "overall": 65,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Moritz Elias",
+            "id": "Moritzi Eliasov",
+            "number": 46,
+            "pos": "F",
+            "overall": 65,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Cody Kunyk",
+            "id": "Codye Kunyken",
+            "number": 20,
+            "pos": "F",
+            "overall": 73,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Christian Hanke",
+            "id": "Christiana Hankov",
+            "number": 25,
+            "pos": "F",
+            "overall": 65,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Enrico Henriquez Morales",
+            "id": "Enra Moralin",
+            "number": 52,
+            "pos": "F",
+            "overall": 66,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Joseph Cramarossa",
+            "id": "Josephu Cramarosan",
+            "number": 92,
+            "pos": "F",
+            "overall": 68,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Kyle Mayhew",
+            "id": "Kyli Mayhewtli",
+            "number": 27,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Madison Bowey",
+            "id": "Madisoni Boweydunov",
+            "number": 22,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Leon van der Linde",
+            "id": "Leona Lindlek",
+            "number": 43,
+            "pos": "D",
+            "overall": 64,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Fabrizio Pilu",
+            "id": "Fabi Pilen",
+            "number": 68,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Ryan Button",
+            "id": "Ryani Buttonan",
+            "number": 55,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Thomas Schemitsch",
+            "id": "Thoma Schemitsik",
+            "number": 62,
+            "pos": "D",
+            "overall": 68,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Maximilian Renner",
+            "id": "Maximiliana Rennov",
+            "number": 58,
+            "pos": "D",
+            "overall": 63,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Michael Garteig",
+        "id": "Michaelo Garteov",
+        "number": 34,
+        "pos": "G",
+        "overall": 85,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "München FluxBullen": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Adam Brooks",
+            "id": "Adamo Brooksovik",
+            "number": 77,
+            "pos": "F",
+            "overall": 80,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Taro Hirose",
+            "id": "Taro Hirosdunov",
+            "number": 17,
+            "pos": "F",
+            "overall": 85,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tobias Rieder",
+            "id": "Toba Riedinov",
+            "number": 8,
+            "pos": "F",
+            "overall": 78,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Patrick Hager",
+            "id": "Pata Hagik",
+            "number": 52,
+            "pos": "F",
+            "overall": 76,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Yasin Ehliz",
+            "id": "Yasino Ehlizov",
+            "number": 42,
+            "pos": "F",
+            "overall": 76,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jeremy McKenna",
+            "id": "Jeri McKennven",
+            "number": 91,
+            "pos": "F",
+            "overall": 76,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Gabriel Fontaine",
+            "id": "Gabo Fontaintto",
+            "number": 97,
+            "pos": "F",
+            "overall": 75,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Veit Oswald",
+            "id": "Veita Oswalddunov",
+            "number": 27,
+            "pos": "F",
+            "overall": 75,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Markus Eisenschmid",
+            "id": "Markusu Eisenschmlek",
+            "number": 11,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Maximilian Kastner",
+            "id": "Maximiliana Kastnlek",
+            "number": 93,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Philipp Krening",
+            "id": "Phe Krenindunov",
+            "number": 79,
+            "pos": "F",
+            "overall": 68,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Brady Ferguson",
+            "id": "Bradya Ferguinov",
+            "number": 12,
+            "pos": "F",
+            "overall": 72,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Konrad Abeltshauser",
+            "id": "Konradu Abeltshausdunov",
+            "number": 16,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Ryan Murphy",
+            "id": "Ryani Murphyro",
+            "number": 24,
+            "pos": "D",
+            "overall": 76,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Ville Pokka",
+            "id": "Villa Pokkvik",
+            "number": 22,
+            "pos": "D",
+            "overall": 76,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Dillon Heatherington",
+            "id": "Dille Heatheringttto",
+            "number": 95,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Phillip Sinn",
+            "id": "Phe Sinnov",
+            "number": 43,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Fabio Wagner",
+            "id": "Fabio Wagnov",
+            "number": 55,
+            "pos": "D",
+            "overall": 70,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Maximilian Daubner",
+            "id": "Maximiliana Daubndunov",
+            "number": 70,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Antoine Bibeau",
+        "id": "Anto Bibeaovik",
+        "number": 30,
+        "pos": "G",
+        "overall": 84,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Straubing Forest Tigers": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Justin Scott",
+            "id": "Justinu Scottro",
+            "number": 20,
+            "pos": "F",
+            "overall": 79,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Nicholas Halloran",
+            "id": "Nicholasu Hallorar",
+            "number": 71,
+            "pos": "F",
+            "overall": 86,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Elis Hede",
+            "id": "Elisu Hedov",
+            "number": 75,
+            "pos": "F",
+            "overall": 81,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Stefan Loibl",
+            "id": "Stefane Loibldunov",
+            "number": 38,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tim Fleischer",
+            "id": "Tima Fleischtto",
+            "number": 91,
+            "pos": "F",
+            "overall": 75,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Wade Allison",
+            "id": "Wadi Alliven",
+            "number": 88,
+            "pos": "F",
+            "overall": 76,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Josh Melnick",
+            "id": "Joshe Melnicov",
+            "number": 37,
+            "pos": "F",
+            "overall": 73,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Danjo Leonhardt",
+            "id": "Danju Leonharik",
+            "number": 53,
+            "pos": "F",
+            "overall": 75,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Filip Varejcka",
+            "id": "Filipi Varejckov",
+            "number": 90,
+            "pos": "F",
+            "overall": 74,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Linus Brandl",
+            "id": "Linusa Brandlik",
+            "number": 73,
+            "pos": "F",
+            "overall": 65,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tim Brunnhuber",
+            "id": "Tima Brunnhubinov",
+            "number": 19,
+            "pos": "F",
+            "overall": 70,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Skyler McKenzie",
+            "id": "Skyle McKenzvik",
+            "number": 86,
+            "pos": "F",
+            "overall": 70,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Stephan Daschner",
+            "id": "Stephana Daschnov",
+            "number": 9,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Marcel Brandt",
+            "id": "Marcu Brandtin",
+            "number": 92,
+            "pos": "D",
+            "overall": 82,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Nicolas Beaudin",
+            "id": "Nicolasa Beaudan",
+            "number": 7,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Alex Green",
+            "id": "Alexe Greenar",
+            "number": 6,
+            "pos": "D",
+            "overall": 74,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Mario Zimmermann",
+            "id": "Marie Zimmerar",
+            "number": 13,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Adrian Klein",
+            "id": "Adriano Kleintli",
+            "number": 17,
+            "pos": "D",
+            "overall": 71,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Zachary James Leslie",
+            "id": "Zaco Leslinik",
+            "number": 8,
+            "pos": "D",
+            "overall": 70,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Henrik Haukeland",
+        "id": "Henrike Haukelik",
+        "number": 40,
+        "pos": "G",
+        "overall": 91,
+        "line": null,
+        "pair": null,
+        "rotation": false
+      }
+    },
+    "Schwenningen Sturmflügel": {
+      "forwards": {
+        "line1": [
+          {
+            "name": "Tyson Spink",
+            "id": "Tysono Spinkar",
+            "number": 96,
+            "pos": "F",
+            "overall": 76,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Zach Senyshyn",
+            "id": "Zachi Senyshyro",
+            "number": 89,
+            "pos": "F",
+            "overall": 77,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Tylor Spink",
+            "id": "Tylora Spinkar",
+            "number": 90,
+            "pos": "F",
+            "overall": 73,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line2": [
+          {
+            "name": "Kyle Platzer",
+            "id": "Kyli Platzov",
+            "number": 88,
+            "pos": "F",
+            "overall": 73,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Alexander Karachun",
+            "id": "Ale Karachinov",
+            "number": 47,
+            "pos": "F",
+            "overall": 69,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Daniel O'Regan",
+            "id": "Daniele OReganovik",
+            "number": 11,
+            "pos": "F",
+            "overall": 74,
+            "line": 2,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line3": [
+          {
+            "name": "Mirko Höfflin",
+            "id": "Mirke Höfflro",
+            "number": 10,
+            "pos": "F",
+            "overall": 68,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Phil Hungerecker",
+            "id": "Philu Hungereckdunov",
+            "number": 94,
+            "pos": "F",
+            "overall": 71,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Jordan Szwarz",
+            "id": "Jorde Szwarzar",
+            "number": 14,
+            "pos": "F",
+            "overall": 71,
+            "line": 3,
+            "pair": null,
+            "rotation": false
+          }
+        ],
+        "line4": [
+          {
+            "name": "Boaz Bassen",
+            "id": "Boazo Basov",
+            "number": 64,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Sebastian Uvira",
+            "id": "Sebu Uvirtli",
+            "number": 93,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Håkon Hänelt",
+            "id": "Håkone Häneltik",
+            "number": 19,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
+          }
+        ]
+      },
+      "defense": {
+        "pair1": [
+          {
+            "name": "Eric Martinsson",
+            "id": "Ericu Martinstli",
+            "number": 46,
+            "pos": "D",
+            "overall": 73,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          },
+          {
+            "name": "Niklas Hübner",
+            "id": "Nikla Hübndunov",
+            "number": 72,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 1,
+            "rotation": false
+          }
+        ],
+        "pair2": [
+          {
+            "name": "Alex Trivellato",
+            "id": "Alexe Trivellvik",
+            "number": 53,
+            "pos": "D",
+            "overall": 69,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          },
+          {
+            "name": "Thomas Larkin",
+            "id": "Thoma Larkinik",
+            "number": 37,
+            "pos": "D",
+            "overall": 68,
+            "line": null,
+            "pair": 2,
+            "rotation": false
+          }
+        ],
+        "pair3": [
+          {
+            "name": "Arkadiusz Dziambor",
+            "id": "Arko Dziambovik",
+            "number": 16,
+            "pos": "D",
+            "overall": 67,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Dominik Bittner",
+            "id": "Dominiki Bittnlek",
+            "number": 7,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          }
+        ],
+        "rotation": [
+          {
+            "name": "Benjamin Marshall",
+            "id": "Benu Marshaltto",
+            "number": 54,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": null,
+            "rotation": true
+          }
+        ]
+      },
+      "goalie": {
+        "name": "Joacim Eriksson",
+        "id": "Joacimi Erikstli",
+        "number": 60,
+        "pos": "G",
+        "overall": 92,
         "line": null,
         "pair": null,
         "rotation": false
@@ -2449,9 +3559,9 @@
       "forwards": {
         "line1": [
           {
-            "name": "Tobias Lindberg",
-            "id": "Toba Lindvik",
-            "number": 9,
+            "name": "Tor Immo",
+            "id": "Tore Immvik",
+            "number": 62,
             "pos": "F",
             "overall": 84,
             "line": 1,
@@ -2459,9 +3569,9 @@
             "rotation": false
           },
           {
-            "name": "Tor Immo",
-            "id": "Tore Immvik",
-            "number": 62,
+            "name": "Tobias Lindberg",
+            "id": "Toba Lindvik",
+            "number": 9,
             "pos": "F",
             "overall": 85,
             "line": 1,
@@ -2469,27 +3579,17 @@
             "rotation": false
           },
           {
-            "name": "Trevor Gooch",
-            "id": "Trevu Goochan",
-            "number": 72,
+            "name": "Jesse Koskenkorva",
+            "id": "Jesso Koskenkornik",
+            "number": 51,
             "pos": "F",
-            "overall": 84,
+            "overall": 78,
             "line": 1,
             "pair": null,
             "rotation": false
           }
         ],
         "line2": [
-          {
-            "name": "Jesse Koskenkorva",
-            "id": "Jesso Koskenkornik",
-            "number": 51,
-            "pos": "F",
-            "overall": 78,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "David Elsner",
             "id": "Davida Elsninov",
@@ -2509,19 +3609,19 @@
             "line": 2,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Tobias Schwarz",
+            "id": "Toba Schwardunov",
+            "number": 95,
+            "pos": "F",
+            "overall": 72,
+            "line": 2,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line3": [
-          {
-            "name": "Simon Seidl",
-            "id": "Simona Seidlar",
-            "number": 17,
-            "pos": "F",
-            "overall": 68,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "Julian Kornelli",
             "id": "Juliano Kornelllek",
@@ -2541,6 +3641,16 @@
             "line": 3,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Simon Seidl",
+            "id": "Simona Seidlar",
+            "number": 17,
+            "pos": "F",
+            "overall": 68,
+            "line": 3,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line4": [
@@ -2549,7 +3659,7 @@
             "id": "Sei Parkdunov",
             "number": 96,
             "pos": "F",
-            "overall": 66,
+            "overall": 65,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -2583,7 +3693,7 @@
             "id": "Stanislave Dietzlek",
             "number": 67,
             "pos": "D",
-            "overall": 75,
+            "overall": 74,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -2661,451 +3771,7 @@
         "id": "Phe Dietldunov",
         "number": 29,
         "pos": "G",
-        "overall": 84,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "München FluxBullen": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Adam Brooks",
-            "id": "Adamo Brooksovik",
-            "number": 77,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Taro Hirose",
-            "id": "Taro Hirosdunov",
-            "number": 17,
-            "pos": "F",
-            "overall": 85,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tobias Rieder",
-            "id": "Toba Riedinov",
-            "number": 8,
-            "pos": "F",
-            "overall": 78,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Patrick Hager",
-            "id": "Pata Hagik",
-            "number": 52,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Yasin Ehliz",
-            "id": "Yasino Ehlizov",
-            "number": 42,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jeremy McKenna",
-            "id": "Jeri McKennven",
-            "number": 91,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Gabriel Fontaine",
-            "id": "Gabo Fontaintto",
-            "number": 97,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Veit Oswald",
-            "id": "Veita Oswalddunov",
-            "number": 27,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Markus Eisenschmid",
-            "id": "Markusu Eisenschmlek",
-            "number": 11,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Philipp Krening",
-            "id": "Phe Krenindunov",
-            "number": 79,
-            "pos": "F",
-            "overall": 68,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Maximilian Kastner",
-            "id": "Maximiliana Kastnlek",
-            "number": 93,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Brady Ferguson",
-            "id": "Bradya Ferguinov",
-            "number": 12,
-            "pos": "F",
-            "overall": 72,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Konrad Abeltshauser",
-            "id": "Konradu Abeltshausdunov",
-            "number": 16,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Ryan Murphy",
-            "id": "Ryani Murphyro",
-            "number": 24,
-            "pos": "D",
-            "overall": 77,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Ville Pokka",
-            "id": "Villa Pokkvik",
-            "number": 22,
-            "pos": "D",
-            "overall": 76,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Dillon Heatherington",
-            "id": "Dille Heatheringttto",
-            "number": 95,
-            "pos": "D",
-            "overall": 73,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Fabio Wagner",
-            "id": "Fabio Wagnov",
-            "number": 55,
-            "pos": "D",
-            "overall": 70,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Phillip Sinn",
-            "id": "Phe Sinnov",
-            "number": 43,
-            "pos": "D",
-            "overall": 67,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Maximilian Daubner",
-            "id": "Maximiliana Daubndunov",
-            "number": 70,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Antoine Bibeau",
-        "id": "Anto Bibeaovik",
-        "number": 30,
-        "pos": "G",
-        "overall": 84,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Nürnberg Eistiger": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Evan Barratt",
-            "id": "Evane Barrattto",
-            "number": 10,
-            "pos": "F",
-            "overall": 83,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tyler Spezia",
-            "id": "Tylera Spezitto",
-            "number": 37,
-            "pos": "F",
-            "overall": 82,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Brett Murray",
-            "id": "Bretta Murraytto",
-            "number": 81,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Thomas Heigl",
-            "id": "Thoma Heiglik",
-            "number": 49,
-            "pos": "F",
-            "overall": 78,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Samuel Dove-McFalls",
-            "id": "Samueli DoveMcFalan",
-            "number": 75,
-            "pos": "F",
-            "overall": 79,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Cole Maier",
-            "id": "Colu Maiar",
-            "number": 14,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Greg Meireles",
-            "id": "Grege Meirelvik",
-            "number": 43,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Roman Kechter",
-            "id": "Romane Kechtov",
-            "number": 73,
-            "pos": "F",
-            "overall": 68,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jakob Ustorf",
-            "id": "Jakobu Ustorfin",
-            "number": 48,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Charlie Gerard",
-            "id": "Cha Gerardar",
-            "number": 95,
-            "pos": "F",
-            "overall": 73,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Josef Eham",
-            "id": "Josefa Ehamtli",
-            "number": 44,
-            "pos": "F",
-            "overall": 63,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Luis Üffing",
-            "id": "Luisa Üffingvik",
-            "number": 42,
-            "pos": "F",
-            "overall": 63,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Jakob Weber",
-            "id": "Jakobu Webik",
-            "number": 41,
-            "pos": "D",
-            "overall": 75,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Julius Karrer",
-            "id": "Jule Karrsen",
-            "number": 6,
-            "pos": "D",
-            "overall": 72,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Marcus Weber",
-            "id": "Marcuse Webik",
-            "number": 24,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Constantin Braun",
-            "id": "Constantinu Braunovik",
-            "number": 90,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Justus Böttner",
-            "id": "Justu Böttninov",
-            "number": 9,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Owen Headrick",
-            "id": "Owene Headricik",
-            "number": 47,
-            "pos": "D",
-            "overall": 73,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Cody Haiskanen",
-            "id": "Codye Haiskanov",
-            "number": 74,
-            "pos": "D",
-            "overall": 65,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Niklas Treutle",
-        "id": "Nikla Treutlven",
-        "number": 31,
-        "pos": "G",
-        "overall": 89,
+        "overall": 85,
         "line": null,
         "pair": null,
         "rotation": false
@@ -3115,21 +3781,11 @@
       "forwards": {
         "line1": [
           {
-            "name": "Kevin Slezak",
-            "id": "Kevine Slezakdunov",
-            "number": 81,
-            "pos": "F",
-            "overall": 75,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
             "name": "Corey Trivino",
             "id": "Coreye Trivinov",
             "number": 86,
             "pos": "F",
-            "overall": 77,
+            "overall": 76,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -3139,7 +3795,17 @@
             "id": "Pierri Proti",
             "number": 36,
             "pos": "F",
-            "overall": 78,
+            "overall": 77,
+            "line": 1,
+            "pair": null,
+            "rotation": false
+          },
+          {
+            "name": "Kevin Slezak",
+            "id": "Kevine Slezakdunov",
+            "number": 81,
+            "pos": "F",
+            "overall": 74,
             "line": 1,
             "pair": null,
             "rotation": false
@@ -3193,7 +3859,7 @@
             "id": "Alexe Berardinelik",
             "number": 7,
             "pos": "F",
-            "overall": 73,
+            "overall": 72,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -3245,16 +3911,6 @@
       "defense": {
         "pair1": [
           {
-            "name": "Maximilian Merkl",
-            "id": "Maximiliana Merklov",
-            "number": 18,
-            "pos": "D",
-            "overall": 66,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
             "name": "Sean Giles",
             "id": "Seano Gilestto",
             "number": 28,
@@ -3263,19 +3919,19 @@
             "line": null,
             "pair": 1,
             "rotation": false
+          },
+          {
+            "name": "Marian Bauer",
+            "id": "Mara Baudunov",
+            "number": 11,
+            "pos": "D",
+            "overall": 66,
+            "line": null,
+            "pair": 1,
+            "rotation": false
           }
         ],
         "pair2": [
-          {
-            "name": "Pascal Zerressen",
-            "id": "Pasco Zerresvik",
-            "number": 16,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
           {
             "name": "Guillaume Naud",
             "id": "Guillauma Naudlek",
@@ -3285,13 +3941,23 @@
             "line": null,
             "pair": 2,
             "rotation": false
+          },
+          {
+            "name": "Maximilian Merkl",
+            "id": "Maximiliana Merklov",
+            "number": 18,
+            "pos": "D",
+            "overall": 65,
+            "line": null,
+            "pair": 2,
+            "rotation": false
           }
         ],
         "pair3": [
           {
-            "name": "Nick Mähler",
-            "id": "Nicke Mählar",
-            "number": 29,
+            "name": "Pascal Zerressen",
+            "id": "Pasco Zerresvik",
+            "number": 16,
             "pos": "D",
             "overall": 64,
             "line": null,
@@ -3333,241 +3999,9 @@
         "rotation": false
       }
     },
-    "Augsburg Ferox": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Donald D.J. Busdeker",
-            "id": "Dono Busdekvik",
-            "number": 14,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Alexandre Grenier",
-            "id": "Ale Greniov",
-            "number": 82,
-            "pos": "F",
-            "overall": 81,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Alexander Blank",
-            "id": "Ale Blankov",
-            "number": 26,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Riley Damiani",
-            "id": "Rileyu Damiansen",
-            "number": 19,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tim Wohlgemuth",
-            "id": "Tima Wohlgemtto",
-            "number": 33,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Anthony Louis",
-            "id": "Anthonyu Louisovik",
-            "number": 18,
-            "pos": "F",
-            "overall": 77,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Enrico Henriquez Morales",
-            "id": "Enra Moralin",
-            "number": 52,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Florian Elias",
-            "id": "Floriani Eliasov",
-            "number": 67,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Moritz Elias",
-            "id": "Moritzi Eliasov",
-            "number": 46,
-            "pos": "F",
-            "overall": 66,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Christian Hanke",
-            "id": "Christiana Hankov",
-            "number": 25,
-            "pos": "F",
-            "overall": 65,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Cody Kunyk",
-            "id": "Codye Kunyken",
-            "number": 20,
-            "pos": "F",
-            "overall": 72,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Joseph Cramarossa",
-            "id": "Josephu Cramarosan",
-            "number": 92,
-            "pos": "F",
-            "overall": 68,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Kyle Mayhew",
-            "id": "Kyli Mayhewtli",
-            "number": 27,
-            "pos": "D",
-            "overall": 72,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Madison Bowey",
-            "id": "Madisoni Boweydunov",
-            "number": 22,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Thomas Schemitsch",
-            "id": "Thoma Schemitsik",
-            "number": 62,
-            "pos": "D",
-            "overall": 68,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Leon van der Linde",
-            "id": "Leona Lindlek",
-            "number": 43,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Ryan Button",
-            "id": "Ryani Buttonan",
-            "number": 55,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Moritz Wirth",
-            "id": "Moritzi Wirthnik",
-            "number": 9,
-            "pos": "D",
-            "overall": 62,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Maximilian Renner",
-            "id": "Maximiliana Rennov",
-            "number": 58,
-            "pos": "D",
-            "overall": 62,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Michael Garteig",
-        "id": "Michaelo Garteov",
-        "number": 34,
-        "pos": "G",
-        "overall": 85,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
     "Novadelta Panther": {
       "forwards": {
         "line1": [
-          {
-            "name": "Kenny Agostino",
-            "id": "Ken Agostinov",
-            "number": 11,
-            "pos": "F",
-            "overall": 89,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
           {
             "name": "Myles Powell",
             "id": "Mils Powlek",
@@ -3587,6 +4021,16 @@
             "line": 1,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Kenny Agostino",
+            "id": "Ken Agostinov",
+            "number": 11,
+            "pos": "F",
+            "overall": 89,
+            "line": 1,
+            "pair": null,
+            "rotation": false
           }
         ],
         "line2": [
@@ -3595,7 +4039,7 @@
             "id": "Dano Schmolik",
             "number": 92,
             "pos": "F",
-            "overall": 84,
+            "overall": 83,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -3623,19 +4067,19 @@
         ],
         "line3": [
           {
-            "name": "Peter Abbandonato",
-            "id": "Peteru Abbandoninov",
-            "number": 98,
+            "name": "Daniel Pietta",
+            "id": "Dan Pietto",
+            "number": 86,
             "pos": "F",
-            "overall": 80,
+            "overall": 79,
             "line": 3,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Daniel Pietta",
-            "id": "Dan Pietto",
-            "number": 86,
+            "name": "Peter Abbandonato",
+            "id": "Peteru Abbandoninov",
+            "number": 98,
             "pos": "F",
             "overall": 79,
             "line": 3,
@@ -3659,17 +4103,7 @@
             "id": "Johan Krausen",
             "number": 16,
             "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Philipp Krauß",
-            "id": "Filip Krausen",
-            "number": 8,
-            "pos": "F",
-            "overall": 67,
+            "overall": 68,
             "line": 4,
             "pair": null,
             "rotation": false
@@ -3683,27 +4117,37 @@
             "line": 4,
             "pair": null,
             "rotation": false
+          },
+          {
+            "name": "Philipp Krauß",
+            "id": "Filip Krausen",
+            "number": 8,
+            "pos": "F",
+            "overall": 67,
+            "line": 4,
+            "pair": null,
+            "rotation": false
           }
         ]
       },
       "defense": {
         "pair1": [
           {
-            "name": "Alex Breton",
-            "id": "Aleks Bratan",
-            "number": 75,
+            "name": "Leon Hüttl",
+            "id": "Leo Hütten",
+            "number": 25,
             "pos": "D",
-            "overall": 89,
+            "overall": 81,
             "line": null,
             "pair": 1,
             "rotation": false
           },
           {
-            "name": "Morgan Ellis",
-            "id": "Morgon Elvik",
-            "number": 4,
+            "name": "Alex Breton",
+            "id": "Aleks Bratan",
+            "number": 75,
             "pos": "D",
-            "overall": 79,
+            "overall": 89,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -3721,11 +4165,11 @@
             "rotation": false
           },
           {
-            "name": "Leon Hüttl",
-            "id": "Leo Hütten",
-            "number": 25,
+            "name": "Morgan Ellis",
+            "id": "Morgon Elvik",
+            "number": 4,
             "pos": "D",
-            "overall": 81,
+            "overall": 78,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -3733,21 +4177,21 @@
         ],
         "pair3": [
           {
-            "name": "Philip Rosa-Preto",
-            "id": "Philu Proti",
-            "number": 95,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
             "name": "Edwin Tropmann",
             "id": "Edwin Tropov",
             "number": 55,
             "pos": "D",
             "overall": 68,
+            "line": null,
+            "pair": 3,
+            "rotation": false
+          },
+          {
+            "name": "Philip Rosa-Preto",
+            "id": "Philu Proti",
+            "number": 95,
+            "pos": "D",
+            "overall": 69,
             "line": null,
             "pair": 3,
             "rotation": false
@@ -3771,261 +4215,39 @@
         "id": "Bret Brokan",
         "number": 36,
         "pos": "G",
-        "overall": 85,
+        "overall": 84,
         "line": null,
         "pair": null,
         "rotation": false
       }
     },
-    "Straubing Forest Tigers": {
+    "Nürnberg Eistiger": {
       "forwards": {
         "line1": [
           {
-            "name": "Nicholas Halloran",
-            "id": "Nicholasu Hallorar",
-            "number": 71,
+            "name": "Evan Barratt",
+            "id": "Evane Barrattto",
+            "number": 10,
             "pos": "F",
-            "overall": 85,
+            "overall": 82,
             "line": 1,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Tyler Madden",
-            "id": "Tylera Maddenro",
-            "number": 18,
-            "pos": "F",
-            "overall": 78,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Justin Scott",
-            "id": "Justinu Scottro",
-            "number": 20,
-            "pos": "F",
-            "overall": 78,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Tim Fleischer",
-            "id": "Tima Fleischtto",
-            "number": 91,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Stefan Loibl",
-            "id": "Stefane Loibldunov",
-            "number": 38,
-            "pos": "F",
-            "overall": 75,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Wade Allison",
-            "id": "Wadi Alliven",
-            "number": 88,
-            "pos": "F",
-            "overall": 76,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Filip Varejcka",
-            "id": "Filipi Varejckov",
-            "number": 90,
-            "pos": "F",
-            "overall": 75,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Danjo Leonhardt",
-            "id": "Danju Leonharik",
-            "number": 53,
-            "pos": "F",
-            "overall": 74,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Josh Melnick",
-            "id": "Joshe Melnicov",
+            "name": "Tyler Spezia",
+            "id": "Tylera Spezitto",
             "number": 37,
             "pos": "F",
-            "overall": 73,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Tim Brunnhuber",
-            "id": "Tima Brunnhubinov",
-            "number": 19,
-            "pos": "F",
-            "overall": 70,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Skyler McKenzie",
-            "id": "Skyle McKenzvik",
-            "number": 86,
-            "pos": "F",
-            "overall": 69,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Linus Brandl",
-            "id": "Linusa Brandlik",
-            "number": 73,
-            "pos": "F",
-            "overall": 65,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Stephan Daschner",
-            "id": "Stephana Daschnov",
-            "number": 9,
-            "pos": "D",
-            "overall": 73,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Marcel Brandt",
-            "id": "Marcu Brandtin",
-            "number": 92,
-            "pos": "D",
-            "overall": 83,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Nicolas Beaudin",
-            "id": "Nicolasa Beaudan",
-            "number": 7,
-            "pos": "D",
-            "overall": 71,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Alex Green",
-            "id": "Alexe Greenar",
-            "number": 6,
-            "pos": "D",
-            "overall": 74,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "Adrian Klein",
-            "id": "Adriano Kleintli",
-            "number": 17,
-            "pos": "D",
-            "overall": 70,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Mario Zimmermann",
-            "id": "Marie Zimmerar",
-            "number": 13,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Zachary James Leslie",
-            "id": "Zaco Leslinik",
-            "number": 8,
-            "pos": "D",
-            "overall": 70,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Henrik Haukeland",
-        "id": "Henrike Haukelik",
-        "number": 40,
-        "pos": "G",
-        "overall": 91,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Mannheim Ventus": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Kristian Reichel",
-            "id": "Kristianu Reichlek",
-            "number": 11,
-            "pos": "F",
             "overall": 82,
             "line": 1,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Marc Michaelis",
-            "id": "Marcu Michaelsen",
-            "number": 65,
-            "pos": "F",
-            "overall": 80,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Anthony Greco",
-            "id": "Anthonyu Grecan",
-            "number": 44,
+            "name": "Brett Murray",
+            "id": "Bretta Murraytto",
+            "number": 81,
             "pos": "F",
             "overall": 82,
             "line": 1,
@@ -4035,9 +4257,9 @@
         ],
         "line2": [
           {
-            "name": "Justin Schütz",
-            "id": "Justinu Schützan",
-            "number": 74,
+            "name": "Thomas Heigl",
+            "id": "Thoma Heiglik",
+            "number": 49,
             "pos": "F",
             "overall": 78,
             "line": 2,
@@ -4045,21 +4267,21 @@
             "rotation": false
           },
           {
-            "name": "Zachary Solow",
-            "id": "Zaco Solowlek",
-            "number": 73,
+            "name": "Samuel Dove-McFalls",
+            "id": "Samueli DoveMcFalan",
+            "number": 75,
             "pos": "F",
-            "overall": 76,
+            "overall": 79,
             "line": 2,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Matthias Plachta",
-            "id": "Matthiasu Plachtven",
-            "number": 22,
+            "name": "Cole Maier",
+            "id": "Colu Maiar",
+            "number": 14,
             "pos": "F",
-            "overall": 80,
+            "overall": 78,
             "line": 2,
             "pair": null,
             "rotation": false
@@ -4067,31 +4289,31 @@
         ],
         "line3": [
           {
-            "name": "Yannick Proske",
-            "id": "Yannicku Proskov",
-            "number": 27,
+            "name": "Greg Meireles",
+            "id": "Grege Meirelvik",
+            "number": 43,
             "pos": "F",
-            "overall": 71,
+            "overall": 75,
             "line": 3,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Alexander Ehl",
-            "id": "Ale Ehlven",
-            "number": 28,
+            "name": "Roman Kechter",
+            "id": "Romane Kechtov",
+            "number": 73,
             "pos": "F",
-            "overall": 74,
+            "overall": 68,
             "line": 3,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Maximilian Heim",
-            "id": "Maximiliana Heimov",
-            "number": 86,
+            "name": "Jakob Ustorf",
+            "id": "Jakobu Ustorfin",
+            "number": 48,
             "pos": "F",
-            "overall": 74,
+            "overall": 66,
             "line": 3,
             "pair": null,
             "rotation": false
@@ -4099,29 +4321,29 @@
         ],
         "line4": [
           {
-            "name": "Kris Bennett",
-            "id": "Krise Bennettto",
-            "number": 21,
+            "name": "Charlie Gerard",
+            "id": "Cha Gerardar",
+            "number": 95,
             "pos": "F",
-            "overall": 74,
+            "overall": 73,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Luke Esposito",
-            "id": "Luko Espositov",
-            "number": 19,
+            "name": "Josef Eham",
+            "id": "Josefa Ehamtli",
+            "number": 44,
             "pos": "F",
-            "overall": 72,
+            "overall": 64,
             "line": 4,
             "pair": null,
             "rotation": false
           },
           {
-            "name": "Eric Jonathan Uba",
-            "id": "Ericu Ubtto",
-            "number": 16,
+            "name": "Luis Üffing",
+            "id": "Luisa Üffingvik",
+            "number": 42,
             "pos": "F",
             "overall": 63,
             "line": 4,
@@ -4133,243 +4355,21 @@
       "defense": {
         "pair1": [
           {
-            "name": "Lukas Kälble",
-            "id": "Lukasu Kälbldunov",
-            "number": 49,
+            "name": "Jakob Weber",
+            "id": "Jakobu Webik",
+            "number": 41,
             "pos": "D",
-            "overall": 78,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          },
-          {
-            "name": "Nicolas Mattinen",
-            "id": "Nicolasa Mattinlek",
-            "number": 52,
-            "pos": "D",
-            "overall": 85,
-            "line": null,
-            "pair": 1,
-            "rotation": false
-          }
-        ],
-        "pair2": [
-          {
-            "name": "Leon Gawanke",
-            "id": "Leona Gawankvik",
-            "number": 9,
-            "pos": "D",
-            "overall": 80,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          },
-          {
-            "name": "Dan Renouf",
-            "id": "Dani Renoufin",
-            "number": 4,
-            "pos": "D",
-            "overall": 75,
-            "line": null,
-            "pair": 2,
-            "rotation": false
-          }
-        ],
-        "pair3": [
-          {
-            "name": "John Gilmour",
-            "id": "Johne Gilmoik",
-            "number": 7,
-            "pos": "D",
-            "overall": 74,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Hayden Shaw",
-            "id": "Haydeno Shawin",
-            "number": 82,
-            "pos": "D",
-            "overall": 69,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          }
-        ],
-        "rotation": [
-          {
-            "name": "Tobias Fohrler",
-            "id": "Toba Fohrlven",
-            "number": 5,
-            "pos": "D",
-            "overall": 64,
-            "line": null,
-            "pair": null,
-            "rotation": true
-          }
-        ]
-      },
-      "goalie": {
-        "name": "Maximilian Franzreb",
-        "id": "Maximiliana Franzrnik",
-        "number": 56,
-        "pos": "G",
-        "overall": 89,
-        "line": null,
-        "pair": null,
-        "rotation": false
-      }
-    },
-    "Schwenningen Sturmflügel": {
-      "forwards": {
-        "line1": [
-          {
-            "name": "Zach Senyshyn",
-            "id": "Zachi Senyshyro",
-            "number": 89,
-            "pos": "F",
-            "overall": 77,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tyson Spink",
-            "id": "Tysono Spinkar",
-            "number": 96,
-            "pos": "F",
             "overall": 76,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Tylor Spink",
-            "id": "Tylora Spinkar",
-            "number": 90,
-            "pos": "F",
-            "overall": 73,
-            "line": 1,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line2": [
-          {
-            "name": "Kyle Platzer",
-            "id": "Kyli Platzov",
-            "number": 88,
-            "pos": "F",
-            "overall": 73,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Alexander Karachun",
-            "id": "Ale Karachinov",
-            "number": 47,
-            "pos": "F",
-            "overall": 70,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Daniel O'Regan",
-            "id": "Daniele OReganovik",
-            "number": 11,
-            "pos": "F",
-            "overall": 74,
-            "line": 2,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line3": [
-          {
-            "name": "Mirko Höfflin",
-            "id": "Mirke Höfflro",
-            "number": 10,
-            "pos": "F",
-            "overall": 68,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Jordan Szwarz",
-            "id": "Jorde Szwarzar",
-            "number": 14,
-            "pos": "F",
-            "overall": 71,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Phil Hungerecker",
-            "id": "Philu Hungereckdunov",
-            "number": 94,
-            "pos": "F",
-            "overall": 71,
-            "line": 3,
-            "pair": null,
-            "rotation": false
-          }
-        ],
-        "line4": [
-          {
-            "name": "Sebastian Uvira",
-            "id": "Sebu Uvirtli",
-            "number": 93,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Boaz Bassen",
-            "id": "Boazo Basov",
-            "number": 64,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          },
-          {
-            "name": "Håkon Hänelt",
-            "id": "Håkone Häneltik",
-            "number": 19,
-            "pos": "F",
-            "overall": 67,
-            "line": 4,
-            "pair": null,
-            "rotation": false
-          }
-        ]
-      },
-      "defense": {
-        "pair1": [
-          {
-            "name": "Eric Martinsson",
-            "id": "Ericu Martinstli",
-            "number": 46,
-            "pos": "D",
-            "overall": 73,
             "line": null,
             "pair": 1,
             "rotation": false
           },
           {
-            "name": "Alex Trivellato",
-            "id": "Alexe Trivellvik",
-            "number": 53,
+            "name": "Julius Karrer",
+            "id": "Jule Karrsen",
+            "number": 6,
             "pos": "D",
-            "overall": 69,
+            "overall": 72,
             "line": null,
             "pair": 1,
             "rotation": false
@@ -4377,21 +4377,21 @@
         ],
         "pair2": [
           {
-            "name": "Arkadiusz Dziambor",
-            "id": "Arko Dziambovik",
-            "number": 16,
+            "name": "Marcus Weber",
+            "id": "Marcuse Webik",
+            "number": 24,
             "pos": "D",
-            "overall": 67,
+            "overall": 71,
             "line": null,
             "pair": 2,
             "rotation": false
           },
           {
-            "name": "Thomas Larkin",
-            "id": "Thoma Larkinik",
-            "number": 37,
+            "name": "Constantin Braun",
+            "id": "Constantinu Braunovik",
+            "number": 90,
             "pos": "D",
-            "overall": 68,
+            "overall": 71,
             "line": null,
             "pair": 2,
             "rotation": false
@@ -4399,33 +4399,33 @@
         ],
         "pair3": [
           {
-            "name": "Dominik Bittner",
-            "id": "Dominiki Bittnlek",
-            "number": 7,
-            "pos": "D",
-            "overall": 65,
-            "line": null,
-            "pair": 3,
-            "rotation": false
-          },
-          {
-            "name": "Benjamin Marshall",
-            "id": "Benu Marshaltto",
-            "number": 54,
+            "name": "Justus Böttner",
+            "id": "Justu Böttninov",
+            "number": 9,
             "pos": "D",
             "overall": 66,
             "line": null,
             "pair": 3,
             "rotation": false
+          },
+          {
+            "name": "Owen Headrick",
+            "id": "Owene Headricik",
+            "number": 47,
+            "pos": "D",
+            "overall": 76,
+            "line": null,
+            "pair": 3,
+            "rotation": false
           }
         ],
         "rotation": [
           {
-            "name": "William Weber",
-            "id": "Williame Webik",
-            "number": 78,
+            "name": "Cody Haiskanen",
+            "id": "Codye Haiskanov",
+            "number": 74,
             "pos": "D",
-            "overall": 64,
+            "overall": 65,
             "line": null,
             "pair": null,
             "rotation": true
@@ -4433,11 +4433,11 @@
         ]
       },
       "goalie": {
-        "name": "Joacim Eriksson",
-        "id": "Joacimi Erikstli",
-        "number": 60,
+        "name": "Niklas Treutle",
+        "id": "Nikla Treutlven",
+        "number": 31,
         "pos": "G",
-        "overall": 92,
+        "overall": 88,
         "line": null,
         "pair": null,
         "rotation": false
