@@ -5,7 +5,7 @@
   "games": [
     {
       "game_id": "Bad Nauheim Devils-Kassel Zenit",
-      "featured": true,
+      "featured": false,
       "conference": "Nord",
       "home": "Bad Nauheim Devils",
       "away": "Kassel Zenit",
@@ -23,7 +23,7 @@
     },
     {
       "game_id": "Whiteout Berlin-Köln Blitzhaie",
-      "featured": true,
+      "featured": false,
       "conference": "Nord",
       "home": "Whiteout Berlin",
       "away": "Köln Blitzhaie",
@@ -50,7 +50,7 @@
     },
     {
       "game_id": "Novadelta Panther-Augsburg Ferox",
-      "featured": true,
+      "featured": false,
       "conference": "Süd",
       "home": "Novadelta Panther",
       "away": "Augsburg Ferox",

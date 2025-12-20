@@ -32,7 +32,7 @@
     },
     {
       "game_id": "Köln Blitzhaie-Düsseldorf Aurora",
-      "featured": true,
+      "featured": false,
       "conference": "Nord",
       "home": "Köln Blitzhaie",
       "away": "Düsseldorf Aurora",
@@ -50,7 +50,7 @@
     },
     {
       "game_id": "Straubing Forest Tigers-Augsburg Ferox",
-      "featured": true,
+      "featured": false,
       "conference": "Süd",
       "home": "Straubing Forest Tigers",
       "away": "Augsburg Ferox",
@@ -77,7 +77,7 @@
     },
     {
       "game_id": "Nürnberg Eistiger-München FluxBullen",
-      "featured": true,
+      "featured": false,
       "conference": "Süd",
       "home": "Nürnberg Eistiger",
       "away": "München FluxBullen",
