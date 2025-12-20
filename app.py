@@ -22,13 +22,15 @@ with st.sidebar:
     c1, c2 = st.columns(2)
     with c1:
         if st.button("DEPLOY · Web jetzt", use_container_width=True):
-            code, out = sudo_systemctl(["start", "highspeed-web-deploy.service"])
+            code, out = systemctl(["start", "highspeed-toolbox-deploy.service"])
+
             st.success("OK" if code == 0 else "FAIL")
             if out: st.code(out)
 
     with c2:
         if st.button("DEPLOY · Toolbox jetzt", use_container_width=True):
-            code, out = sudo_systemctl(["start", "highspeed-toolbox-deploy.service"])
+            code, out = systemctl(["start", "highspeed-toolbox-deploy.service"])
+
             st.success("OK" if code == 0 else "FAIL")
             if out: st.code(out)
 
