@@ -108,38 +108,6 @@ with st.sidebar:
             st.error("FAIL (sudoers?)")
             if out:
                 st.code(out)
-    st.divider()
-    st.markdown("## 🏒 PUX Renderer")
-
-    if results_renderer is None:
-        st.error("PUX Renderer nicht importierbar.")
-        st.code(RESULTS_IMPORT_ERR)
-    else:
-        saison = st.number_input("Saison", min_value=1, max_value=99, value=1, step=1)
-        spieltag = st.number_input("Spieltag", min_value=1, max_value=99, value=1, step=1)
-        delta_date = st.text_input("Δ Datum (z.B. 2125-10-18)", value="2125-10-18")
-        template_name = st.text_input("Template", value="matchday_overview_v1.png")
-
-        spieltag_path = APP_DIR / "data" / "spieltage" / f"saison_{int(saison):02d}" / f"spieltag_{int(spieltag):02d}.json"
-        st.caption(f"Input: {spieltag_path}")
-
-        if st.button("📊 Render Ergebnisse", use_container_width=True):
-            if not spieltag_path.exists():
-                st.error("Spieltags-JSON nicht gefunden. Erst Pull Data machen oder Pfad prüfen.")
-            else:
-                try:
-                    out_path = results_renderer.render_from_spieltag_file(
-                        spieltag_json_path=spieltag_path,
-                        template_name=template_name,
-                        delta_date=delta_date,
-                    )
-                except Exception as e:
-                    st.error("Render fehlgeschlagen.")
-                    st.code(str(e))
-                else:
-                    st.success(f"Gerendert: {out_path}")
-                    # Output im Main anzeigen (Streamlit zeigt das auch aus Sidebar heraus, aber Main ist lesbarer)
-                    st.session_state["last_render_path"] = str(out_path)
 
 # ============================================================
 # Main
