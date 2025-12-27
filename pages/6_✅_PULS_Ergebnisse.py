@@ -19,24 +19,65 @@ else:
 
 st.title("📊 PULS Ergebnisse")
 st.caption("Spieltags-Ergebnisse rendern + 2-Zeiler pro Spiel aus Replay-Log (MVP).")
+import re
+
+SPIELTAGE_DIR = ROOT / "data" / "spieltage"
+
+def _num_from_name(pattern: str, name: str) -> int:
+    m = re.search(pattern, name)
+    return int(m.group(1)) if m else -1
+
+def list_seasons(base: Path) -> list[Path]:
+    seasons = [p for p in base.iterdir() if p.is_dir() and p.name.startswith("saison_")]
+    seasons.sort(key=lambda p: _num_from_name(r"saison_(\d+)", p.name))
+    return seasons
+
+def list_spieltage(season_dir: Path) -> list[Path]:
+    files = list(season_dir.glob("spieltag_*.json"))
+    files.sort(key=lambda p: _num_from_name(r"spieltag_(\d+)\.json", p.name))
+    return files
+c1, c2, c3 = st.columns([1.2, 1.2, 2])
+
+with c1:
+    seasons = list_seasons(SPIELTAGE_DIR)
+    if not seasons:
+        st.error("Keine Saison-Ordner gefunden.")
+        st.stop()
+
+    season_dir = st.selectbox(
+        "Saison",
+        options=seasons,
+        index=len(seasons) - 1,
+        format_func=lambda p: p.name,
+    )
+
+with c2:
+    spieltage = list_spieltage(season_dir)
+    if not spieltage:
+        st.error("Keine Spieltage in dieser Saison gefunden.")
+        st.stop()
+
+    spieltag_path = st.selectbox(
+        "Spieltag",
+        options=spieltage,
+        index=len(spieltage) - 1,
+        format_func=lambda p: p.name,
+    )
+
+with c3:
+    delta_date = st.text_input("Δ Datum (z.B. 2125-10-18)", value="2125-10-18")
+
+st.caption(f"Input: {spieltag_path}")
 
 if results_renderer is None:
     st.error("results_renderer konnte nicht importiert werden.")
     st.code(IMPORT_ERR)
     st.stop()
 
-c1, c2, c3 = st.columns([1, 1, 2])
-with c1:
-    saison = st.number_input("Saison", min_value=1, max_value=99, value=1, step=1)
-with c2:
-    spieltag = st.number_input("Spieltag", min_value=1, max_value=99, value=1, step=1)
-with c3:
-    delta_date = st.text_input("Δ Datum (z.B. 2125-10-18)", value="2125-10-18")
 
 template_name = st.text_input("Template", value="matchday_overview_v1.png")
 
-spieltag_path = ROOT / "data" / "spieltage" / f"saison_{int(saison):02d}" / f"spieltag_{int(spieltag):02d}.json"
-st.caption(f"Input: {spieltag_path}")
+
 
 if not spieltag_path.exists():
     st.warning("Spieltags-JSON nicht gefunden. (Data Pull / Pfad prüfen)")

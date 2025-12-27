@@ -1,0 +1,17 @@
+[4mNEXT                       [0m[4m [0m[4m    LEFT[0m[4m [0m[4mLAST                       [0m[4m [0m[4m    PASSED[0m[4m [0m[4mUNIT                             [0m[4m [0m[4mACTIVATES                          [0m
+Sat 2025-12-27 23:58:20 CET 4min 40s Sat 2025-12-27 23:48:19 CET   5min ago highspeed-web-deploy.timer        highspeed-web-deploy.service
+Sun 2025-12-28 00:00:00 CET     6min Sat 2025-12-27 00:00:00 CET    23h ago dpkg-db-backup.timer              dpkg-db-backup.service
+Sun 2025-12-28 00:38:31 CET    44min Sat 2025-12-27 00:13:40 CET    23h ago logrotate.timer                   logrotate.service
+Sun 2025-12-28 01:04:08 CET 1h 10min Sat 2025-12-27 07:06:50 CET    16h ago apt-daily.timer                   apt-daily.service
+Sun 2025-12-28 03:10:20 CET 3h 16min Sun 2025-12-21 03:10:53 CET 6 days ago e2scrub_all.timer                 e2scrub_all.service
+Sun 2025-12-28 03:15:00 CET 3h 21min Sat 2025-12-27 03:15:00 CET    20h ago highspeed-pux-pipeline.timer      highspeed-pux-pipeline.service
+Sun 2025-12-28 03:15:56 CET 3h 22min Sat 2025-12-27 00:15:10 CET    23h ago man-db.timer                      man-db.service
+Sun 2025-12-28 06:31:18 CET       6h Sat 2025-12-27 06:51:50 CET    17h ago apt-daily-upgrade.timer           apt-daily-upgrade.service
+Sun 2025-12-28 12:59:49 CET      13h Sat 2025-12-27 12:59:49 CET    10h ago systemd-tmpfiles-clean.timer      systemd-tmpfiles-clean.service
+Sun 2025-12-28 15:45:40 CET      15h Sat 2025-12-27 15:45:40 CET     8h ago rpi-zram-writeback.timer          rpi-zram-writeback.service
+Mon 2025-12-29 01:15:46 CET 1 day 1h Mon 2025-12-22 01:03:50 CET 5 days ago fstrim.timer                      fstrim.service
+-                                  - Tue 2025-12-23 12:06:50 CET          - highspeed-pux-engine-deploy.timer highspeed-pux-engine-deploy.service
+-                                  - Tue 2025-12-23 12:12:10 CET          - highspeed-pux-engine-update.timer highspeed-pux-engine-update.service
+
+[0;1;39m13 timers listed.[0m
+Pass --all to see loaded but inactive timers, too.
