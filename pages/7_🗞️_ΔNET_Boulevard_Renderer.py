@@ -65,7 +65,7 @@ with colA:
 
     headline = st.text_area(
         "Headline (kurz + brutal)",
-        value="Martin hat einen kleinen Schnipel",
+        value="Headline",
         height=120
     )
     bg = st.selectbox(
@@ -76,7 +76,7 @@ with colA:
 
     teaser = st.text_area(
         "Teaser (1–3 Zeilen, nicht Roman)",
-        value="Augenzeugen sprechen von einem nahezu lächerlich kleinen Penis. \n\n" 
+        value="Augenzeugen sprechen sind sich nicht einig. \n\n" 
         "Experten sind ratlos.",
         height=100
     )
