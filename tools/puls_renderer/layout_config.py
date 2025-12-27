@@ -56,6 +56,30 @@ class MatchdayLayoutV1:
     color_text: Tuple[int, int, int, int] = (174, 220, 255, 255)  # #AEDCFF
     color_accent: Tuple[int, int, int, int] = (120, 190, 220, 255) # eisblau
 
+# -------------------------
+# Typography (central)
+# -------------------------
+# Big header "SPIELTAG X"
+header_spieltag_font_size: int = 72
+
+# Team names in rows
+row_team_font_size: int = 22
+
+# Center token: "VS" / "2:1"
+center_token_font_size: int = 44
+
+# Footer date
+footer_date_font_size: int = 20
+
+# Watermark
+watermark_font_size: int = 20
+watermark_margin: int = 22
+watermark_opacity: int = 90
+
+# Font files (so both renderers use same fonts)
+font_regular: str = "Inter-Regular.ttf"
+font_medium: str = "Inter-Medium.ttf"
+font_bold: str = "Inter-Bold.ttf"
 
 
 
