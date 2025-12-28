@@ -11,10 +11,9 @@ from .starting6_renderer import (
     render_starting6_from_files,
 )
 
-# Public API: League table
-from .league_table_renderer import (
-    render_table_from_matchday_json,          # preferred public name
-    render_league_table_from_matchday_json,   # keep for backwards compatibility / internal use
+# Public API: Results
+from .results_renderer import (
+    results_renderer,
 )
 
 # Layout / helpers you actually reuse from pages/tools
@@ -41,6 +40,9 @@ __all__ = [
     # League table
     "render_table_from_matchday_json",
     "render_league_table_from_matchday_json",
+
+    # Results
+    "results_renderer",
 
     # Layout / helpers
     "MatchdayLayoutV1",
