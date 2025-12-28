@@ -19,7 +19,7 @@ except Exception:
 
 st.set_page_config(page_title="Starting6 Renderer", layout="wide")
 st.title("🏒 Starting6 Renderer")
-st.caption("Lädt Matchups + Starting6 aus Matchday-JSON + Lineups-JSON.")
+st.caption("Rendert Starting-6-Grafiken aus Matchday-JSON + Lineups-JSON.")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -73,7 +73,8 @@ def list_lineup_files(season_dir: Path) -> list[Path]:
 
 
 # -----------------------------
-# Saison-Auswahl (anhand Spieltage)
+st.divider()
+st.subheader("1️⃣ Daten auswählen")
 # -----------------------------
 seasons = list_seasons(SPIELTAGE_ROOT)
 if not seasons:
@@ -100,11 +101,19 @@ if not lineup_files:
     st.stop()
 
 
-# --- Auswahl ---
+st.divider()
+st.subheader("Dateien")
+
 col1, col2 = st.columns(2)
 
 with col1:
-    matchday_path: Path = st.selectbox("Matchday JSON", matchday_files, format_func=lambda p: p.name)
+    default_matchday_idx = len(matchday_files) - 1  # Latest matchday
+    matchday_path: Path = st.selectbox(
+        "Matchday JSON",
+        matchday_files,
+        index=default_matchday_idx,
+        format_func=lambda p: p.name
+    )
 
 with col2:
     # default: lineup passend zum spieltag vorauswählen (falls vorhanden)

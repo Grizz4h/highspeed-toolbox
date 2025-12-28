@@ -1,85 +1,41 @@
-import re
 import streamlit as st
 from pathlib import Path
 
 from tools.puls_renderer import render_from_json_file
+from tools.puls_renderer.ui_utils import select_season
+from tools.puls_renderer.data_utils import get_spieltage_root, discover_matchdays
 
 st.set_page_config(page_title="PULS Renderer", layout="centered")
 
 st.title("🏒 PULS – Spieltags-Renderer")
-st.caption("JSON rein → Spieltagsübersicht PNG raus. Δ-Datum kommt aus UI (nicht aus JSON).")
+st.caption("Rendert Spieltagsübersicht aus Matchday-JSON.")
 
-BASE_DIR = Path(__file__).resolve().parent.parent  # Projektroot (app.py liegt dort)
-SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"   # <- root, darunter saison_XX
-SPIELTAGE_ROOT.mkdir(parents=True, exist_ok=True)
+SPIELTAGE_ROOT = get_spieltage_root()
 
-# ----------------------------
-# Helpers
-# ----------------------------
-def season_folder(season: int) -> str:
-    return f"saison_{int(season):02d}"
-
-def discover_seasons(root: Path) -> list[int]:
-    seasons: list[int] = []
-    if not root.exists():
-        return seasons
-    for p in root.iterdir():
-        if p.is_dir():
-            m = re.match(r"(?i)saison_(\d+)$", p.name)
-            if m:
-                try:
-                    seasons.append(int(m.group(1)))
-                except Exception:
-                    pass
-    return sorted(set(seasons))
-
-def discover_matchdays(folder: Path) -> list[Path]:
-    if not folder.exists():
-        return []
-    # nur spieltag_XX.json
-    files = sorted(folder.glob("spieltag_[0-9][0-9].json"))
-    return files
-
-# ----------------------------
-# Saison-Auswahl
 # ----------------------------
 st.divider()
-st.subheader("0) Saison wählen")
+st.subheader("1️⃣ Daten auswählen")
+# ----------------------------
 
-available_seasons = discover_seasons(SPIELTAGE_ROOT)
-
-# Fallback: wenn noch keine saison_XX existiert → default 1 anzeigen
-default_season = available_seasons[-1] if available_seasons else 1
-
-sel_season = st.selectbox(
-    "Saison",
-    options=available_seasons if available_seasons else [default_season],
-    index=(len(available_seasons) - 1) if available_seasons else 0,
-    format_func=lambda s: f"Saison {int(s):02d}",
-)
-
-DATA_DIR = SPIELTAGE_ROOT / season_folder(sel_season)
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+DATA_DIR = select_season(SPIELTAGE_ROOT)
 
 st.caption(f"Aktiver Ordner: `{DATA_DIR.as_posix()}`")
 
-# ----------------------------
-# JSON Auswahl / Upload
-# ----------------------------
-st.divider()
-st.subheader("1) JSON wählen")
-
-uploaded = st.file_uploader("JSON hochladen", type=["json"])
-
+# JSON Auswahl (erst lokale Files, dann Upload)
 local_files = discover_matchdays(DATA_DIR)
 choice = None
 if local_files:
+    file_names = [p.name for p in local_files]
+    default_idx = len(file_names)  # Latest file (last in list + 1 for "—")
     choice = st.selectbox(
-        "…oder eine JSON aus /data auswählen",
-        ["—"] + [p.name for p in local_files],
+        "Spieltag-JSON aus /data",
+        ["—"] + file_names,
+        index=default_idx,
     )
 else:
     st.info("In dieser Saison liegen noch keine `spieltag_XX.json` Dateien.")
+
+uploaded = st.file_uploader("Oder JSON hochladen", type=["json"])
 
 json_path: Path | None = None
 
@@ -93,26 +49,26 @@ elif choice and choice != "—":
     json_path = DATA_DIR / choice
 
 # ----------------------------
-# Renderer Optionen
-# ----------------------------
 st.divider()
-st.subheader("2) Δ-Datum setzen")
-st.caption("Gib nur '2125-10-18' ein. Das Δ setzt der Renderer automatisch davor.")
+st.subheader("2️⃣ Render-Optionen")
+# ----------------------------
 delta_date_input = st.text_input("Δ-Datum", value="2125-10-18", help="Format: 2125-10-18 (ohne Δ).")
 
-enable_vs = st.toggle("Renderer soll 'VS' in die Mitte schreiben (sonst frei lassen)", value=False)
-enable_team_fx = st.toggle("Teamnamen mit FX (Stroke/Shadow)", value=True)
+col1, col2 = st.columns(2)
+with col1:
+    enable_vs = st.toggle("'VS' in die Mitte schreiben", value=False)
+with col2:
+    enable_team_fx = st.toggle("Teamnamen mit FX", value=True)
 
-# ----------------------------
-# Rendern
 # ----------------------------
 st.divider()
+st.subheader("3️⃣ Rendern")
+# ----------------------------
 
 if json_path:
-    st.subheader("3) Rendern")
-    st.caption(f"Quelle: `{json_path.name}` (Saison {int(sel_season):02d})")
+    st.caption(f"Quelle: `{json_path.name}`")
 
-    if st.button("Render Spieltagsübersicht", type="primary"):
+    if st.button("🎨 Spieltag rendern", type="primary"):
         try:
             out_path = render_from_json_file(
                 json_path=json_path,
@@ -123,10 +79,8 @@ if json_path:
             )
             out_path = Path(out_path)
 
-            st.success(f"Gerendert: {out_path.name}")
-
-            img_bytes = out_path.read_bytes()
-            st.image(img_bytes, caption=out_path.name, use_container_width=True)
+            st.success(f"✅ Gerendert: `{out_path.name}`")
+            st.image(str(out_path), width=800)
             st.download_button(
                 "PNG herunterladen",
                 data=img_bytes,
