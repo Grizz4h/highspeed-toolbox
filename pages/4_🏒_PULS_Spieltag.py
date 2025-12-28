@@ -44,7 +44,7 @@ if uploaded is not None:
     target = DATA_DIR / uploaded.name
     target.write_bytes(uploaded.getvalue())
     json_path = target
-    st.success(f"Gespeichert: data/spieltage/{season_folder(sel_season)}/{uploaded.name}")
+    st.success(f"Gespeichert: {uploaded.name}")
 elif choice and choice != "—":
     json_path = DATA_DIR / choice
 
