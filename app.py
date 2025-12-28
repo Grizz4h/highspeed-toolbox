@@ -34,6 +34,8 @@ SERVER_MODE = (os.name != "nt" and PUBLISHER_DIR.exists())
 APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
+if str(APP_DIR / "src") not in sys.path:
+    sys.path.insert(0, str(APP_DIR / "src"))
 
 try:
     from tools.puls_renderer import results_renderer

@@ -1,6 +1,12 @@
 import re
 import streamlit as st
 from pathlib import Path
+import sys
+
+# Add src to path for modular imports
+APP_DIR = Path(__file__).resolve().parents[1]
+if str(APP_DIR / "src") not in sys.path:
+    sys.path.insert(0, str(APP_DIR / "src"))
 
 from src.modules.puls_renderer import render_from_json_file
 from src.modules.puls_renderer.ui_utils import select_season

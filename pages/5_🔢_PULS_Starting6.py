@@ -3,6 +3,12 @@ import re
 from pathlib import Path
 
 import streamlit as st
+import sys
+
+# Add src to path for modular imports
+APP_DIR = Path(__file__).resolve().parents[1]
+if str(APP_DIR / "src") not in sys.path:
+    sys.path.insert(0, str(APP_DIR / "src"))
 
 from src.modules.puls_renderer import (
     list_matchups_from_matchday_json,
