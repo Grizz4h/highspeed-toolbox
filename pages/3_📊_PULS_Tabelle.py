@@ -2,12 +2,13 @@ import re
 import streamlit as st
 from pathlib import Path
 
-from tools.puls_renderer import render_table_from_matchday_json
+from src.modules.puls_renderer import render_table_from_matchday_json
+from src.modules.puls_renderer.data_utils import get_spieltage_root
+from src.modules.puls_renderer.ui_utils import select_season_and_matchday
 
 st.title("📊 PULS Tabellen-Renderer")
 
-BASE_DIR = Path(__file__).resolve().parent.parent  # repo root (wenn pages/ eine Ebene tiefer liegt)
-SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"
+SPIELTAGE_ROOT = get_spieltage_root()
 
 # -----------------------------
 # Helpers
@@ -32,34 +33,11 @@ def list_matchdays(season_dir: Path) -> list[Path]:
     return files
 
 # -----------------------------
-# Saison-Auswahl
+# Saison- und Spieltag-Auswahl
 # -----------------------------
-seasons = list_seasons(SPIELTAGE_ROOT)
+season_dir, selected_file = select_season_and_matchday(SPIELTAGE_ROOT)
 
-if not seasons:
-    st.warning(f"Keine Saison-Ordner gefunden unter: {SPIELTAGE_ROOT.as_posix()}")
-    st.stop()
-
-season_labels = [p.name for p in seasons]
-default_season_idx = max(0, len(season_labels) - 1)  # letzte Saison als Default
-
-selected_season_label = st.selectbox("Saison auswählen", season_labels, index=default_season_idx)
-season_dir = SPIELTAGE_ROOT / selected_season_label
-
-# -----------------------------
-# Spieltag-Auswahl
-# -----------------------------
-files = list_matchdays(season_dir)
-
-if not files:
-    st.warning(f"Keine spieltag_XX.json gefunden unter: {season_dir.as_posix()}")
-    st.stop()
-
-file_labels = [p.name for p in files]
-default_file_idx = max(0, len(file_labels) - 1)  # letzter Spieltag als Default
-
-selected_file_label = st.selectbox("Spieltag JSON auswählen", file_labels, index=default_file_idx)
-selected_file = season_dir / selected_file_label
+# Spieltag ist bereits ausgewählt via select_season_and_matchday
 
 # -----------------------------
 # Inputs

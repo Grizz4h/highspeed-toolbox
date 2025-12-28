@@ -2,16 +2,16 @@ import re
 import streamlit as st
 from pathlib import Path
 
-from tools.puls_renderer import render_from_json_file
+from src.modules.puls_renderer import render_from_json_file
+from src.modules.puls_renderer.ui_utils import select_season
+from src.modules.puls_renderer.data_utils import get_spieltage_root, discover_matchdays, season_folder
 
 st.set_page_config(page_title="PULS Renderer", layout="centered")
 
 st.title("🏒 PULS – Spieltags-Renderer")
 st.caption("JSON rein → Spieltagsübersicht PNG raus. Δ-Datum kommt aus UI (nicht aus JSON).")
 
-BASE_DIR = Path(__file__).resolve().parent.parent  # Projektroot (app.py liegt dort)
-SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"   # <- root, darunter saison_XX
-SPIELTAGE_ROOT.mkdir(parents=True, exist_ok=True)
+SPIELTAGE_ROOT = get_spieltage_root()
 
 # ----------------------------
 # Helpers
@@ -46,20 +46,7 @@ def discover_matchdays(folder: Path) -> list[Path]:
 st.divider()
 st.subheader("0) Saison wählen")
 
-available_seasons = discover_seasons(SPIELTAGE_ROOT)
-
-# Fallback: wenn noch keine saison_XX existiert → default 1 anzeigen
-default_season = available_seasons[-1] if available_seasons else 1
-
-sel_season = st.selectbox(
-    "Saison",
-    options=available_seasons if available_seasons else [default_season],
-    index=(len(available_seasons) - 1) if available_seasons else 0,
-    format_func=lambda s: f"Saison {int(s):02d}",
-)
-
-DATA_DIR = SPIELTAGE_ROOT / season_folder(sel_season)
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+DATA_DIR = select_season(SPIELTAGE_ROOT)
 
 st.caption(f"Aktiver Ordner: `{DATA_DIR.as_posix()}`")
 

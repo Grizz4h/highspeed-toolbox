@@ -4,15 +4,13 @@ from pathlib import Path
 
 import streamlit as st
 
-from tools.puls_renderer import (
+from src.modules.puls_renderer import (
     list_matchups_from_matchday_json,
     extract_starting6_for_matchup,
+    render_starting6_from_files,
 )
-
-# optional: wenn du später den echten PNG-Renderer einbaust
-try:
-    from tools.puls_renderer import render_starting6_from_files
-    HAS_RENDER = True
+from src.modules.puls_renderer.data_utils import get_spieltage_root
+from src.modules.puls_renderer.ui_utils import select_season_and_matchday
 except Exception:
     HAS_RENDER = False
 
@@ -21,9 +19,7 @@ st.set_page_config(page_title="Starting6 Renderer", layout="wide")
 st.title("🏒 Starting6 Renderer")
 st.caption("Lädt Matchups + Starting6 aus Matchday-JSON + Lineups-JSON.")
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"
+SPIELTAGE_ROOT = get_spieltage_root()
 LINEUPS_ROOT   = BASE_DIR / "data" / "lineups"
 
 

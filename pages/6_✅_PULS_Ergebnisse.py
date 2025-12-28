@@ -4,15 +4,9 @@ import sys
 
 st.set_page_config(page_title="PULS Ergebnisse", layout="wide")
 
-# Toolbox-Root ermitteln (pages/ liegt 1 Ebene unter Root)
-ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-try:
-    from tools.puls_renderer import results_renderer
-except Exception as e:
-    results_renderer = None
+from src.modules.puls_renderer import results_renderer
+from src.modules.puls_renderer.data_utils import get_spieltage_root
+from src.modules.puls_renderer.ui_utils import select_season_and_matchday
     IMPORT_ERR = str(e)
 else:
     IMPORT_ERR = ""
@@ -21,7 +15,7 @@ st.title("📊 PULS Ergebnisse")
 st.caption("Spieltags-Ergebnisse rendern + 2-Zeiler pro Spiel aus Replay-Log (MVP).")
 import re
 
-SPIELTAGE_DIR = ROOT / "data" / "spieltage"
+SPIELTAGE_DIR = get_spieltage_root()
 
 def _num_from_name(pattern: str, name: str) -> int:
     m = re.search(pattern, name)
@@ -38,31 +32,7 @@ def list_spieltage(season_dir: Path) -> list[Path]:
     return files
 c1, c2, c3 = st.columns([1.2, 1.2, 2])
 
-with c1:
-    seasons = list_seasons(SPIELTAGE_DIR)
-    if not seasons:
-        st.error("Keine Saison-Ordner gefunden.")
-        st.stop()
-
-    season_dir = st.selectbox(
-        "Saison",
-        options=seasons,
-        index=len(seasons) - 1,
-        format_func=lambda p: p.name,
-    )
-
-with c2:
-    spieltage = list_spieltage(season_dir)
-    if not spieltage:
-        st.error("Keine Spieltage in dieser Saison gefunden.")
-        st.stop()
-
-    spieltag_path = st.selectbox(
-        "Spieltag",
-        options=spieltage,
-        index=len(spieltage) - 1,
-        format_func=lambda p: p.name,
-    )
+season_dir, spieltag_path = select_season_and_matchday(SPIELTAGE_DIR)
 
 with c3:
     delta_date = st.text_input("Δ Datum (z.B. 2125-10-18)", value="2125-10-18")
