@@ -13,7 +13,8 @@ from .starting6_renderer import (
 
 # Public API: Results
 from .results_renderer import (
-    results_renderer,
+    render_from_spieltag_file,
+    render_matchday_results_overview,
 )
 
 # Layout / helpers you actually reuse from pages/tools
@@ -42,7 +43,8 @@ __all__ = [
     "render_league_table_from_matchday_json",
 
     # Results
-    "results_renderer",
+    "render_from_spieltag_file",
+    "render_matchday_results_overview",
 
     # Layout / helpers
     "MatchdayLayoutV1",
