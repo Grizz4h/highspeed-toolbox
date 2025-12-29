@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data (symlinked to external data repo)
+data_backup/
+
+# Output files
+tools/*/output/*.png
+tools/*/output/*.jpg
+
+# Streamlit
+.streamlit/secrets.toml
