@@ -30,4 +30,4 @@ tools/*/output/*.jpg
 .streamlit/secrets.toml
 
 # Data directory (symlinked to external data repo)
-data/
+data
