@@ -16,6 +16,9 @@ try:
 except Exception:
     HAS_RENDER = False
 
+from tools.puls_renderer.ui_utils import select_season
+from tools.puls_renderer.data_utils import get_spieltage_root
+
 
 st.set_page_config(page_title="Starting6 Renderer", layout="wide")
 st.title("🏒 Starting6 Renderer")
@@ -23,7 +26,7 @@ st.caption("Rendert Starting-6-Grafiken aus Matchday-JSON + Lineups-JSON.")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SPIELTAGE_ROOT = BASE_DIR / "data" / "spieltage"
+SPIELTAGE_ROOT = get_spieltage_root()
 LINEUPS_ROOT   = BASE_DIR / "data" / "lineups"
 
 
@@ -54,13 +57,6 @@ def _home_away(m):
         return str(m.get("home", "")), str(m.get("away", ""))
     return "", ""
 
-def list_seasons(root: Path) -> list[Path]:
-    if not root.exists():
-        return []
-    seasons = [p for p in root.iterdir() if p.is_dir() and p.name.startswith("saison_")]
-    seasons.sort(key=lambda p: _to_index(p.name))
-    return seasons
-
 def list_matchday_files(season_dir: Path) -> list[Path]:
     if not season_dir.exists():
         return []
@@ -76,18 +72,8 @@ def list_lineup_files(season_dir: Path) -> list[Path]:
 st.divider()
 st.subheader("1️⃣ Daten auswählen")
 # -----------------------------
-seasons = list_seasons(SPIELTAGE_ROOT)
-if not seasons:
-    st.error(f"Keine Saison-Ordner gefunden unter: {SPIELTAGE_ROOT.as_posix()}")
-    st.stop()
-
-season_labels = [p.name for p in seasons]
-default_season_idx = max(0, len(season_labels) - 1)
-
-selected_season = st.selectbox("Saison auswählen", season_labels, index=default_season_idx)
-
-SPIELTAGE_DIR = SPIELTAGE_ROOT / selected_season
-LINEUPS_DIR   = LINEUPS_ROOT / selected_season
+SPIELTAGE_DIR = select_season(SPIELTAGE_ROOT)
+LINEUPS_DIR   = LINEUPS_ROOT / SPIELTAGE_DIR.name
 
 matchday_files = list_matchday_files(SPIELTAGE_DIR)
 lineup_files   = list_lineup_files(LINEUPS_DIR)
@@ -232,6 +218,7 @@ else:
                 data=img_bytes,
                 file_name=out_path.name,
                 mime="image/png",
+                type="primary",
             )
 
         except Exception as e:

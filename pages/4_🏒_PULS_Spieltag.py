@@ -81,11 +81,13 @@ if json_path:
 
             st.success(f"✅ Gerendert: `{out_path.name}`")
             st.image(str(out_path), width=800)
+            img_bytes = out_path.read_bytes()
             st.download_button(
                 "PNG herunterladen",
                 data=img_bytes,
                 file_name=out_path.name,
                 mime="image/png",
+                type="primary",
             )
 
         except Exception as e:

@@ -43,6 +43,7 @@ if st.button("🎨 Tabelle rendern", type="primary"):
             data=png_bytes,
             file_name=Path(out).name,
             mime="image/png",
+            type="primary",
         )
     except Exception as e:
         st.error(str(e))

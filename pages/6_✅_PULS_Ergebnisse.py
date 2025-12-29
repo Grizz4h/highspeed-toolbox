@@ -38,7 +38,7 @@ template_name = st.text_input("Template", value="matchday_overview_v1.png")
 if not spieltag_path.exists():
     st.warning("Spieltags-JSON nicht gefunden. (Data Pull / Pfad prüfen)")
 else:
-    if st.button("Render Ergebnisse", use_container_width=True):
+    if st.button("Render Ergebnisse", use_container_width=True, type="primary"):
         try:
             out_path = results_renderer.render_from_spieltag_file(
                 spieltag_json_path=spieltag_path,
@@ -63,6 +63,7 @@ else:
                         file_name=out_path.name,
                         mime="image/png",
                         use_container_width=True,
+                        type="primary",
                     )
             else:
                 st.warning("Output-Datei wurde nicht gefunden, obwohl Render keinen Fehler geworfen hat.")

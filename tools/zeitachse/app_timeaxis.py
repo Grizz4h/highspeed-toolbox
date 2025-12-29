@@ -3,6 +3,7 @@ import calendar
 import json
 from datetime import date, timedelta
 from pathlib import Path
+import streamlit.components.v1 as components
 
 from .canon_time import load_config, allocate_inworld_date
 from .state_store import load_state, save_state, delete_state, UIState
@@ -68,6 +69,7 @@ def ensure_calendar_matches_picked():
 
 def render_clickable_month(cfg, season: int, year: int, month: int, events):
     """Clickable month grid: clicking a day sets session_state['picked_date']."""  # noqa
+    
     cal = calendar.Calendar(firstweekday=0)  # Monday
     weeks = cal.monthdayscalendar(year, month)
 
@@ -92,13 +94,13 @@ def render_clickable_month(cfg, season: int, year: int, month: int, events):
             if md is None:
                 label = f"{day}{dot}"
             else:
-                label = f"{day}{dot}\nMD{md}"
+                label = f"{day}{dot}"
 
             # simple highlight indicator
             if d == picked:
                 label = f"✅ {label}"
 
-            if cols[i].button(label, key=f"cal_{year}_{month}_{day}"):
+            if cols[i].button(label, key=f"cal_{year}_{month}_{day}", use_container_width=True):
                 st.session_state["picked_date"] = d
                 ensure_calendar_matches_picked()
                 st.rerun()
@@ -110,6 +112,25 @@ def render_clickable_month(cfg, season: int, year: int, month: int, events):
 def render():
     st.title("🕒 HIGHspeed Zeitachsen-Manager + Kalender")
     st.caption("Zeitachsen-Rechner (Matchday alle 3 Tage) + klickbarer Kalender + freie Einträge + Content-Drops.")
+
+    # Mobile detection via JavaScript
+    mobile_js = """
+    <script>
+    function setMobileParam() {
+        const width = window.innerWidth;
+        const url = new URL(window.location);
+        url.searchParams.set('mobile', width < 768 ? '1' : '0');
+        window.history.replaceState(null, null, url);
+        window.location.reload();
+    }
+    if (!window.location.search.includes('mobile=')) {
+        setMobileParam();
+    }
+    </script>
+    """
+    st.components.v1.html(mobile_js, height=0)
+    
+    is_mobile = st.query_params.get('mobile', '0') == '1'
 
     # -------------------------
     # Load config
@@ -173,136 +194,176 @@ def render():
         st.caption("Events liegen in `events.json`.")
 
     # -------------------------
+    # Rechner (shared for mobile and desktop)
+    # -------------------------
+    st.subheader("⚙️ Zeitachsen-Rechner")
+
+    season = st.selectbox(
+        "Season",
+        options=available_seasons,
+        index=available_seasons.index(int(state.season)) if int(state.season) in available_seasons else 0
+    )
+
+    matchday = st.number_input("Matchday", min_value=1, step=1, value=int(state.matchday))
+
+    content_type = st.selectbox(
+        "Content-Typ",
+        options=list(cfg.offset_rules.keys()),
+        index=list(cfg.offset_rules.keys()).index(state.content_type) if state.content_type in cfg.offset_rules else 0
+    )
+
+    min_off, max_off = cfg.offset_rules[content_type]
+    if min_off == max_off:
+        offset = int(min_off)
+        st.text_input("Offset (Tage)", value=str(offset), disabled=True)
+    else:
+        default_offset = int(state.offset)
+        if default_offset < min_off or default_offset > max_off:
+            default_offset = 0 if (0 >= min_off and 0 <= max_off) else int(min_off)
+        offset = st.slider("Offset (Tage)", int(min_off), int(max_off), int(default_offset), step=1)
+
+    allow_future = st.checkbox("Future Content erlauben (geplant)", value=bool(state.allow_future))
+
+    # Preview
+    try:
+        base_md = matchday_date(cfg, int(season), int(matchday))
+        computed = base_md + timedelta(days=int(offset))
+        st.caption(
+            f"MD{int(matchday)} = **{base_md.isoformat()}** ({base_md.strftime('%A')})\n\n"
+            f"Content-Date (Offset {int(offset)}): **{computed.isoformat()}** ({computed.strftime('%A')})"
+        )
+    except Exception as e:
+        st.error(str(e))
+
+    colA, colB = st.columns(2)
+
+    with colA:
+        if st.button("📅 Berechnen", key="btn_calc"):
+            try:
+                d = allocate_inworld_date(
+                    cfg,
+                    season=int(season),
+                    matchday=int(matchday),
+                    content_type=content_type,
+                    offset_days=int(offset),
+                    allow_future=bool(allow_future),
+                )
+                st.success(d.isoformat())
+
+                # save ui state
+                state.season = int(season)
+                state.matchday = int(matchday)
+                state.content_type = str(content_type)
+                state.offset = int(offset)
+                state.allow_future = bool(allow_future)
+                save_state(state)
+
+                # jump day selection to computed date
+                st.session_state["picked_date"] = d
+                ensure_calendar_matches_picked()
+                st.rerun()
+            except Exception as e:
+                st.error(str(e))
+
+    with colB:
+        if st.button("➕ Content → Kalender", key="btn_add_content"):
+            try:
+                d = allocate_inworld_date(
+                    cfg,
+                    season=int(season),
+                    matchday=int(matchday),
+                    content_type=content_type,
+                    offset_days=int(offset),
+                    allow_future=True,  # events dürfen geplant sein
+                )
+                title = f"{content_type.upper()} – S{int(season)} MD{int(matchday)} (off {int(offset)})"
+                meta = {
+                    "season": int(season),
+                    "matchday": int(matchday),
+                    "content_type": content_type,
+                    "offset": int(offset),
+                }
+                add_event(events, d=d, title=title, notes="", kind="content", meta=meta)
+                save_events(events)
+                st.success(f"Gespeichert: {d.isoformat()}")
+
+                st.session_state["picked_date"] = d
+                ensure_calendar_matches_picked()
+                st.rerun()
+            except Exception as e:
+                st.error(str(e))
+
+    st.divider()
+    st.subheader("➕ Season hinzufügen (optional)")
+    with st.expander("Neue Season anlegen", expanded=False):
+        new_season = st.number_input("Season Nummer", min_value=1, step=1, value=max(available_seasons) + 1)
+        new_start = st.date_input(
+            "Startdatum (Matchday 1)",
+            value=cfg.season_start[available_seasons[0]],
+            key="new_season_start"
+        )
+        if st.button("✅ Season speichern", key="btn_save_season"):
+            write_season_start_into_config(CONFIG_PATH, int(new_season), new_start)
+            st.success("Gespeichert. App lädt neu.")
+            st.rerun()
+
+    # live ui state
+    state.season = int(season)
+    state.matchday = int(matchday)
+    state.content_type = str(content_type)
+    state.offset = int(offset)
+    state.allow_future = bool(allow_future)
+
+    # -------------------------
     # Layout
     # -------------------------
-    left, right = st.columns([1, 1.45], gap="large")
-
-    # =========================
-    # LEFT: Rechner + Content-Drop
-    # =========================
-    with left:
-        st.subheader("⚙️ Zeitachsen-Rechner")
-
-        season = st.selectbox(
-            "Season",
-            options=available_seasons,
-            index=available_seasons.index(int(state.season)) if int(state.season) in available_seasons else 0
-        )
-
-        matchday = st.number_input("Matchday", min_value=1, step=1, value=int(state.matchday))
-
-        content_type = st.selectbox(
-            "Content-Typ",
-            options=list(cfg.offset_rules.keys()),
-            index=list(cfg.offset_rules.keys()).index(state.content_type) if state.content_type in cfg.offset_rules else 0
-        )
-
-        min_off, max_off = cfg.offset_rules[content_type]
-        if min_off == max_off:
-            offset = int(min_off)
-            st.text_input("Offset (Tage)", value=str(offset), disabled=True)
-        else:
-            default_offset = int(state.offset)
-            if default_offset < min_off or default_offset > max_off:
-                default_offset = 0 if (0 >= min_off and 0 <= max_off) else int(min_off)
-            offset = st.slider("Offset (Tage)", int(min_off), int(max_off), int(default_offset), step=1)
-
-        allow_future = st.checkbox("Future Content erlauben (geplant)", value=bool(state.allow_future))
-
-        # Preview
-        try:
-            base_md = matchday_date(cfg, int(season), int(matchday))
-            computed = base_md + timedelta(days=int(offset))
-            st.caption(
-                f"MD{int(matchday)} = **{base_md.isoformat()}** ({base_md.strftime('%A')})\n\n"
-                f"Content-Date (Offset {int(offset)}): **{computed.isoformat()}** ({computed.strftime('%A')})"
-            )
-        except Exception as e:
-            st.error(str(e))
-
-        colA, colB = st.columns(2)
-
-        with colA:
-            if st.button("📅 Berechnen", key="btn_calc"):
-                try:
-                    d = allocate_inworld_date(
-                        cfg,
-                        season=int(season),
-                        matchday=int(matchday),
-                        content_type=content_type,
-                        offset_days=int(offset),
-                        allow_future=bool(allow_future),
-                    )
-                    st.success(d.isoformat())
-
-                    # save ui state
-                    state.season = int(season)
-                    state.matchday = int(matchday)
-                    state.content_type = str(content_type)
-                    state.offset = int(offset)
-                    state.allow_future = bool(allow_future)
-                    save_state(state)
-
-                    # jump day selection to computed date
-                    st.session_state["picked_date"] = d
-                    ensure_calendar_matches_picked()
-                    st.rerun()
-                except Exception as e:
-                    st.error(str(e))
-
-        with colB:
-            if st.button("➕ Content → Kalender", key="btn_add_content"):
-                try:
-                    d = allocate_inworld_date(
-                        cfg,
-                        season=int(season),
-                        matchday=int(matchday),
-                        content_type=content_type,
-                        offset_days=int(offset),
-                        allow_future=True,  # events dürfen geplant sein
-                    )
-                    title = f"{content_type.upper()} – S{int(season)} MD{int(matchday)} (off {int(offset)})"
-                    meta = {
-                        "season": int(season),
-                        "matchday": int(matchday),
-                        "content_type": content_type,
-                        "offset": int(offset),
-                    }
-                    add_event(events, d=d, title=title, notes="", kind="content", meta=meta)
-                    save_events(events)
-                    st.success(f"Gespeichert: {d.isoformat()}")
-
-                    st.session_state["picked_date"] = d
-                    ensure_calendar_matches_picked()
-                    st.rerun()
-                except Exception as e:
-                    st.error(str(e))
-
+    if is_mobile:
+        # Mobile: stacked layout - calendar and events
         st.divider()
-        st.subheader("➕ Season hinzufügen (optional)")
-        with st.expander("Neue Season anlegen", expanded=False):
-            new_season = st.number_input("Season Nummer", min_value=1, step=1, value=max(available_seasons) + 1)
-            new_start = st.date_input(
-                "Startdatum (Matchday 1)",
-                value=cfg.season_start[available_seasons[0]],
-                key="new_season_start"
-            )
-            if st.button("✅ Season speichern", key="btn_save_season"):
-                write_season_start_into_config(CONFIG_PATH, int(new_season), new_start)
-                st.success("Gespeichert. App lädt neu.")
+        st.subheader("🗓️ Kalender")
+
+        nav1, nav2, nav3, nav4 = st.columns([1, 1, 2, 1])
+        with nav1:
+            if st.button("◀︎ Monat", key="btn_prev_month_mobile"):
+                y, m = month_shift(st.session_state["cal_year"], st.session_state["cal_month"], -1)
+                st.session_state["cal_year"], st.session_state["cal_month"] = y, m
                 st.rerun()
 
-        # live ui state (so save button sidebar always matches)
-        state.season = int(season)
-        state.matchday = int(matchday)
-        state.content_type = str(content_type)
-        state.offset = int(offset)
-        state.allow_future = bool(allow_future)
+        with nav2:
+            if st.button("Monat ▶︎", key="btn_next_month_mobile"):
+                y, m = month_shift(st.session_state["cal_year"], st.session_state["cal_month"], +1)
+                st.session_state["cal_year"], st.session_state["cal_month"] = y, m
+                st.rerun()
+
+        with nav3:
+            st.markdown(f"**{st.session_state['cal_year']}-{st.session_state['cal_month']:02d}**")
+
+        with nav4:
+            if st.button("📍 zum ausgewählten Tag", key="btn_month_to_picked_mobile"):
+                ensure_calendar_matches_picked()
+                st.rerun()
+
+        render_clickable_month(cfg, int(state.season), st.session_state["cal_year"], st.session_state["cal_month"], events)
+        st.caption("✅ = ausgewählter Tag | `MDx` = Matchday (3-Tage-Takt) | `•` = Einträge vorhanden")
+
+        st.divider()
+        st.subheader("📝 Tagesansicht & Einträge")
+    else:
+        # Desktop: side-by-side
+        left, right = st.columns([1, 1.45], gap="large")
+
+        # =========================
+        # LEFT: (Rechner is now shared above)
+        # =========================
+        # Rechner content is above
 
     # =========================
-    # RIGHT: Calendar + Day View + Free Entries
+    # Calendar + Day View + Free Entries
     # =========================
-    with right:
+    if is_mobile:
+        # Mobile calendar already rendered above
+        pass
+    else:
         st.subheader("🗓️ Kalender")
 
         nav1, nav2, nav3, nav4 = st.columns([1, 1, 2, 1])
