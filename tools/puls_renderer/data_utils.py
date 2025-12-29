@@ -5,13 +5,17 @@ import streamlit as st
 
 def get_spieltage_root() -> Path:
     """Get the spieltage root directory."""
-    base_dir = Path(__file__).resolve().parents[2]
-    return base_dir / "data" / "spieltage"
+    # Start from this file's location in tools/puls_renderer/
+    # Go up to toolbox root, then into data symlink -> spieltage
+    toolbox_root = Path(__file__).resolve().parents[2]  # /opt/highspeed/toolbox
+    return toolbox_root / "data" / "spieltage"
 
 
-@st.cache_data
 def discover_matchdays(season_dir: Path) -> list[Path]:
-    """Discover all spieltag_XX.json files in a season directory."""
+    """Discover all spieltag_XX.json files in a season directory.
+    
+    Note: Cache removed to ensure fresh file discovery after data repo updates.
+    """
     if not season_dir.exists():
         return []
     files = sorted(season_dir.glob("spieltag_*.json"))
