@@ -36,9 +36,13 @@ if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 if str(APP_DIR / "src") not in sys.path:
     sys.path.insert(0, str(APP_DIR / "src"))
+if str(APP_DIR / "src" / "modules") not in sys.path:
+    sys.path.insert(0, str(APP_DIR / "src" / "modules"))
+if str(APP_DIR / "src" / "modules" / "puls_renderer") not in sys.path:
+    sys.path.insert(0, str(APP_DIR / "src" / "modules" / "puls_renderer"))
 
 try:
-    from tools.puls_renderer import results_renderer
+    from src.modules.puls_renderer import results_renderer
 except Exception as e:
     results_renderer = None
     RESULTS_IMPORT_ERR = str(e)

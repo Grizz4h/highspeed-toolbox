@@ -56,30 +56,59 @@ class MatchdayLayoutV1:
     color_text: Tuple[int, int, int, int] = (174, 220, 255, 255)  # #AEDCFF
     color_accent: Tuple[int, int, int, int] = (120, 190, 220, 255) # eisblau
 
-# -------------------------
-# Typography (central)
-# -------------------------
-# Big header "SPIELTAG X"
-header_spieltag_font_size: int = 72
+@dataclass(frozen=True)
+class ConferenceLayoutV1:
+    # Canvas (gleiche Größe)
+    width: int = 1080
+    height: int = 1350
 
-# Team names in rows
-row_team_font_size: int = 22
+    # --- Header: "SPIELTAG XX" (zentriert unter PULS) ---
+    header_center_x: int = 540
+    header_spieltag_y: int = 140
 
-# Center token: "VS" / "2:1"
-center_token_font_size: int = 44
+    # --- Match rows: Y-Positionen für 5 Spiele ---
+    # Höher positioniert für bessere Platzverteilung bei separaten Renderings
+    y_matches: List[int] = (370, 565, 762, 955, 1150)
 
-# Footer date
-footer_date_font_size: int = 20
+    # --- Symmetrie / Slots ---
+    center_x: int = 540
 
-# Watermark
-watermark_font_size: int = 20
-watermark_margin: int = 22
-watermark_opacity: int = 90
+    # VS-Korridor enger -> mehr Platz für Teamnamen
+    vs_gap_half_width: int = 70
 
-# Font files (so both renderers use same fonts)
-font_regular: str = "Inter-Regular.ttf"
-font_medium: str = "Inter-Medium.ttf"
-font_bold: str = "Inter-Bold.ttf"
+    # Logos
+    logo_size: int = 60
+
+    # Home-Logo weiter nach außen
+    x_logo_home: int = 80
+
+    # Away-Logo weiter nach außen
+    x_logo_away: int = 946
+
+    # Teamnamen
+    x_text_home: int = 150
+    x_text_away: int = 930
+
+    # Footer: Datum
+    footer_date_center_x: int = 540
+    footer_date_y: int = 200
+
+    # Colors (RGBA)
+    color_text: Tuple[int, int, int, int] = (174, 220, 255, 255)
+    color_accent: Tuple[int, int, int, int] = (120, 190, 220, 255)
+
+    # last5 Positionen (unter Logos)
+    last5_y_offset: int = 10  # Abstand unter Logo
+    last5_font_size: int = 20
+    last5_x_offset_home: int = 40  # Nach rechts für Home
+    last5_x_offset_away: int = -40 # Nach links für Away
+    @property
+    def max_width_home(self) -> int:
+        return (self.center_x - self.vs_gap_half_width) - self.x_text_home
+
+    @property
+    def max_width_away(self) -> int:
+        return self.x_text_away - (self.center_x + self.vs_gap_half_width)
 
 
 

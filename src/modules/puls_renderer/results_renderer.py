@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional, Tuple, List
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-from .layout_config import MatchdayLayoutV1
+from .layout_config import MatchdayLayoutV1, ConferenceLayoutV1
 
 
 # ----------------------------
@@ -251,51 +251,30 @@ def _guess_replay_path(toolbox_root: Path, saison: int, spieltag: int, home_name
     return toolbox_root / "data" / "replays" / f"saison_{saison:02d}" / f"spieltag_{spieltag:02d}" / fn
 
 
-def _two_sentence_blurb_from_replay(replay_json: Dict[str, Any], home_name: str, away_name: str, score_home: int, score_away: int) -> str:
-    events = replay_json.get("events", []) or []
-    goals = [e for e in events if (e.get("type") == "goal")]
+def _load_latest_json(latest_path: Path) -> Dict[str, Any]:
+    if latest_path.exists():
+        return _safe_load_json(latest_path)
+    return {"teams": []}
 
-    if not goals:
-        return f"{home_name} gewinnt {score_home}:{score_away} gegen {away_name}. Wenig Highlights im Protokoll."
 
-    # Reihenfolge: wie im Log
-    first = goals[0]
-    first_team = first.get("team", "")
-    first_scorer = ((first.get("scorer") or {}).get("id") or "").replace("_", " ").strip()
+def _load_narratives_json(narratives_path: Path) -> Dict[str, Any]:
+    if narratives_path.exists():
+        return _safe_load_json(narratives_path)
+    return {}
 
-    # wer hat den "Siegtreffer" gemacht? -> letzter goal-event
-    last = goals[-1]
-    last_team = last.get("team", "")
-    last_scorer = ((last.get("scorer") or {}).get("id") or "").replace("_", " ").strip()
 
-    # Teams aus Log sind meist "home"/"away" oder echte Namen – wir machen’s robust
-    def _team_label(t: str) -> str:
-        tl = (t or "").strip().lower()
-        if tl == "home":
-            return home_name
-        if tl == "away":
-            return away_name
-        # falls Teamname drinsteht
-        if tl:
-            return t
-        return ""
+def _get_last5_for_team(latest_data: Dict[str, Any], team_name: str) -> List[str]:
+    teams = latest_data.get("teams", [])
+    for team in teams:
+        if team.get("team") == team_name:
+            return team.get("last5", [])
+    return []
 
-    first_team_lbl = _team_label(first_team)
-    last_team_lbl = _team_label(last_team)
 
-    s1 = f"{first_team_lbl} eröffnete das Spiel früh"
-    if first_scorer:
-        s1 += f" durch {first_scorer}."
-    else:
-        s1 += "."
-
-    # Satz 2: Siegtreffer/Unterschied
-    if last_team_lbl:
-        s2 = f"Am Ende setzte sich {home_name} {score_home}:{score_away} durch – den Unterschied machte {last_scorer or last_team_lbl}."
-    else:
-        s2 = f"Am Ende setzte sich {home_name} {score_home}:{score_away} durch."
-
-    return f"{s1} {s2}"
+def _get_line1_for_match(narratives_data: Dict[str, Any], home_name: str, away_name: str) -> str:
+    key = f"{home_name}-{away_name}"
+    match_data = narratives_data.get(key, {})
+    return match_data.get("line1", "")
 
 
 # ----------------------------
@@ -331,12 +310,18 @@ def convert_spieltag_json_to_results(spieltag_json: Dict[str, Any]) -> Dict[str,
 
         conf = norm_conf(r.get("conference"))
 
+        # Neue Flags
+        overtime = bool(r.get("overtime", False))
+        shootout = bool(r.get("shootout", False))
+
         item = {
             "home_name": str(home_name),
             "away_name": str(away_name),
             "goals_home": int(gh or 0),
             "goals_away": int(ga or 0),
             "conference": conf,
+            "overtime": overtime,
+            "shootout": shootout,
         }
         all_games.append(item)
 
@@ -369,11 +354,21 @@ def render_matchday_results_overview(
     out_path: Path,
     layout: Optional[MatchdayLayoutV1] = None,
     delta_date: Optional[str] = None,
+    latest_path: Optional[Path] = None,
+    narratives_path: Optional[Path] = None,
 ) -> Path:
-    layout = layout or MatchdayLayoutV1()
+    # Wähle Layout basierend auf Daten
+    if len(spieltag_data.get("nord", [])) > 0 and len(spieltag_data.get("sued", [])) > 0:
+        layout = MatchdayLayoutV1()
+    else:
+        layout = ConferenceLayoutV1()
 
     img = Image.open(template_path).convert("RGBA")
     draw = ImageDraw.Draw(img)
+
+    # Load additional data
+    latest_data = _load_latest_json(latest_path) if latest_path else {"teams": []}
+    narratives_data = _load_narratives_json(narratives_path) if narratives_path else {}
 
     # Fonts (wie bei euch)
     font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
@@ -434,10 +429,7 @@ def render_matchday_results_overview(
     nord: List[Dict[str, Any]] = spieltag_data.get("nord", [])
     sued: List[Dict[str, Any]] = spieltag_data.get("sued", [])
 
-    # Wir halten erstmal an 5/5 fest, weil Template so ist.
-    if len(nord) != 5 or len(sued) != 5:
-        raise ValueError(f"Template erwartet 5 nord + 5 sued. Got nord={len(nord)} sued={len(sued)}")
-
+    # Anpassen für separate Renderings
     team_font = _load_font(font_bold_path, team_size)
     score_font = _load_font(font_bold_path, score_size)
     blurb_font = _load_font(font_med_path, blurb_size)
@@ -449,7 +441,7 @@ def render_matchday_results_overview(
     def _display_team(slug: str) -> str:
         return (display_map.get(slug, slug.replace("-", " "))).upper()
 
-    def draw_match_row(y: int, home_name: str, away_name: str, gh: int, ga: int) -> None:
+    def draw_match_row(y: int, home_name: str, away_name: str, gh: int, ga: int, overtime: bool, shootout: bool, last5_home: List[str], last5_away: List[str], line1: str) -> None:
         home_slug = _team_name_to_logo_slug(home_name, display_map)
         away_slug = _team_name_to_logo_slug(away_name, display_map)
 
@@ -495,7 +487,7 @@ def render_matchday_results_overview(
             stroke_fill=(0, 0, 0, 190),
         )
 
-        # Score in der Mitte statt VS
+        # Score in der Mitte
         score_txt = f"{gh}:{ga}"
         draw_text_fx(
             img,
@@ -513,12 +505,84 @@ def render_matchday_results_overview(
             stroke_fill=(0, 0, 0, 180),
         )
 
+        # OT/SO als Badge rechts neben Score
+        if overtime or shootout:
+            badge_txt = "OT" if overtime else "SO"
+            badge_x = layout.center_x + _text_w(draw, score_txt, score_font) // 2 + 10  # rechts neben Score
+            badge_font = _load_font(font_med_path, 16)  # kleiner
+            draw_text_fx(
+                img,
+                (badge_x, y),
+                badge_txt,
+                badge_font,
+                fill=layout.color_accent,
+                anchor="lm",
+                glow=False,
+                shadow=True,
+                shadow_offset=(0, 1),
+                shadow_alpha=150,
+                stroke=True,
+                stroke_width=1,
+                stroke_fill=(0, 0, 0, 200),
+            )
 
-    for i, m in enumerate(nord):
-        draw_match_row(layout.y_nord[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"])
+        # last5 unter Logos
+        last5_home_txt = " ".join(last5_home[-5:])  # letzte 5
+        last5_away_txt = " ".join(last5_away[-5:])
+        last5_font = _load_font(font_med_path, layout.last5_font_size)
+        last5_home_y = y + layout.logo_size + layout.last5_y_offset
+        last5_away_y = y + layout.logo_size + layout.last5_y_offset
+        draw_text_fx(
+            img,
+            (layout.x_logo_home + layout.last5_x_offset_home, last5_home_y),
+            last5_home_txt,
+            last5_font,
+            fill=layout.color_text,
+            anchor="lm",  # linksbündig
+        )
+        draw_text_fx(
+            img,
+            (layout.x_logo_away + layout.logo_size + layout.last5_x_offset_away, last5_away_y),
+            last5_away_txt,
+            last5_font,
+            fill=layout.color_text,
+            anchor="rm",  # rechtsbündig
+        )
 
-    for i, m in enumerate(sued):
-        draw_match_row(layout.y_sued[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"])
+        # Line1 unter dem Score
+        if line1:
+            line1_y = y + 70 # anpassen
+            draw_text_fx(
+                img,
+                (layout.center_x, line1_y),
+                line1,
+                blurb_font,
+                fill=layout.color_text,
+                anchor="mm",
+            )
+
+
+    if isinstance(layout, ConferenceLayoutV1):
+        # Für separate Konferenzen: verwende y_matches
+        matches = nord if nord else sued
+        for i, m in enumerate(matches):
+            last5_home = _get_last5_for_team(latest_data, m["home_name"])
+            last5_away = _get_last5_for_team(latest_data, m["away_name"])
+            line1 = _get_line1_for_match(narratives_data, m["home_name"], m["away_name"])
+            draw_match_row(layout.y_matches[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"], m["overtime"], m["shootout"], last5_home, last5_away, line1)
+    else:
+        # Für kombinierte: verwende y_nord und y_sued
+        for i, m in enumerate(nord):
+            last5_home = _get_last5_for_team(latest_data, m["home_name"])
+            last5_away = _get_last5_for_team(latest_data, m["away_name"])
+            line1 = _get_line1_for_match(narratives_data, m["home_name"], m["away_name"])
+            draw_match_row(layout.y_nord[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"], m["overtime"], m["shootout"], last5_home, last5_away, line1)
+
+        for i, m in enumerate(sued):
+            last5_home = _get_last5_for_team(latest_data, m["home_name"])
+            last5_away = _get_last5_for_team(latest_data, m["away_name"])
+            line1 = _get_line1_for_match(narratives_data, m["home_name"], m["away_name"])
+            draw_match_row(layout.y_sued[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"], m["overtime"], m["shootout"], last5_home, last5_away, line1)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
         # ---- Watermark (wie im Spieltag-Renderer) ----
@@ -543,7 +607,9 @@ def render_from_spieltag_file(
     template_name: str = "matchday_overview_v1.png",
     out_name: Optional[str] = None,
     delta_date: Optional[str] = None,
-) -> Path:
+    latest_path: Optional[Path] = None,
+    narratives_path: Optional[Path] = None,
+) -> List[Path]:
     base_dir = Path(__file__).resolve().parent  # tools/puls_renderer
     paths = RenderPaths(base_dir=base_dir)
 
@@ -557,19 +623,53 @@ def render_from_spieltag_file(
     if not template_path.exists():
         raise FileNotFoundError(f"Template not found: {template_path}")
 
+    out_paths = []
+
+    # Render Nord
+    nord_data = {"saison": saison, "spieltag": spieltag, "nord": data["nord"], "sued": []}
+    nord_template_name = "matchday_results_v1_nord.png" if data["nord"] else template_name
+    nord_template_path = paths.templates_dir / nord_template_name
+    if not nord_template_path.exists():
+        nord_template_path = paths.templates_dir / template_name  # fallback
     if out_name is None:
-        out_name = f"results_s{saison:02d}_spieltag_{spieltag:02d}.png"
-
-    out_path = paths.output_dir / out_name
-
-    return render_matchday_results_overview(
-        template_path=template_path,
-        spieltag_data=data,
+        nord_out_name = f"results_nord_s{saison:02d}_spieltag_{spieltag:02d}.png"
+    else:
+        nord_out_name = out_name.replace(".png", "_nord.png")
+    nord_out_path = paths.output_dir / nord_out_name
+    out_paths.append(render_matchday_results_overview(
+        template_path=nord_template_path,
+        spieltag_data=nord_data,
         paths=paths,
-        out_path=out_path,
-        layout=MatchdayLayoutV1(),
+        out_path=nord_out_path,
+        layout=ConferenceLayoutV1(),
         delta_date=delta_date,
-    )
+        latest_path=latest_path,
+        narratives_path=narratives_path,
+    ))
+
+    # Render Süd
+    sued_data = {"saison": saison, "spieltag": spieltag, "nord": [], "sued": data["sued"]}
+    sued_template_name = "matchday_results_v1.png" if data["sued"] else template_name
+    sued_template_path = paths.templates_dir / sued_template_name
+    if not sued_template_path.exists():
+        sued_template_path = paths.templates_dir / template_name  # fallback
+    if out_name is None:
+        sued_out_name = f"results_sued_s{saison:02d}_spieltag_{spieltag:02d}.png"
+    else:
+        sued_out_name = out_name.replace(".png", "_sued.png")
+    sued_out_path = paths.output_dir / sued_out_name
+    out_paths.append(render_matchday_results_overview(
+        template_path=sued_template_path,
+        spieltag_data=sued_data,
+        paths=paths,
+        out_path=sued_out_path,
+        layout=ConferenceLayoutV1(),
+        delta_date=delta_date,
+        latest_path=latest_path,
+        narratives_path=narratives_path,
+    ))
+
+    return out_paths
 
 
 if __name__ == "__main__":
@@ -578,4 +678,15 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
         raise SystemExit("Usage: python tools/puls_renderer/results_renderer.py <spieltag_json> <delta_date>")
-    render_from_spieltag_file(Path(sys.argv[1]), delta_date=sys.argv[2])
+    spieltag_path = Path(sys.argv[1])
+    delta_date = sys.argv[2]
+    
+    # Errate Pfade
+    toolbox_root = spieltag_path.parents[3]  # .../toolbox
+    saison = int(spieltag_path.parent.name.split('_')[1])  # saison_01 -> 1
+    spieltag = int(spieltag_path.name.split('_')[1].split('.')[0])  # spieltag_01.json -> 1
+    latest_path = toolbox_root / "data" / "stats" / f"saison_{saison:02d}" / "league" / "latest.json"
+    narratives_path = toolbox_root / "data" / "replays" / f"saison_{saison:02d}" / f"spieltag_{spieltag:02d}" / "narratives.json"
+    
+    paths = render_from_spieltag_file(spieltag_path, delta_date=delta_date, latest_path=latest_path, narratives_path=narratives_path)
+    print(f"Generated: {paths}")
