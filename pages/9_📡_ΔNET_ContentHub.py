@@ -340,11 +340,57 @@ def group_entries_by_day(entries: List[Dict]) -> Dict[str, List[Dict]]:
 	return grouped
 
 
+def delete_release_event(event_id: str) -> None:
+	"""Löscht ein Release Event und alle zugehörigen Content Items, Story Sequences und Slides."""
+	st.session_state["release_events"] = [ev for ev in st.session_state["release_events"] if ev["id"] != event_id]
+	st.session_state["content_items"] = [ci for ci in st.session_state["content_items"] if ci["release_event_id"] != event_id]
+	# Lösche Story Sequences für dieses Event
+	seq_ids = [seq["id"] for seq in st.session_state["story_sequences"] if seq["release_event_id"] == event_id]
+	st.session_state["story_sequences"] = [seq for seq in st.session_state["story_sequences"] if seq["release_event_id"] != event_id]
+	# Lösche Story Slides für diese Sequences
+	for seq_id in seq_ids:
+		st.session_state["story_slides"] = [slide for slide in st.session_state["story_slides"] if slide["sequence_id"] != seq_id]
+
+
+def delete_content_item(content_id: str) -> None:
+	"""Löscht ein einzelnes Content Item."""
+	st.session_state["content_items"] = [ci for ci in st.session_state["content_items"] if ci["id"] != content_id]
+
+
 init_state()
 load_state()
 st.title("📡 ΔNET Content Hub")
 
 st.caption("Usecases UC-01 bis UC-11 als kompakte Workflow-UI. Session State = Speicher.")
+
+# Session Management
+with st.expander("⚙️ Session Management", expanded=False):
+	col_a, col_b = st.columns([1, 3])
+	with col_a:
+		if st.button("🗑️ Event-Sessions löschen", type="secondary", use_container_width=True):
+			if "confirm_delete" not in st.session_state:
+				st.session_state["confirm_delete"] = True
+				st.rerun()
+	with col_b:
+		if st.session_state.get("confirm_delete", False):
+			st.warning("⚠️ Alle Release Events, Content Items, Story Sequences und Slides werden gelöscht!")
+			col_x, col_y, col_z = st.columns([1, 1, 2])
+			with col_x:
+				if st.button("✅ Bestätigen", type="primary"):
+					st.session_state["release_events"] = []
+					st.session_state["content_items"] = []
+					st.session_state["story_sequences"] = []
+					st.session_state["story_slides"] = []
+					st.session_state["personal_line_history"] = []
+					st.session_state["id_counters"] = {"release": 1, "content": 1, "sequence": 1, "slide": 1}
+					save_state()
+					st.session_state["confirm_delete"] = False
+					st.success("Alle Event-Sessions wurden gelöscht.")
+					st.rerun()
+			with col_y:
+				if st.button("❌ Abbrechen"):
+					st.session_state["confirm_delete"] = False
+					st.rerun()
 
 with st.expander("UC-01 Release Event anlegen (GENERIC)", expanded=True):
 	col1, col2, col3 = st.columns(3)
@@ -556,31 +602,67 @@ tab_overview, tab_calendar = st.tabs(["Overview", "Kalender"])
 
 with tab_overview:
 	st.subheader("Release Events Overview")
-	st.dataframe([
-		{
-			"id": ev["id"],
-			"type": ev.get("type"),
-			"episode_id": ev.get("episode_id"),
-			"title": ev["title"],
-			"status": ev["status"],
-			"website_url": ev["website_url"],
-			"release_datetime": ev["release_datetime"].strftime("%Y-%m-%d %H:%M") if ev.get("release_datetime") else "-",
-		}
-		for ev in st.session_state["release_events"]
-	])
+	for ev in st.session_state["release_events"]:
+		with st.container(border=True):
+			col_info, col_action = st.columns([5, 1])
+			with col_info:
+				st.markdown(f"**{ev['id']}** — {ev['title']} ({ev['status']})")
+				info_text = f"Type: {ev.get('type')} | Episode: {ev.get('episode_id') or 'N/A'}"
+				if ev.get('release_datetime'):
+					info_text += f" | Release: {ev['release_datetime'].strftime('%Y-%m-%d %H:%M')}"
+				st.caption(info_text)
+				if ev.get('website_url'):
+					st.caption(f"🔗 {ev['website_url']}")
+			with col_action:
+				if st.button("🗑️", key=f"del_ev_{ev['id']}", help="Event löschen"):
+					if f"confirm_del_{ev['id']}" not in st.session_state:
+						st.session_state[f"confirm_del_{ev['id']}"] = True
+						st.rerun()
+			if st.session_state.get(f"confirm_del_{ev['id']}", False):
+				st.warning(f"Event {ev['id']} und alle zugehörigen Content Items löschen?")
+				col_yes, col_no = st.columns(2)
+				with col_yes:
+					if st.button("✅ Ja", key=f"yes_{ev['id']}"):
+						delete_release_event(ev['id'])
+						st.session_state[f"confirm_del_{ev['id']}"] = False
+						save_state()
+						st.success(f"Event {ev['id']} gelöscht.")
+						st.rerun()
+				with col_no:
+					if st.button("❌ Nein", key=f"no_{ev['id']}"):
+						st.session_state[f"confirm_del_{ev['id']}"] = False
+						st.rerun()
 
 	st.subheader("Content Items Overview")
-	st.dataframe([
-		{
-			"id": c["id"],
-			"release_event_id": c["release_event_id"],
-			"channel": c["channel"],
-			"status": c["status"],
-			"post_url": c.get("post_url"),
-			"posted_at": c.get("posted_at").strftime("%Y-%m-%d %H:%M") if c.get("posted_at") else None,
-		}
-		for c in st.session_state["content_items"]
-	])
+	for c in st.session_state["content_items"]:
+		with st.container(border=True):
+			col_info, col_action = st.columns([5, 1])
+			with col_info:
+				st.markdown(f"**{c['id']}** — {c['channel']} ({c['status']})")
+				st.caption(f"Release Event: {c['release_event_id']}")
+				if c.get('post_url'):
+					st.caption(f"🔗 {c['post_url']}")
+				if c.get('posted_at'):
+					st.caption(f"📅 Posted: {c['posted_at'].strftime('%Y-%m-%d %H:%M')}")
+			with col_action:
+				if st.button("🗑️", key=f"del_ci_{c['id']}", help="Content Item löschen"):
+					if f"confirm_del_ci_{c['id']}" not in st.session_state:
+						st.session_state[f"confirm_del_ci_{c['id']}"] = True
+						st.rerun()
+			if st.session_state.get(f"confirm_del_ci_{c['id']}", False):
+				st.warning(f"Content Item {c['id']} löschen?")
+				col_yes, col_no = st.columns(2)
+				with col_yes:
+					if st.button("✅ Ja", key=f"yes_ci_{c['id']}"):
+						delete_content_item(c['id'])
+						st.session_state[f"confirm_del_ci_{c['id']}"] = False
+						save_state()
+						st.success(f"Content Item {c['id']} gelöscht.")
+						st.rerun()
+				with col_no:
+					if st.button("❌ Nein", key=f"no_ci_{c['id']}"):
+						st.session_state[f"confirm_del_ci_{c['id']}"] = False
+						st.rerun()
 
 with tab_calendar:
 	st.subheader("Kalender")
