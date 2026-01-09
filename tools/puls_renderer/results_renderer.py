@@ -369,6 +369,7 @@ def render_matchday_results_overview(
     out_path: Path,
     layout: Optional[MatchdayLayoutV1] = None,
     delta_date: Optional[str] = None,
+    blurb_list: Optional[List[Dict[str, str]]] = None,
 ) -> Path:
     layout = layout or MatchdayLayoutV1()
 
@@ -384,13 +385,15 @@ def render_matchday_results_overview(
     score_size = 34
     spieltag_size = 72
     date_size = 20
-    blurb_size = 16
+    blurb_size = layout.blurb_font_size
 
     # display map: slug -> display-name
     display_map = _load_team_display_map(paths.fonts_dir.parent)
 
     saison = int(spieltag_data.get("saison") or 0)
     spieltag = int(spieltag_data.get("spieltag") or 0)
+
+    blurb_list = blurb_list or []
 
     # Header: "SPIELTAG X" wie bisher (damit Template passt)
     header_text = f"SPIELTAG {spieltag}"
@@ -448,6 +451,30 @@ def render_matchday_results_overview(
 
     def _display_team(slug: str) -> str:
         return (display_map.get(slug, slug.replace("-", " "))).upper()
+
+    def draw_blurb(x: int, y: int, line1: str, line2: str) -> None:
+        if not line1 and not line2:
+            return
+        text = f"{line1}\n{line2}".strip()
+        if not text:
+            return
+        # Wrap to fit
+        wrapped = _wrap_to_n_lines(draw, text, blurb_font, layout.max_width_blurb, 2)
+        for i, line in enumerate(wrapped):
+            if line:
+                draw_text_fx(
+                    img,
+                    (x, y + i * 14),  # 14 pixel pro Zeile
+                    line,
+                    blurb_font,
+                    fill=layout.color_text,
+                    anchor="la",
+                    glow=False,
+                    shadow=True,
+                    shadow_offset=(0, 1),
+                    shadow_alpha=120,
+                    stroke=False,
+                )
 
     def draw_match_row(y: int, home_name: str, away_name: str, gh: int, ga: int) -> None:
         home_slug = _team_name_to_logo_slug(home_name, display_map)
@@ -516,9 +543,16 @@ def render_matchday_results_overview(
 
     for i, m in enumerate(nord):
         draw_match_row(layout.y_nord[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"])
+        if i < len(blurb_list):
+            blurb = blurb_list[i]
+            draw_blurb(layout.x_blurb, layout.y_blurb_nord[i], blurb.get("line1", ""), blurb.get("line2", ""))
 
     for i, m in enumerate(sued):
         draw_match_row(layout.y_sued[i], m["home_name"], m["away_name"], m["goals_home"], m["goals_away"])
+        idx = i + len(nord)
+        if idx < len(blurb_list):
+            blurb = blurb_list[idx]
+            draw_blurb(layout.x_blurb, layout.y_blurb_sued[i], blurb.get("line1", ""), blurb.get("line2", ""))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
         # ---- Watermark (wie im Spieltag-Renderer) ----

@@ -376,7 +376,7 @@ def render_matchday_results_overview(
 
     # Größen (MVP)
     team_size = 23
-    score_size = 34
+    score_size = 44
     spieltag_size = 72
     date_size = 20
     blurb_size = 16
@@ -609,6 +609,7 @@ def render_from_spieltag_file(
     delta_date: Optional[str] = None,
     latest_path: Optional[Path] = None,
     narratives_path: Optional[Path] = None,
+    edited_blurbs: Optional[Dict[str, Dict[str, str]]] = None,
 ) -> List[Path]:
     base_dir = Path(__file__).resolve().parent  # tools/puls_renderer
     paths = RenderPaths(base_dir=base_dir)

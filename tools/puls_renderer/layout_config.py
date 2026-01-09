@@ -18,6 +18,13 @@ class MatchdayLayoutV1:
     y_nord: List[int] = (430, 510, 590, 670, 750)
     y_sued: List[int] = (875, 955, 1035, 1110, 1185)
 
+    # --- Blurbs rechts neben jedem Match ---
+    x_blurb: int = 980
+    y_blurb_nord: List[int] = (420, 500, 580, 660, 740)  # etwas über dem Match-Y
+    y_blurb_sued: List[int] = (865, 945, 1025, 1100, 1175)
+    max_width_blurb: int = 80
+    blurb_font_size: int = 12
+
     # --- Symmetrie / Slots ---
     center_x: int = 540
 
