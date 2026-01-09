@@ -549,17 +549,27 @@ def render_matchday_results_overview(
             anchor="rm",  # rechtsbündig
         )
 
-        # Line1 unter dem Score
+        # Line1 unter dem Score mit Wrapping
         if line1:
-            line1_y = y + 70 # anpassen
-            draw_text_fx(
-                img,
-                (layout.center_x, line1_y),
-                line1,
-                blurb_font,
-                fill=layout.color_text,
-                anchor="mm",
-            )
+            line1_y = y + 50  # höher als vorher (war 70)
+            # Wrap text auf max 2 Zeilen - früher umbrechen
+            max_width = layout.center_x * 1.1  # ca. 594px für kürzere Zeilen
+            wrapped = _wrap_to_n_lines(draw, line1, blurb_font, int(max_width), 2)
+            for j, ln in enumerate(wrapped):
+                if ln:
+                    draw_text_fx(
+                        img,
+                        (layout.center_x, line1_y + j * 18),
+                        ln,
+                        blurb_font,
+                        fill=layout.color_text,
+                        anchor="mm",
+                        glow=False,
+                        shadow=True,
+                        shadow_offset=(0, 1),
+                        shadow_alpha=120,
+                        stroke=False,
+                    )
 
 
     if isinstance(layout, ConferenceLayoutV1):
