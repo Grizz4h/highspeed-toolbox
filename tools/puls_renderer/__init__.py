@@ -11,6 +11,11 @@ from .starting6_renderer import (
     render_starting6_from_files,
 )
 
+# Public API: Matchday Starting 6
+from .matchday_starting6_renderer import (
+    render_matchday_starting6,
+)
+
 # Public API: League table
 from .league_table_renderer import (
     render_table_from_matchday_json,          # preferred public name
@@ -37,6 +42,9 @@ __all__ = [
 
     # Starting 6
     "render_starting6_from_files",
+    
+    # Matchday Starting 6
+    "render_matchday_starting6",
 
     # League table
     "render_table_from_matchday_json",
