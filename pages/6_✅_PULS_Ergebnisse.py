@@ -83,13 +83,15 @@ for i, (game_key, g) in enumerate(zip(game_keys, games)):
     line2 = game_narr.get("line2", "")
     
     # Extrahiere Ergebnis
+    
+    # Extrahiere Ergebnis
     gh = g.get("goals_home") or g.get("g_home") or 0
     ga = g.get("goals_away") or g.get("g_away") or 0
     
     st.write(f"**Spiel {i+1}: {game_key} ({gh}:{ga})**")
     col1, col2 = st.columns(2)
     with col1:
-        edited_line1 = st.text_area(f"Zeile 1 für {game_key}", value=line1, height=60, key=f"line1_{i}")
+        edited_line1 = st.text_area(f"Zeile 1 für {game_key}", value=line1, height=60, key=f"line1_{saison}_{spieltag}_{i}")
     with col2:
         edited_line2 = st.text_area(f"Zeile 2 für {game_key}", value=line2, height=60, key=f"line2_{i}")
     
