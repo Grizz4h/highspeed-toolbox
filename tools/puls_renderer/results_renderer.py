@@ -377,6 +377,7 @@ def render_matchday_results_overview(
     draw = ImageDraw.Draw(img)
 
     # Fonts (wie bei euch)
+    font_display_path = paths.fonts_dir / "PULS_Schriftart.ttf"   # NEW (nur für "SPIELTAG")
     font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
     font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
 
@@ -395,9 +396,11 @@ def render_matchday_results_overview(
 
     blurb_list = blurb_list or []
 
-    # Header: "SPIELTAG X" wie bisher (damit Template passt)
-    header_text = f"SPIELTAG {spieltag}"
-    font_spieltag = ImageFont.truetype(str(font_bold_path), size=spieltag_size)
+    # Header: Test-Titel für Schriftart
+        # Header: Generischer Test-Titel
+    header_text = "HEADER TEST"
+    font_spieltag = _load_font(font_display_path, spieltag_size)
+
     draw_text_fx(
         img,
         (layout.header_center_x, layout.header_spieltag_y),
@@ -414,7 +417,13 @@ def render_matchday_results_overview(
         stroke_fill=(0, 0, 0, 200),
     )
 
-    # Footer date: Δ...
+
+
+    import streamlit as st
+    font_spieltag = _load_font(font_display_path, spieltag_size)
+    st.write(f"[DEBUG] Font für SPIELTAG geladen: {font_spieltag}")
+    st.write(f"[DEBUG] Font-Pfad: {font_display_path}")
+    st.write(f"[DEBUG] Header-Text: {header_text}")
     if not delta_date:
         raise ValueError("Δ-Datum fehlt. Bitte im Renderer-UI eintragen (z.B. 2125-10-18).")
     delta_date = str(delta_date).strip()
