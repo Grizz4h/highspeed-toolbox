@@ -579,6 +579,7 @@ def render_matchday_overview(
     # Fonts
     font_bold_path = fonts_dir / "Inter-Bold.ttf"
     font_med_path = fonts_dir / "Inter-Medium.ttf"
+    font_display_path = fonts_dir / "PULS_Schriftart.ttf"
 
     # Base sizes
     team_size = 23
@@ -593,7 +594,7 @@ def render_matchday_overview(
 
     # Header
     header_text = f"SPIELTAG {spieltag}"
-    font_spieltag = _fit_text(draw, header_text, font_bold_path, max_width=900, start_size=spieltag_size, min_size=34)
+    font_spieltag = _fit_text(draw, header_text, font_display_path, max_width=900, start_size=spieltag_size, min_size=34)
 
     if header_fx == "clean":
         # Knackig, keine Matsch-Glow, kein Noise

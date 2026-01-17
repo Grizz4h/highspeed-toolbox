@@ -373,10 +373,11 @@ def render_matchday_results_overview(
     # Fonts (wie bei euch)
     font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
     font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
+    font_display_path = paths.fonts_dir / "PULS_Schriftart.ttf"
 
     # Größen (MVP)
     team_size = 23
-    score_size = 44
+    score_size = 60
     spieltag_size = 72
     date_size = 20
     blurb_size = 16
@@ -387,9 +388,9 @@ def render_matchday_results_overview(
     saison = int(spieltag_data.get("saison") or 0)
     spieltag = int(spieltag_data.get("spieltag") or 0)
 
-    # Header: "SPIELTAG X" wie bisher (damit Template passt)
+    # Header: "SPIELTAG X" mit PULS_Schriftart.ttf
     header_text = f"SPIELTAG {spieltag}"
-    font_spieltag = ImageFont.truetype(str(font_bold_path), size=spieltag_size)
+    font_spieltag = _load_font(font_display_path, spieltag_size)
     draw_text_fx(
         img,
         (layout.header_center_x, layout.header_spieltag_y),
@@ -431,7 +432,7 @@ def render_matchday_results_overview(
 
     # Anpassen für separate Renderings
     team_font = _load_font(font_bold_path, team_size)
-    score_font = _load_font(font_bold_path, score_size)
+    score_font = _load_font(font_display_path, score_size)
     blurb_font = _load_font(font_med_path, blurb_size)
 
     # Textblock rechts: Platz (MVP) – musst du ggf. feinjustieren
