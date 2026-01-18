@@ -41,7 +41,8 @@ template_name = st.text_input("Template", value="matchday_results_v1.png")
 toolbox_root = Path(__file__).parents[1]  # .../toolbox
 saison = int(spieltag_path.parent.name.split('_')[1])  # saison_01 -> 1
 spieltag = int(spieltag_path.name.split('_')[1].split('.')[0])  # spieltag_01.json -> 1
-latest_path = toolbox_root / "data" / "stats" / f"saison_{saison:02d}" / "league" / "latest.json"
+latest_path = toolbox_root / "data" / "stats" / f"saison_{saison:02d}" / "league" / f"after_spieltag_{spieltag:02d}_detail.json"
+st.caption(f"[DEBUG] last5 latest_path: {latest_path}")
 narratives_path = toolbox_root / "data" / "replays" / f"saison_{saison:02d}" / f"spieltag_{spieltag:02d}" / "narratives.json"
 
 st.caption(f"Latest: {latest_path}")
