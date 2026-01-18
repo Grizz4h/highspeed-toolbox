@@ -119,8 +119,8 @@ def _draw_table_block(
     fonts_dir: Path,
     display_map: Dict[str, str],
 ) -> None:
-    font_bold_path = fonts_dir / "Inter-Bold.ttf"
-    font_med_path = fonts_dir / "Inter-Medium.ttf"
+    font_bold_path = fonts_dir / "PULS_Schriftart.ttf"
+    font_med_path = fonts_dir / "PULS_Schriftart.ttf"
 
     # Titel (du willst den ggf. später selbst reinmalen – kannst du auch einfach auskommentieren)
     font_block_title = _load_font(font_bold_path, 34)
@@ -293,8 +293,10 @@ def render_league_table_from_matchday_json(
     draw = ImageDraw.Draw(img)
 
     # Fonts
-    font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
+    font_bold_path = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med_path = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med_path_season = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_date_path = paths.fonts_dir / "Inter-Medium.ttf"
 
     # Header brand
     font_brand = _load_font(font_bold_path, 34)
@@ -335,11 +337,11 @@ def render_league_table_from_matchday_json(
     )
 
     # Sub
-    font_sub = _fit_text(draw, sub, font_med_path, max_width=920, start_size=26, min_size=18)
+    font_sub = _fit_text(draw, sub, font_med_path_season, max_width=920, start_size=26, min_size=18)
     draw.text((layout.width // 2, layout.header_sub_y), sub, font=font_sub, fill=layout.color_accent, anchor="mm")
 
     # Δ date sichtbar
-    font_date = _load_font(font_med_path, 20)
+    font_date = _load_font(font_date_path, 20)
     draw.text((layout.width // 2, layout.header_date_y), date_str, font=font_date, fill=layout.color_accent, anchor="mm")
 
     # display map (optional)

@@ -377,9 +377,9 @@ def render_matchday_results_overview(
     draw = ImageDraw.Draw(img)
 
     # Fonts (wie bei euch)
-    font_display_path = paths.fonts_dir / "PULS_Schriftart.ttf"   # NEW (nur für "SPIELTAG")
-    font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
+    font_display_path = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_bold_path = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med_path = paths.fonts_dir / "PULS_Schriftart.ttf"
 
     # Größen (MVP)
     team_size = 23

@@ -115,6 +115,8 @@ def _fit_text(
     min_size: int = 12,
 ) -> ImageFont.FreeTypeFont:
     size = start_size
+    font_path = Path(font_path)
+    font_path = font_path.parent / "PULS_Schriftart.ttf"
     while size >= min_size:
         f = ImageFont.truetype(str(font_path), size=size)
         bbox = draw.textbbox((0, 0), text, font=f)

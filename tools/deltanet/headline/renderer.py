@@ -36,6 +36,8 @@ def _ensure_dir(p: Path) -> None:
 
 def _fit_text(draw: ImageDraw.ImageDraw, text: str, font_path: Path, max_width: int, start_size: int, min_size: int = 12) -> ImageFont.FreeTypeFont:
     size = start_size
+    font_path = Path(font_path)
+    font_path = font_path.parent / "PULS_Schriftart.ttf"
     while size >= min_size:
         f = ImageFont.truetype(str(font_path), size=size)
         bbox = draw.textbbox((0, 0), text, font=f)
@@ -137,8 +139,8 @@ def render_deltanet_headline(
     img = Image.open(tpath).convert("RGBA")
     draw = ImageDraw.Draw(img)
 
-    font_bold = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med = paths.fonts_dir / "Inter-Medium.ttf"
+    font_bold = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med = paths.fonts_dir / "PULS_Schriftart.ttf"
 
     if not font_bold.exists() or not font_med.exists():
         raise FileNotFoundError(f"Fonts not found. Expected in: {paths.fonts_dir}")

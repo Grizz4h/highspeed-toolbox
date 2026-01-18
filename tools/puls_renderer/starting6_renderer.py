@@ -99,8 +99,8 @@ def render_starting6_from_files(
     img = Image.open(template_path).convert("RGBA")
     draw = ImageDraw.Draw(img)
 
-    font_bold = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med = paths.fonts_dir / "Inter-Medium.ttf"
+    font_bold = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med = paths.fonts_dir / "PULS_Schriftart.ttf"
 
     # Header
     header = ""

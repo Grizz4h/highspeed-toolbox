@@ -150,8 +150,8 @@ def render_matchday_starting6(
     draw = ImageDraw.Draw(img)
     
     # Fonts
-    font_bold = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med = paths.fonts_dir / "Inter-Medium.ttf"
+    font_bold = paths.fonts_dir / "PULS_Schriftart.ttf"
+    font_med = paths.fonts_dir / "PULS_Schriftart.ttf"
     
     # Header (nur Sub-Zeile, Titel ist im Template)
     sub = f"{season_label} • SPIELTAG {matchday}"

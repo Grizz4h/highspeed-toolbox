@@ -371,9 +371,10 @@ def render_matchday_results_overview(
     narratives_data = _load_narratives_json(narratives_path) if narratives_path else {}
 
     # Fonts (wie bei euch)
-    font_bold_path = paths.fonts_dir / "Inter-Bold.ttf"
-    font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
+    font_bold_path = paths.fonts_dir / "PULS_Schriftart.ttf"
     font_display_path = paths.fonts_dir / "PULS_Schriftart.ttf"
+    # Für Datum und Watermark wieder Inter-Medium.ttf verwenden
+    font_med_path = paths.fonts_dir / "Inter-Medium.ttf"
 
     # Größen (MVP)
     team_size = 23

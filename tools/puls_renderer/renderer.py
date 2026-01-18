@@ -577,7 +577,7 @@ def render_matchday_overview(
     draw = ImageDraw.Draw(img)
 
     # Fonts
-    font_bold_path = fonts_dir / "Inter-Bold.ttf"
+    font_bold_path = fonts_dir / "PULS_Schriftart.ttf"
     font_med_path = fonts_dir / "Inter-Medium.ttf"
     font_display_path = fonts_dir / "PULS_Schriftart.ttf"
 
@@ -708,7 +708,7 @@ def render_matchday_overview(
         home_txt = home_label.upper()
         away_txt = away_label.upper()
 
-        team_font = _load_font(font_bold_path, team_size)
+        team_font = _load_font(font_display_path, team_size)
 
 
         # logos
