@@ -99,15 +99,13 @@ def _wrap_to_n_lines(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeT
     if cur:
         lines.append(cur)
 
-    # auf n Zeilen begrenzen + letzte kürzen
+    # auf n Zeilen begrenzen, aber NICHT abschneiden
     if len(lines) <= n:
         lines += [""] * (n - len(lines))
         return lines[:n]
-
-    # zu viele: n-1 behalten, letzte zusammenfassen + trunc
+    # zu viele: n-1 behalten, Rest als letzte Zeile (ohne Truncation)
     head = lines[: n - 1]
     tail = " ".join(lines[n - 1 :])
-    tail = _truncate_line(draw, tail, font, max_w)
     return head + [tail]
 
 def _draw_watermark(
@@ -381,7 +379,7 @@ def render_matchday_results_overview(
     score_size = 60
     spieltag_size = 72
     date_size = 20
-    blurb_size = 16
+    blurb_size = 20
 
     # display map: slug -> display-name
     display_map = _load_team_display_map(paths.fonts_dir.parent)
@@ -434,7 +432,7 @@ def render_matchday_results_overview(
     # Anpassen für separate Renderings
     team_font = _load_font(font_bold_path, team_size)
     score_font = _load_font(font_display_path, score_size)
-    blurb_font = _load_font(font_med_path, blurb_size)
+    blurb_font = _load_font(font_display_path, blurb_size)
 
     # Textblock rechts: Platz (MVP) – musst du ggf. feinjustieren
     # Wir nehmen den Bereich rechts innerhalb der Match-Box.
@@ -551,27 +549,33 @@ def render_matchday_results_overview(
             anchor="rm",  # rechtsbündig
         )
 
-        # Line1 unter dem Score mit Wrapping
-        if line1:
-            line1_y = y + 50  # höher als vorher (war 70)
-            # Wrap text auf max 2 Zeilen - früher umbrechen
-            max_width = layout.center_x * 1.1  # ca. 594px für kürzere Zeilen
-            wrapped = _wrap_to_n_lines(draw, line1, blurb_font, int(max_width), 2)
-            for j, ln in enumerate(wrapped):
-                if ln:
-                    draw_text_fx(
-                        img,
-                        (layout.center_x, line1_y + j * 18),
-                        ln,
-                        blurb_font,
-                        fill=layout.color_text,
-                        anchor="mm",
-                        glow=False,
-                        shadow=True,
-                        shadow_offset=(0, 1),
-                        shadow_alpha=120,
-                        stroke=False,
-                    )
+        # Line1 und Line2 unter dem Score
+        # Hole narratives (line1, line2) aus narratives_data falls vorhanden
+        key = f"{home_name}-{away_name}"
+        match_data = narratives_data.get(key, {})
+        line2 = match_data.get("line2", "")
+        if line1 or line2:
+            line1_y = y + 50
+            max_width = int(layout.center_x * 0.85)
+            # Beide Zeilen als ein Block, dann auf 2 Zeilen umbrechen
+            textblock = " ".join([t for t in [line1, line2] if t]).strip()
+            if textblock:
+                wrapped = _wrap_to_n_lines(draw, textblock, blurb_font, max_width, 2)
+                for j, ln in enumerate(wrapped):
+                    if ln:
+                        draw_text_fx(
+                            img,
+                            (layout.center_x, line1_y + j * 24),
+                            ln,
+                            blurb_font,
+                            fill=layout.color_text,
+                            anchor="mm",
+                            glow=False,
+                            shadow=True,
+                            shadow_offset=(0, 1),
+                            shadow_alpha=120,
+                            stroke=False,
+                        )
 
 
     if isinstance(layout, ConferenceLayoutV1):
