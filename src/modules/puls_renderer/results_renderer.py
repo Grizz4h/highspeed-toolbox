@@ -529,7 +529,7 @@ def render_matchday_results_overview(
         # last5 unter Logos
         last5_home_txt = " ".join(last5_home[-5:])  # letzte 5
         last5_away_txt = " ".join(last5_away[-5:])
-        last5_font = _load_font(font_med_path, layout.last5_font_size)
+        last5_font = _load_font(font_bold_path, layout.last5_font_size)
         last5_home_y = y + layout.logo_size + layout.last5_y_offset
         last5_away_y = y + layout.logo_size + layout.last5_y_offset
         draw_text_fx(

@@ -157,7 +157,7 @@ def render_matchday_starting6(
     sub = f"{season_label} • SPIELTAG {matchday}"
     
     font_sub = _fit_text(draw, sub.upper(), font_med, max_width=980, start_size=20, min_size=14)
-    draw.text((540, 170), sub.upper(), font=font_sub, fill=layout.color_accent, anchor="mm")
+    draw.text((540, 180), sub.upper(), font=font_sub, fill=layout.color_accent, anchor="mm")
     
     # Divider
     draw.line((110, 195, 970, 195), fill=layout.color_divider, width=2)
