@@ -116,7 +116,7 @@ def _fit_text(
 ) -> ImageFont.FreeTypeFont:
     size = start_size
     font_path = Path(font_path)
-    font_path = font_path.parent / "PULS_Schriftart.ttf"
+    # Verwende die übergebene Schrift (Inter), nicht PULS_Schriftart
     while size >= min_size:
         f = ImageFont.truetype(str(font_path), size=size)
         bbox = draw.textbbox((0, 0), text, font=f)
@@ -361,9 +361,9 @@ def render_deltanet_boulevard(payload: Dict[str, Any], out_name: Optional[str] =
     color_text = getattr(layout, "color_text", (235, 238, 242, 255))
     color_teaser = getattr(layout, "color_teaser", color_muted)
 
-    # BRAND (small) — safe fallback statt layout.brand_size crash
+    # BRAND (small) — direkt mit Inter-Medium rendern (NICHT PULS-Schrift)
     brand_size = getattr(layout, "brand_size", 24)
-    f_brand = _fit_text(draw, brand.upper(), font_med, max_w, start_size=brand_size, min_size=16)
+    f_brand = ImageFont.truetype(str(font_med), size=brand_size)
     draw.text((left, y_brand), brand.upper(), font=f_brand, fill=color_muted, anchor="la")
 
     # KICKER (Marker + Text)
