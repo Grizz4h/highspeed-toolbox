@@ -1,0 +1,123 @@
+[
+{
+  "slug": "solar-gelato",
+  "visible": true,
+
+  "name": "Solar Gelato",
+  "effect": "Warm im Körper. Klar im Kopf.",
+  "date": "Δ2083-4-27",
+  "thc": "19%",
+  "cbd": "0.5%",
+  "type": "Hybrid (sativa-leaning)",
+  "breeder": "Verdant Horizon Therapeutics",
+  "vibe": "",
+
+  "description": "Ein geschmeidiger Hybrid für helle Tagesstunden. Solar Gelato verbindet warmes Körpergefühl mit klarer Kopfpräsenz, leichter Euphorie und subtiler Musik-Sensitivität. Perfekt für Solo-Rides, Spaziergänge und fokussierte Tagesaktivität ohne Überreizung.",
+
+  "images": {
+    "hero": "/images/strains/solar-gelato/1_solar_Gelato.png",
+    "card": "/images/strains/solar-gelato/1_solar_Gelato.png",
+    "gallery": [
+      "/images/strains/solar-gelato/1_solar_Gelato.png"
+    ]
+  },
+
+  "terpeneProfile": {
+    "myrcen": 0.20,
+    "verdaxen": 0.20,
+    "ocimen": 0.10,
+    "florasol": 0.10,
+    "pinene": 0.10,
+    "luminene": 0.10,
+    "eucalyptol": 0.05,
+    "neurolin": 0.10,
+    "prismadene": 0.05
+  },
+
+  "effects": [],
+
+  "tags": ["Daytime", "TheraHybrid", "GelatoLine"],
+
+  "links": [
+    { "label": "Verdant Horizon Therapeutics", "href": "/about/breeders/verdant-horizon-therapeutics" },
+    { "label": "Cell Verde", "href": "/about/cell-verde" }
+  ]
+}
+,
+
+
+{
+  "slug": "crimson-blossom",
+  "visible": true,
+  "name": "Crimson Blossom",
+  "effect": "Emotionale Stabilisierung mit kontrollierter Aufhellung",
+  "date": "Δ2099-11-12",
+  "thc": "17%",
+  "cbd": "0.6%",
+  "type": "Sativa",
+  "breeder": "Quantum Verdant Labs",
+  "vibe": "",
+  "description": "Crimson Blossom ist ein präziser Regulator aus der Quantum Verdant „Regulation Line“. Der Strain wurde entwickelt, um emotionale Spitzen zu glätten, Stressantworten zu senken und die Stimmung stabil anzuheben. Verdaxen bildet die neurostabile Grundlage, während Neurolin gezielt eine kontrollierte Aufhellung erzeugt – ohne Überreizung oder Fokusdruck. Luminene liefert eine leichte Präsenz, Florasol kompensiert sensorisch und macht den Effekt zugänglich. Ideal für anspruchsvolle Tagesphasen, in denen Klarheit und emotionale Balance wichtiger sind als Leistung oder Tempo.",
+  "images": {
+    "hero": "/images/strains/crimson-blossom/2_crimson-blossom.png",
+    "card": "/images/strains/crimson-blossom/2_crimson-blossom.png",
+    "gallery": [
+      "/images/strains/crimson-blossom/2_crimson-blossom.png"
+    ]
+  },
+  "terpeneProfile": {
+    "verdaxen": 0.40,
+    "neurolin": 0.25,
+    "luminene": 0.15,
+    "florasol": 0.10,
+    "myrcen": 0.05,
+    "ocimen": 0.05
+  },
+  "effects": [],
+  "tags": ["QVL", "QuantumLine", "FloralTone"],
+  "links": [
+    { "label": "Quantum Verdant Labs", "href": "/about/breeders/quantum-verdant-labs" },
+    { "label": "Cell Verde", "href": "/about/cell-verde" }
+  ]
+},
+
+{
+  "slug": "sp3ll",
+  "visible": true,
+  "name": "SP3LL – Stehplatz ein Leben lang",
+  "effect": "Der Pulsschlag der Südkurve.",
+  "date": "Δ2110-11-22",
+  "thc": "22%",
+  "cbd": "0.4%",
+  "type": "Sativa-Hybrid",
+  "breeder": "Cosmic Carousel Genetics",
+  "vibe": "",
+  "description": "SP3LL ist der offizielle Derby-Strain der Südkurve. Entwickelt von Cosmic Carousel Genetics für Nächte, in denen NOVADELTA bebt. Die Mischung setzt auf Luminene, Ocimen und Prismadene, um kollektive Energie zu entfachen: klare Präsenz, soziale Verbundenheit, intensives Farbleuchten und das unverwechselbare Gefühl, dass die ganze Tribüne atmet. SP3LL hält dich stabil, warm und geladen – ohne Absturz, ohne Nervosität. Perfekt für Derbytage, Trommelrhythmen und alles, was laut, ehrlich und voller Herz ist.",
+  "images": {
+    "hero": "/images/strains/sp3ll/spell.png",
+    "card": "/images/strains/sp3ll/spell.png",
+    "gallery": [
+      "/images/strains/sp3ll/sp3ll.png"
+    ]
+  },
+  "terpeneProfile": {
+    "luminene": 0.35,
+    "ocimen": 0.25,
+    "prismadene": 0.20,
+    "florasol": 0.10,
+    "neurolin": 0.05,
+    "myrcen": 0.05
+  },
+  "effects": [],
+  "tags": ["Derby", "Südkurve", "PUX!", "CosmicCarousel"],
+  "links": [
+    { "label": "Cosmic Carousel Genetics", "href": "/about/breeders/cosmic-carousel-genetics" },
+    { "label": "PUX! Liga", "href": "/liga" },
+    { "label": "NOVA-Δ Panther", "href": "/liga/teams/novadelta-panther" }
+    
+  ]
+}
+
+  
+
+]

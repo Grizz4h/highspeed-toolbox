@@ -1,0 +1,276 @@
+{
+  "world_today": "2125-12-31",
+  "brands": {
+    "breeder": [
+      {
+        "id": "verdant_horizon_therapeutics",
+        "name": "Verdant Horizon Therapeutics",
+        "location": "Cell Verde",
+        "founding_date": "2081-01-01",
+        "type": "breeder",
+        "tagline": "Healing without Harm",
+        "specialization": "Medizinische Heilkunst & Regeneration",
+        "allowed_product_types": [
+          "Medical Strain",
+          "Feminized Seed",
+          "Autoflower"
+        ]
+      },
+      {
+        "id": "quantum_verdant_labs",
+        "name": "Quantum Verdant Labs",
+        "location": "Cell Verde",
+        "founding_date": "2098-01-01",
+        "type": "breeder",
+        "tagline": "Where Biology Meets Neon Logic",
+        "specialization": "Neuro-Biotechnologie & präzise Datensteuerung",
+        "allowed_product_types": [
+          "Neuro-Strain",
+          "Medical Strain"
+        ]
+      },
+      {
+        "id": "glyphroot_atelier",
+        "name": "GlyphRoot Atelier",
+        "location": "Pollex Viertel",
+        "founding_date": "2100-01-01",
+        "type": "breeder",
+        "tagline": "Stories in Every Strain",
+        "specialization": "Kultur, Duft & Kreativität",
+        "allowed_product_types": [
+          "Lifestyle Strain",
+          "Limited Edition"
+        ]
+      },
+      {
+        "id": "cosmic_carousel_genetics",
+        "name": "Cosmic Carousel Genetics",
+        "location": "Südplateau",
+        "founding_date": "2105-01-01",
+        "type": "breeder",
+        "tagline": "Ride the High",
+        "specialization": "Event & Party-Strains",
+        "allowed_product_types": [
+          "Fun Strain",
+          "Limited Edition"
+        ]
+      },
+      {
+        "id": "cipherleaf_collective",
+        "name": "CipherLeaf Collective",
+        "location": "Iris-Sektor",
+        "founding_date": "2114-01-01",
+        "type": "breeder",
+        "tagline": "Decode Your Mind",
+        "specialization": "Luxus Lifestyle & spezifische Anlässe",
+        "allowed_product_types": [
+          "Lifestyle Strain",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "bike": [
+      {
+        "id": "eclipse_velo",
+        "name": "ÉCLIPSE VÉLO",
+        "location": "Iris-Sektor",
+        "founding_date": "2088-01-01",
+        "type": "bike",
+        "tagline": "Glide the Glow",
+        "specialization": "Luxury Design & Resort Mobility",
+        "allowed_product_types": [
+          "Complete Bike",
+          "Frame (Full)",
+          "Accessory Pack"
+        ]
+      },
+      {
+        "id": "cobble_quill",
+        "name": "Cobble & Quill",
+        "location": "Pollex Viertel",
+        "founding_date": "2098-01-01",
+        "type": "bike",
+        "tagline": "Ride the Quiet Line",
+        "specialization": "Altstadt Handwerk & Kultur",
+        "allowed_product_types": [
+          "Frame (Full)",
+          "Complete Bike",
+          "Accessory Pack"
+        ]
+      },
+      {
+        "id": "moss_motion",
+        "name": "Moss & Motion",
+        "location": "Cell Verde",
+        "founding_date": "2103-01-01",
+        "type": "bike",
+        "tagline": "Flow with the Flora",
+        "specialization": "Ökologische & organische Mobilität",
+        "allowed_product_types": [
+          "Frame (Full)",
+          "Complete Bike",
+          "Component Kit",
+          "Upgrade Module"
+        ]
+      },
+      {
+        "id": "rift_rides",
+        "name": "Rift Rides",
+        "location": "Süd-Plateau",
+        "founding_date": "2108-01-01",
+        "type": "bike",
+        "tagline": "Cut the Lines, Own the Streets",
+        "specialization": "Modular Urban & DIY Performance",
+        "allowed_product_types": [
+          "Frame (Modular)",
+          "Component Kit",
+          "Upgrade Module",
+          "Accessory Pack"
+        ]
+      },
+      {
+        "id": "skytrace_dynamics",
+        "name": "SkyTrace Dynamics",
+        "location": "Peripherie",
+        "founding_date": "2113-01-01",
+        "type": "bike",
+        "tagline": "Wege, wo keine vorgesehen sind.",
+        "specialization": "Vertikale Mobilität & VertiLink-Systeme",
+        "allowed_product_types": [
+          "Frame (Modular)",
+          "Component Kit",
+          "Upgrade Module"
+        ]
+      }
+    ]
+  },
+  "product_types": {
+    "breeder": [
+      "Medical Strain",
+      "Fun Strain",
+      "Lifestyle Strain",
+      "Neuro-Strain",
+      "Limited Edition",
+      "Feminized Seed",
+      "Autoflower"
+    ],
+    "bike": [
+      "Frame (Full)",
+      "Frame (Modular)",
+      "Complete Bike",
+      "Component Kit",
+      "Upgrade Module",
+      "Accessory Pack"
+    ]
+  },
+  "release_offset_rules": {
+    "Medical Strain": [
+      -14,
+      -3
+    ],
+    "Fun Strain": [
+      -7,
+      0
+    ],
+    "Lifestyle Strain": [
+      -7,
+      0
+    ],
+    "Neuro-Strain": [
+      -14,
+      -7
+    ],
+    "Limited Edition": [
+      -3,
+      2
+    ],
+    "Feminized Seed": [
+      -21,
+      -7
+    ],
+    "Autoflower": [
+      -21,
+      -7
+    ],
+    "Frame (Full)": [
+      -30,
+      -7
+    ],
+    "Frame (Modular)": [
+      -21,
+      -7
+    ],
+    "Complete Bike": [
+      -30,
+      -14
+    ],
+    "Component Kit": [
+      -14,
+      0
+    ],
+    "Upgrade Module": [
+      -7,
+      3
+    ],
+    "Accessory Pack": [
+      -3,
+      7
+    ]
+  },
+  "product_suggestions": {
+    "breeder": {
+      "verdant_horizon_therapeutics": [
+        "Serene Sap",
+        "NeuroDawn",
+        "SomnaBloom"
+      ],
+      "quantum_verdant_labs": [
+        "Cognisurge-9V",
+        "Axon Prism",
+        "Soma-Null"
+      ],
+      "glyphroot_atelier": [
+        "Script Sage",
+        "Chronicle Kush",
+        "Echo Ink"
+      ],
+      "cosmic_carousel_genetics": [
+        "SP3LL",
+        "Blitz-Loop",
+        "Bubble-Razz"
+      ],
+      "cipherleaf_collective": [
+        "Luxe Lexicon",
+        "Violet Vellum",
+        "Prism Paradox"
+      ]
+    },
+    "bike": {
+      "eclipse_velo": [
+        "HaloFrame™",
+        "LumoWeave™ Frame",
+        "Solar-Petal Skins"
+      ],
+      "cobble_quill": [
+        "Scribe-Frame",
+        "Mechanical Hub Kit",
+        "Leather Grip Pack"
+      ],
+      "moss_motion": [
+        "BioWeave-Frame",
+        "ChloroSkin Coating",
+        "Seed-Cap Accessory"
+      ],
+      "rift_rides": [
+        "CrankRip-Core",
+        "LockSwap-Frame",
+        "Neo-Flex Felgen"
+      ],
+      "skytrace_dynamics": [
+        "VertiLink-Mount Kit",
+        "VertiLink-Rail Module",
+        "Mag-Anchor Node"
+      ]
+    }
+  }
+}

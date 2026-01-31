@@ -1,0 +1,178 @@
+[
+  {
+    "id": "vor-dem-bruch",
+    "epoch": "Vor dem Bruch",
+    "years": "2025 – 2075",
+    "summary": "Urbanisierung, erste Space-Kapseln, Cannabis-Revolution, ARIS-Entstehung, Beginn des Fusionsbooms.",
+    "groups": [
+      {
+        "title": "Frühphase 2025–2070",
+        "description": "Grundlagen für NOVADELTA: medizinische Revolution, Mobilitätswende, Orbit-Technologie, ARIS-Gründung.",
+        "events": [
+          { "year": 2041, "title": "MedCannabis-Revolution", "type": "bio",
+            "summary": "Cannabis wird Allzweck-Medizin → Basis für Cell Verde & VHT." },
+          { "year": 2045, "title": "Erste Orbitalkapseln", "type": "tech",
+            "summary": "Start der kommerziellen Erdorbit-Transporte." },
+            { "year": 2045, "title": "Projekt Blue Tension", "type": "urban","summary": "Die Staustufe wird zu einem überdimensionierten Energiekomplex ausgebaut."},
+
+          { "year": 2049, "title": "Gründung AUDIOM", "type": "urban",
+            "summary": "Luxus- & Urban-Mobility entsteht." },
+          { "year": 2055, "title": "Mobilitätswende 2.0", "type": "urban",
+            "summary": "Bike-Highways, Hyperloops, Rückbau klassischer Straßen." },
+          { "year": 2061, "title": "Aurora Vein Fund", "type": "tech",
+            "summary": "Fund von Helium-3/Deuterium → Grundstein für Fusionsenergie." },
+          { "year": 2063, "title": "ARIS Industries entsteht", "type": "tech",
+            "summary": "Fusion europäischer Raumfahrt- & Energieunternehmen." },
+          { "year": 2065, "title": "Mag-Launch Needle", "type": "tech",
+            "summary": "Bau des vertikalen Magnet-Orbit-Beschleunigers." },
+          { "year": 2068, "title": "Fusions-Boom beginnt", "type": "urban",
+            "summary": "Erste Rückkehrkapseln bringen Fusionsbrennstoffe." },
+          { "year": 2070, "title": "MNG-1 Launchport entwickelt sich", "type": "urban",
+            "summary": "Anwohner siedeln sich rund um die Startrampe an." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "der-bruch",
+    "epoch": "Der Bruch",
+    "years": "2075 – 2080",
+    "summary": "Katastrophe der Staustufen, Energiekrise, Wiederaufbau keimt.",
+    "groups": [
+      {
+        "title": "Der Donaubruch",
+        "description": "Kernmoment: Zusammenbruch alter Infrastruktur, Start von NOVADELTA.",
+        "events": [
+          { "year": 2075, "title": "Donaubruch", "type": "urban",
+            "summary": "Staustufen brechen" },
+          { "year": 2076, "title": "Energiekrise", "type": "tech",
+            "summary": "ARIS wird einziger Versorger der Region." },
+          { "year": 2078, "title": "Notreaktoren", "type": "tech",
+            "summary": "ARIS stabilisiert die Region mit temporären Reaktoren." },
+          { "year": 2079, "title": "Projekt NOVADELTA", "type": "urban",
+            "summary": "Wiederaufbauprogramm gestartet." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aufbau-struktur",
+    "epoch": "Aufbau & Struktur",
+    "years": "2080 – 2100",
+    "summary": "Die Stadt reorganisiert sich in Zonen, Subkulturen und neue Technologien.",
+    "groups": [
+      {
+        "title": "Reformation der Wissenschaft",
+        "description": "Neue Zonen, neue Infrastruktur, neue gesellschaftliche Muster.",
+        "events": [
+          { "year": 2081, "title": "Zonen entstehen", "type": "urban",
+            "summary": "Süd-Plateau, Cell Verde, Iris-Sektor werden definiert." },
+          { "year": 2081, "title": "Neues VHT", "type": "bio",
+            "summary": "Bio-technologische Anlage entsteht in Cell Verde." },
+          { "year": 2083, "title": "Needle-People", "type": "urban",
+            "summary": "Raumminen-Kaste bildet sich rund um die Needle." },
+          { "year": 2084, "title": "MNG Launchpad 1", "type": "urban",
+            "summary": "Hafenviertel entsteht: Bohrer, Händler, Kuriere." },
+          { "year": 2085, "title": "P.U.L.S.-Liga entsteht", "type": "culture",
+            "summary": "PUX! ersetzt klassisches Hockey." },
+          { "year": 2088, "title": "ÉCLIPSE VELO", "type": "urban",
+            "summary": "Eclipse-Bikes werden Statussymbol im Iris-Sektor." },
+          { "year": 2089, "title": "Grid", "type": "tech",
+            "summary": "ARIS startet Energie- & Datennetz." }
+        ]
+      },
+      {
+        "title": "Technologischer Durchbruch",
+        "description": "Genetische Rückkopplungssysteme, QVL, neue urbane Technologien.",
+        "events": [
+         
+          { "year": 2098, "title": "Cobble & Quill", "type": "urban",
+            "summary": "Retro-Räder & Lautlos-Kultur im Pollex Viertel." },
+          { "year": 2098, "title": "Quantum Verdant Labs (QVL)", "type": "bio",
+            "summary": "Standardisierte Med-Strains entstehen." },
+          { "year": 2099, "title": "Erste NOVADELTA-Karte", "type": "urban",
+            "summary": "Sektor-Kodifizierung vollständig." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grosses-netzwerk",
+    "epoch": "Das große Netzwerk",
+    "years": "2100 – 2118",
+    "summary": "Subkulturen, Breeder, Mechaniker, Tech-Festen & Kuriersysteme werden global.",
+    "groups": [
+      {
+        "title": "Kultur & Subkultur",
+        "description": "Stadtleben, Festivals, Breeder-Subkultur.",
+        "events": [
+          {
+            "year": 2100,
+            "title": "GlyphRoot Atelier",
+            "type": "culture",
+            "summary": "Kulturelle Blüte im Pollex-Viertel: Duft- und Literatur-Strains verbinden Sprache, Erinnerung und Identität."
+          },
+    
+          { "year": 2105, "title": "Cosmic Carousel Genetics", "type": "bio",
+            "summary": "Neon-Subkultur-Breeder im Südplateau." }
+         
+        ]
+      },
+      {
+        "title": "Tech & Mobilität",
+        "description": "Rift, SkyTrace Dynamics, Strain-Indexierung.",
+        "events": [
+          {
+          "year": 2103,
+          "title": "Moss & Motion Cycles",
+          "type": "urban",
+          "summary": "Cell-Verde-Manufaktur. Steht für funktionale Öko-Mobilität und organische Technik als bewusster Gegenpol zu High-Gloss-Luxus."
+        },
+          
+          { "year": 2106, "title": "Strain-Indexierung", "type": "bio",
+            "summary": "Wirkung/Terpen/DNA-Link-System." },
+          { "year": 2107, "title": "Bike-Korridor 7A", "type": "urban",
+            "summary": "Verbindung Südplateau ↔ Pollex Viertel." },
+          { "year": 2108, "title": "Rift Rides", "type": "tech",
+            "summary": "Rift Rides entwickelt im Süd-Plateau leistungsorientierte Bike-Systeme für extreme Beschleunigung und modulare Belastung."
+           },
+          {
+            "year": 2113,
+            "title": "SkyTrace Dynamics",
+            "type": "tech",
+            "summary": "Entwicklung von VertiLink-Frames und Mag-Anchor-Nodes für vertikale Kurier­routen. Ermöglicht Tower-Riding und prägt die Hochhaus-Logistik in der Peripherie"
+          },
+          { "year": 2114, "title": "CipherLeaf Collective", "type": "bio",
+            "summary": "Synästhesie-Strains aus dem Iris-Sektor." }
+
+        ]
+      }
+    ]
+  },
+{
+  "id": "heute",
+  "epoch": "HIGHspeed heute",
+  "years": "ca. 2125",
+  "summary": "Vertikale Megastadt aus Energie, Daten und Bewegung. Bikes, Kuriere, Breeder und autonome Systeme verschmelzen zu einem lebendigen Stadtkörper.",
+  "groups": [
+    {
+      "title": "Gegenwart",
+      "description": "NOVADELTA im Dauerbetrieb zwischen Mensch, Maschine und Algorithmus.",
+      "events": [
+       {
+  "year": 2125,
+  "title": "Betriebszustand",
+  "type": "urban",
+  "summary": "NOVADELTA ist kein Ort, sondern ein laufendes System. Autonome Dienste, urbane KI und menschliche Arbeit greifen ineinander, solange der Takt stimmt."
+},
+        {
+          "year": 2125,
+          "title": "Kuriergeneration",
+          "type": "culture",
+          "summary": "Junge Kuriere wie Jaro navigieren NOVADELTA zwischen Ebenen, Clustern und Sperrzonen. Bikes sind Werkzeug, Status und Sprache zugleich."
+        }
+      ]
+    }
+  ]
+}
+]

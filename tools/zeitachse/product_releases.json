@@ -1,0 +1,412 @@
+[
+  {
+    "id": "vht_serene_sap",
+    "release_date": "2082-06-15",
+    "brand_id": "verdant_horizon_therapeutics",
+    "brand_name": "Verdant Horizon Therapeutics",
+    "product_type": "Medical Strain",
+    "product_name": "Serene Sap",
+    "notes": "Muskelentspannung & Angstlösung",
+    "meta": {
+      "effect": "Muskelentspannung & Angstlösung",
+      "category": "regeneration"
+    }
+  },
+  {
+    "id": "vht_solar_gelato",
+    "release_date": "2083-04-27",
+    "brand_id": "verdant_horizon_therapeutics",
+    "brand_name": "Verdant Horizon Therapeutics",
+    "product_type": "Medical Strain",
+    "product_name": "Solar Gelato",
+    "notes": "Warm im Körper. Klar im Kopf. - Hybrid (sativa-leaning)",
+    "meta": {
+      "effect": "Warm im Körper. Klar im Kopf.",
+      "category": "hybrid-day",
+      "thc": "19%",
+      "cbd": "0.5%"
+    }
+  },
+  {
+    "id": "vht_neurodawn",
+    "release_date": "2083-03-10",
+    "brand_id": "verdant_horizon_therapeutics",
+    "brand_name": "Verdant Horizon Therapeutics",
+    "product_type": "Medical Strain",
+    "product_name": "NeuroDawn",
+    "notes": "Neuroprotektion & mentale Klarheit",
+    "meta": {
+      "effect": "Neuroprotektion & mentale Klarheit",
+      "category": "neuro"
+    }
+  },
+  {
+    "id": "vht_somnabloom",
+    "release_date": "2084-01-20",
+    "brand_id": "verdant_horizon_therapeutics",
+    "brand_name": "Verdant Horizon Therapeutics",
+    "product_type": "Medical Strain",
+    "product_name": "SomnaBloom",
+    "notes": "Tiefschlaf & Traumstabilisierung",
+    "meta": {
+      "effect": "Tiefschlaf & Traumstabilisierung",
+      "category": "sleep"
+    }
+  },
+  {
+    "id": "qvl_cognisurge",
+    "release_date": "2099-02-15",
+    "brand_id": "quantum_verdant_labs",
+    "brand_name": "Quantum Verdant Labs",
+    "product_type": "Neuro-Strain",
+    "product_name": "Cognisurge-9V",
+    "notes": "Neuronale Regeneration",
+    "meta": {
+      "effect": "Neuronale Regeneration",
+      "category": "neuro-tech"
+    }
+  },
+  {
+    "id": "qvl_crimson_blossom",
+    "release_date": "2099-11-12",
+    "brand_id": "quantum_verdant_labs",
+    "brand_name": "Quantum Verdant Labs",
+    "product_type": "Neuro-Strain",
+    "product_name": "Crimson Blossom",
+    "notes": "Emotionale Stabilisierung mit kontrollierter Aufhellung - Sativa",
+    "meta": {
+      "effect": "Emotionale Stabilisierung mit kontrollierter Aufhellung",
+      "category": "regulation",
+      "thc": "17%",
+      "cbd": "0.6%"
+    }
+  },
+  {
+    "id": "qvl_axon_prism",
+    "release_date": "2100-05-20",
+    "brand_id": "quantum_verdant_labs",
+    "brand_name": "Quantum Verdant Labs",
+    "product_type": "Neuro-Strain",
+    "product_name": "Axon Prism",
+    "notes": "Reflex-Optimierung",
+    "meta": {
+      "effect": "Reflex-Optimierung",
+      "category": "performance"
+    }
+  },
+  {
+    "id": "qvl_soma_null",
+    "release_date": "2101-08-10",
+    "brand_id": "quantum_verdant_labs",
+    "brand_name": "Quantum Verdant Labs",
+    "product_type": "Neuro-Strain",
+    "product_name": "Soma-Null",
+    "notes": "Schmerzblockade",
+    "meta": {
+      "effect": "Schmerzblockade",
+      "category": "pain-management"
+    }
+  },
+  {
+    "id": "gra_script_sage",
+    "release_date": "2101-03-15",
+    "brand_id": "glyphroot_atelier",
+    "brand_name": "GlyphRoot Atelier",
+    "product_type": "Lifestyle Strain",
+    "product_name": "Script Sage",
+    "notes": "Klarer Fokus, leichte Euphorie, fließende Sprache",
+    "meta": {
+      "effect": "Klarer Fokus, leichte Euphorie, fließende Sprache",
+      "category": "creative"
+    }
+  },
+  {
+    "id": "gra_chronicle_kush",
+    "release_date": "2102-07-20",
+    "brand_id": "glyphroot_atelier",
+    "brand_name": "GlyphRoot Atelier",
+    "product_type": "Lifestyle Strain",
+    "product_name": "Chronicle Kush",
+    "notes": "Tiefe Ruhe, Zeitdehnung, nostalgische Rückblenden",
+    "meta": {
+      "effect": "Tiefe Ruhe, Zeitdehnung, nostalgische Rückblenden",
+      "category": "contemplative"
+    }
+  },
+  {
+    "id": "gra_echo_ink",
+    "release_date": "2103-11-05",
+    "brand_id": "glyphroot_atelier",
+    "brand_name": "GlyphRoot Atelier",
+    "product_type": "Limited Edition",
+    "product_name": "Echo Ink",
+    "notes": "Mikro-Trance & kreativer Flow",
+    "meta": {
+      "effect": "Mikro-Trance & kreativer Flow",
+      "category": "performance"
+    }
+  },
+  {
+    "id": "ccg_sp3ll",
+    "release_date": "2106-04-10",
+    "brand_id": "cosmic_carousel_genetics",
+    "brand_name": "Cosmic Carousel Genetics",
+    "product_type": "Fun Strain",
+    "product_name": "SP3LL",
+    "notes": "Euphorisches Gruppen-High mit Fokus und Lachflash – offizieller Strain der PUX!-Fans",
+    "meta": {
+      "effect": "Euphorisches Gruppen-High mit Fokus und Lachflash",
+      "category": "event"
+    }
+  },
+  {
+    "id": "ccg_blitz_loop",
+    "release_date": "2107-09-15",
+    "brand_id": "cosmic_carousel_genetics",
+    "brand_name": "Cosmic Carousel Genetics",
+    "product_type": "Fun Strain",
+    "product_name": "Blitz-Loop",
+    "notes": "Schneller Onset und Adrenalinkick – bevorzugt von Kuriercrews vor Rennen",
+    "meta": {
+      "effect": "Schneller Onset und Adrenalinkick",
+      "category": "adrenaline"
+    }
+  },
+  {
+    "id": "ccg_bubble_razz",
+    "release_date": "2108-12-20",
+    "brand_id": "cosmic_carousel_genetics",
+    "brand_name": "Cosmic Carousel Genetics",
+    "product_type": "Fun Strain",
+    "product_name": "Bubble-Razz",
+    "notes": "Leichtes, verspieltes High mit sprudelndem Energiegefühl – perfekt für Nachtfahrten",
+    "meta": {
+      "effect": "Leichtes, verspieltes High mit sprudelndem Energiegefühl",
+      "category": "party"
+    }
+  },
+  {
+    "id": "clc_luxe_lexicon",
+    "release_date": "2115-02-10",
+    "brand_id": "cipherleaf_collective",
+    "brand_name": "CipherLeaf Collective",
+    "product_type": "Lifestyle Strain",
+    "product_name": "Luxe Lexicon",
+    "notes": "Klarheit & Wortfluss für Lesungen, Debatten & Salons",
+    "meta": {
+      "effect": "Klarheit & Wortfluss für Lesungen, Debatten & Salons",
+      "category": "eloquence"
+    }
+  },
+  {
+    "id": "clc_violet_vellum",
+    "release_date": "2116-06-15",
+    "brand_id": "cipherleaf_collective",
+    "brand_name": "CipherLeaf Collective",
+    "product_type": "Lifestyle Strain",
+    "product_name": "Violet Vellum",
+    "notes": "Sanfte Ruhe & kreative Tiefe für Atelier- und Schreibphasen",
+    "meta": {
+      "effect": "Sanfte Ruhe & kreative Tiefe",
+      "category": "creative"
+    }
+  },
+  {
+    "id": "clc_prism_paradox",
+    "release_date": "2117-10-20",
+    "brand_id": "cipherleaf_collective",
+    "brand_name": "CipherLeaf Collective",
+    "product_type": "Limited Edition",
+    "product_name": "Prism Paradox",
+    "notes": "Kurzzeit-Synästhesie & Fokus für Performances & Shows",
+    "meta": {
+      "effect": "Kurzzeit-Synästhesie & Fokus",
+      "category": "synesthetic"
+    }
+  },
+  {
+    "id": "ev_haloframe",
+    "release_date": "2090-03-15",
+    "brand_id": "eclipse_velo",
+    "brand_name": "ÉCLIPSE VÉLO",
+    "product_type": "Frame (Full)",
+    "product_name": "HaloFrame™",
+    "notes": "Flagship Monocoque-Frame mit Glide-Gefühl",
+    "meta": {
+      "category": "luxury",
+      "signature": true
+    }
+  },
+  {
+    "id": "ev_lumoweave",
+    "release_date": "2091-07-20",
+    "brand_id": "eclipse_velo",
+    "brand_name": "ÉCLIPSE VÉLO",
+    "product_type": "Frame (Full)",
+    "product_name": "LumoWeave™ Frame",
+    "notes": "Reaktiver Frame für fließende Bewegung",
+    "meta": {
+      "category": "performance"
+    }
+  },
+  {
+    "id": "ev_solar_petal",
+    "release_date": "2092-05-10",
+    "brand_id": "eclipse_velo",
+    "brand_name": "ÉCLIPSE VÉLO",
+    "product_type": "Accessory Pack",
+    "product_name": "Solar-Petal Skins",
+    "notes": "Solarflächen für sanften Tide-Boost",
+    "meta": {
+      "category": "energy"
+    }
+  },
+  {
+    "id": "cq_scribe_frame",
+    "release_date": "2099-04-15",
+    "brand_id": "cobble_quill",
+    "brand_name": "Cobble & Quill",
+    "product_type": "Frame (Full)",
+    "product_name": "Scribe-Frame",
+    "notes": "Stahlrahmen mit eingelassenen Schienen für Lettern",
+    "meta": {
+      "category": "craft",
+      "signature": true
+    }
+  },
+  {
+    "id": "cq_mechanical_hub",
+    "release_date": "2100-08-20",
+    "brand_id": "cobble_quill",
+    "brand_name": "Cobble & Quill",
+    "product_type": "Component Kit",
+    "product_name": "Mechanical Hub Kit",
+    "notes": "Mechanische Nabenschaltung für leises Rollen",
+    "meta": {
+      "category": "mechanics"
+    }
+  },
+  {
+    "id": "cq_leather_grip",
+    "release_date": "2101-02-10",
+    "brand_id": "cobble_quill",
+    "brand_name": "Cobble & Quill",
+    "product_type": "Accessory Pack",
+    "product_name": "Leather Grip Pack",
+    "notes": "Geöltes Leder & Bronze-Anschlüsse",
+    "meta": {
+      "category": "aesthetics"
+    }
+  },
+  {
+    "id": "mm_bioweave",
+    "release_date": "2104-05-15",
+    "brand_id": "moss_motion",
+    "brand_name": "Moss & Motion",
+    "product_type": "Frame (Full)",
+    "product_name": "BioWeave-Frame",
+    "notes": "Flachsfaserrahmen in Myzelharz",
+    "meta": {
+      "category": "eco",
+      "signature": true
+    }
+  },
+  {
+    "id": "mm_chloroskin",
+    "release_date": "2105-09-20",
+    "brand_id": "moss_motion",
+    "brand_name": "Moss & Motion",
+    "product_type": "Upgrade Module",
+    "product_name": "ChloroSkin Coating",
+    "notes": "Beschichtung für Mikro-Strom unter Licht",
+    "meta": {
+      "category": "energy"
+    }
+  },
+  {
+    "id": "mm_seed_cap",
+    "release_date": "2106-03-10",
+    "brand_id": "moss_motion",
+    "brand_name": "Moss & Motion",
+    "product_type": "Accessory Pack",
+    "product_name": "Seed-Cap Accessory",
+    "notes": "Abnehmbare Caps mit heimischen Samen",
+    "meta": {
+      "category": "rewilding"
+    }
+  },
+  {
+    "id": "rr_crankrip",
+    "release_date": "2109-06-15",
+    "brand_id": "rift_rides",
+    "brand_name": "Rift Rides",
+    "product_type": "Component Kit",
+    "product_name": "CrankRip-Core",
+    "notes": "Hydraulische Tritt-Energie-Speicherung",
+    "meta": {
+      "category": "performance",
+      "signature": true
+    }
+  },
+  {
+    "id": "rr_lockswap",
+    "release_date": "2110-02-20",
+    "brand_id": "rift_rides",
+    "brand_name": "Rift Rides",
+    "product_type": "Frame (Modular)",
+    "product_name": "LockSwap-Frame",
+    "notes": "Umbauten direkt am Bordstein",
+    "meta": {
+      "category": "modular"
+    }
+  },
+  {
+    "id": "rr_neoflex",
+    "release_date": "2111-10-10",
+    "brand_id": "rift_rides",
+    "brand_name": "Rift Rides",
+    "product_type": "Component Kit",
+    "product_name": "Neo-Flex Felgen",
+    "notes": "Absorbieren Aufprälle und springen zurück",
+    "meta": {
+      "category": "durability"
+    }
+  },
+  {
+    "id": "st_vertilink_mount",
+    "release_date": "2114-04-15",
+    "brand_id": "skytrace_dynamics",
+    "brand_name": "SkyTrace Dynamics",
+    "product_type": "Component Kit",
+    "product_name": "VertiLink-Mount Kit",
+    "notes": "Mechanisch-magnetische Kupplung für Fassadenrails",
+    "meta": {
+      "category": "vertical",
+      "signature": true
+    }
+  },
+  {
+    "id": "st_vertilink_rail",
+    "release_date": "2115-08-20",
+    "brand_id": "skytrace_dynamics",
+    "brand_name": "SkyTrace Dynamics",
+    "product_type": "Component Kit",
+    "product_name": "VertiLink-Rail Module",
+    "notes": "Verstärkte Stahl-/Composite-Leisten für Gebäude",
+    "meta": {
+      "category": "infrastructure"
+    }
+  },
+  {
+    "id": "st_mag_anchor",
+    "release_date": "2116-12-10",
+    "brand_id": "skytrace_dynamics",
+    "brand_name": "SkyTrace Dynamics",
+    "product_type": "Upgrade Module",
+    "product_name": "Mag-Anchor Node",
+    "notes": "Magnetisches Haltefeld für VertiLink-System",
+    "meta": {
+      "category": "enhancement"
+    }
+  }
+]

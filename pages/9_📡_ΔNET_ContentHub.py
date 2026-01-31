@@ -7,7 +7,7 @@ from urllib.request import Request, urlopen
 
 import streamlit as st
 
-st.set_page_config(page_title="📡 ΔNET Content Hub", layout="wide")
+st.set_page_config(page_title="ΔNET Content Hub", layout="wide")
 
 RELEASE_STATUSES = ["DRAFT", "READY", "POSTED", "ARCHIVED"]
 CONTENT_STATUSES = ["DRAFT", "READY", "READY_FOR_REVIEW", "READY_FOR_RENDER", "POSTED", "ARCHIVED"]

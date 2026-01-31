@@ -103,7 +103,7 @@ class Starting6LayoutV1:
 
     # Header
     header_title_y: int = 125
-    header_sub_y: int = 180
+    header_sub_y: int = 175
 
     # Logos
     logo_size: int = 200
